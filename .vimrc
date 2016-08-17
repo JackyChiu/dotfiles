@@ -24,6 +24,7 @@ filetype plugin indent on
 
 """ BEHAVIOUR """
 set backspace=indent,eol,start		"Add this to your vimrc to make the backspace work like in most other programs
+set clipboard=unnamed
 
 """ VISUAL """
 syntax enable
@@ -31,4 +32,3 @@ set showmatch		"Matching braces/brakcets
 set ruler		"Show file title
 set number		"Show absolute number on current line
 set relativenumber	"Relative numbering
-

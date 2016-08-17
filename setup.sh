@@ -11,8 +11,8 @@ echo "Backup dir: $backup"
 
 # Move backups and create sym links
 for dotfile in $dotfiles; do
-	mv ~/.$file $backup
+	mv ~/$dotfile $backup
 	echo "Current $dotfile moved to: $backup"
-	ln -s $dir/$file ~/.$file
-	echo "Symbloic link for $file made in ~"
+	ln -s $dir/$dotfile ~/$dotfile
+	echo "Symbloic link for $dotfile made in ~"
 done
