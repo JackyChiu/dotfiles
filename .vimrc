@@ -13,11 +13,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'eparreno/vim-l9'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'           "Vundle to install plugins
+Plugin 'scrooloose/nerdtree'            "Project tree view
+Plugin 'Valloric/YouCompleteMe'         "Minor autocompletions
+Plugin 'christoomey/vim-tmux-navigator' "Vim-Tmux nagvagation
 
 call vundle#end()
 filetype plugin indent on
