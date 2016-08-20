@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'           "Vundle to install plugins
 Plugin 'scrooloose/nerdtree'            "Project tree view
 Plugin 'Valloric/YouCompleteMe'         "Minor autocompletions
 Plugin 'christoomey/vim-tmux-navigator' "Vim-Tmux nagvagation
+Plugin 'tpope/vim-surround'             "To add quotes and braces
 
 call vundle#end()
 filetype plugin indent on
