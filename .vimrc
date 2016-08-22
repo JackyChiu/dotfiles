@@ -27,8 +27,11 @@ set backspace=indent,eol,start                          "Add this to your vimrc 
 set clipboard=unnamed		        	                "System Regiester to be same as unnamed
 set tabstop=4 			            	                "Exisiting tabs to be shown with 4 spaces
 set shiftwidth=4                                        "Size of indent
+set softtabstop=4                                       "Backspace tab
 set expandtab 			            	                "Tab to be 4 spaces
 let g:ycm_autoclose_preview_window_after_completion = 1 "Close autocomplete preview window after completion
+set backupdir=~/.vim/.backup                            "Dir for vim to save backup files
+set directory=~/.vim/.swap                              "Dir for vim to save swap files
 
 """ VISUAL """
 syntax enable
