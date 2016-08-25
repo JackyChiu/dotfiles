@@ -16,3 +16,8 @@ for dotfile in $dotfiles; do
 	ln -s $dir/$dotfile ~/$dotfile
 	echo "Symbloic link for $dotfile made in ~"
 done
+
+# Dir for backup/swap files
+mkdir -p ~/.vim/.backup
+mkdir -p ~/.vim/.swap
+echo "Dirs made for backup/swap files"
