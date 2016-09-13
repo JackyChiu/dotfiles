@@ -24,6 +24,7 @@ filetype plugin indent on
 
 """ BEHAVIOUR """
 set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
+set autoread                                            "Auto read changes outside of vim
 set clipboard=unnamed		        	                "System Regiester to be same as unnamed
 set tabstop=4 			            	                "Exisiting tabs to be shown with 4 spaces
 set shiftwidth=4                                        "Size of indent
@@ -32,6 +33,8 @@ set expandtab 			            	                "Tab to be 4 spaces
 let g:ycm_autoclose_preview_window_after_completion = 1 "Close autocomplete preview window after completion
 set backupdir=~/.vim/.backup                            "Dir for vim to save backup files
 set directory=~/.vim/.swap                              "Dir for vim to save swap files
+set nohlsearch                                          "Don't continue to highlight searched phrases.
+set incsearch                                           "But do highlight as you type your search.
 
 """ VISUAL """
 syntax enable
@@ -39,5 +42,5 @@ set showmatch	                    	                "Matching braces/brakcets
 set ruler	                        	                "Show file title
 set number		                                        "Show absolute number on current line
 set relativenumber                     	                "Relative numbering
-"Matching paren hightlight color change
-hi MatchParen cterm=bold ctermbg=blue ctermfg=black    
+hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
+

@@ -89,6 +89,5 @@ SPACESHIP_PROMPT_TRUNC=0
 
 # Default vim
 alias vim='/usr/local/bin/vim'
-export VISUAL= vim
-export EDITOR=$VISUAL
-
+export VISUAL='/usr/local/bin/vim'
+export EDITOR="$VISUAL"
