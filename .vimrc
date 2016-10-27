@@ -35,7 +35,6 @@ set backupdir=~/.vim/.backup                            "Dir for vim to save bac
 set directory=~/.vim/.swap                              "Dir for vim to save swap files
 set nohlsearch                                          "Don't continue to highlight searched phrases.
 set incsearch                                           "But do highlight as you type your search.
-map <F8> :!javac %<CR>
 """ VISUAL """
 syntax enable 
 set showmatch	                    	                "Matching braces/brakcets
