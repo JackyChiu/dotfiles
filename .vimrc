@@ -19,6 +19,7 @@ Plugin 'Valloric/YouCompleteMe'         "Minor autocompletions
 Plugin 'christoomey/vim-tmux-navigator' "Vim-Tmux nagvagation
 Plugin 'tpope/vim-surround'             "To add quotes and braces
 Plugin 'airblade/vim-gitgutter'         "Git addititons and removals
+Plugin 'sheerun/vim-polyglot'           "Better syntax highlighing
 
 call vundle#end()
 filetype plugin indent on
@@ -39,10 +40,12 @@ set incsearch                                           "But do highlight as you
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full:full                          "Wild mode for whilemenu
 """ VISUAL """
-syntax enable 
 set showmatch	                    	                "Matching braces/brakcets
 set ruler	                        	                "Show file title
 set number		                                        "Show absolute number on current line
 set relativenumber                     	                "Relative numbering
 hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
 hi CursorLineNr ctermfg=blue                            "Make current line number blue
+let g:onedark_termcolors=256                            "Set onedark to use 256 colors
+syntax on                                               "Synax highlighting on 
+colorscheme onedark                                     "Use onedark theme
