@@ -91,3 +91,6 @@ SPACESHIP_PROMPT_TRUNC=0
 alias vim='/usr/local/bin/vim'
 export VISUAL='/usr/local/bin/vim'
 export EDITOR="$VISUAL"
+
+# npm
+export PATH="$HOME/.npm-packages/bin:$PATH"
