@@ -29,6 +29,7 @@ filetype plugin indent on
 """ BEHAVIOUR """
 set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
 set autoread                                            "Auto read changes outside of vim
+au FocusGained,BufEnter * :silent! !                    "Reload file on enter/focus
 set clipboard=unnamed		        	                "System Regiester to be same as unnamed
 set tabstop=4 			            	                "Exisiting tabs to be shown with 4 spaces
 set shiftwidth=4                                        "Size of indent
@@ -41,6 +42,14 @@ set nohlsearch                                          "Don't continue to highl
 set incsearch                                           "But do highlight as you type your search.
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full:full                          "Wild mode for whilemenu
+set mouse=a                                             "Mouse click when just reading
+
+""" KEY MAPPINGS """
+" Easier way to enter new line
+nnoremap <CR> i<CR><ESC>
+" Easier to use tab than %
+nnoremap <tab> %
+nnoremap <tab> %
 
 """ VISUAL """
 set showmatch	                    	                "Matching braces/brakcets
