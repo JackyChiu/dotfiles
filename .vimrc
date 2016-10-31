@@ -7,19 +7,21 @@
 set nocompatible	"Disable vi compatibility mode
 filetype off		
 
-""" VUNDLE """
-
+""" PLUGINS  """
 "Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'           "Vundle to install plugins
 Plugin 'scrooloose/nerdtree'            "Project tree view
-Plugin 'Valloric/YouCompleteMe'         "Minor autocompletions
+Plugin 'Valloric/YouCompleteMe'         "Autocompletions ;)
 Plugin 'christoomey/vim-tmux-navigator' "Vim-Tmux nagvagation
 Plugin 'tpope/vim-surround'             "To add quotes and braces
 Plugin 'airblade/vim-gitgutter'         "Git addititons and removals
 Plugin 'sheerun/vim-polyglot'           "Better syntax highlighing
+Plugin 'vim-airline/vim-airline'        "Airline bar for vim
+Plugin 'vim-airline/vim-airline-themes' "Need for airline themes to work
+Plugin 'tpope/vim-fugitive'             "Git wrapper for vim
 
 call vundle#end()
 filetype plugin indent on
@@ -39,13 +41,21 @@ set nohlsearch                                          "Don't continue to highl
 set incsearch                                           "But do highlight as you type your search.
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full:full                          "Wild mode for whilemenu
+
 """ VISUAL """
 set showmatch	                    	                "Matching braces/brakcets
 set ruler	                        	                "Show file title
 set number		                                        "Show absolute number on current line
 set relativenumber                     	                "Relative numbering
-hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
-hi CursorLineNr ctermfg=blue                            "Make current line number blue
 let g:onedark_termcolors=256                            "Set onedark to use 256 colors
 syntax on                                               "Synax highlighting on 
 colorscheme onedark                                     "Use onedark theme
+hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
+hi CursorLineNr ctermfg=blue                            "Make current line number blue
+
+""" Airline settings"
+let g:airline_theme='onedark'                           "Airline to use onedark theme
+let g:airline_powerline_fonts = 1                       "Airline to use powerline font
+set laststatus=2                                        "Used to see airline without opening split
+set noshowmode                                          "Don't repeat vim modes in indicator
+set ttimeoutlen=10                                      "Faster to exit insert mode

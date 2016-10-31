@@ -94,3 +94,6 @@ export EDITOR="$VISUAL"
 
 # npm
 export PATH="$HOME/.npm-packages/bin:$PATH"
+
+# ctags
+alias ctags="`brew --prefix`/bin/ctags"
