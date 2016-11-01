@@ -1,0 +1,12 @@
+# First have this config setup
+# git config --global core.excludesfile ~/.gitignore_global
+
+# incase of swp file created by vim
+*.swp
+
+# tags created by ctags
+tags
+
+# Becasue I'm a Mac user
+.DS_Store
+
