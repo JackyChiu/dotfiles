@@ -44,6 +44,8 @@ set wildmode=longest:full:full                          "Wild mode for whilemenu
 set mouse=a                                             "Mouse click when just reading
 
 """ KEY MAPPINGS """
+" No need for shift key
+nnoremap ; :
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %
