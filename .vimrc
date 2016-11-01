@@ -29,7 +29,6 @@ filetype plugin indent on
 """ BEHAVIOUR """
 set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
 set autoread                                            "Auto read changes outside of vim
-au FocusGained,BufEnter * :silent! !                    "Reload file on enter/focus
 set clipboard=unnamed		        	                "System Regiester to be same as unnamed
 set tabstop=4 			            	                "Exisiting tabs to be shown with 4 spaces
 set shiftwidth=4                                        "Size of indent
