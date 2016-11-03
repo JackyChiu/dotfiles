@@ -50,7 +50,7 @@ nnoremap ; :
 nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %
 nnoremap <tab> %
-nnoremap <tab> %
+vnoremap <tab> %
 
 """ VISUAL """
 set showmatch	                    	                "Matching braces/brakcets
