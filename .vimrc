@@ -40,7 +40,7 @@ set directory=~/.vim/.swap                              "Dir for vim to save swa
 set nohlsearch                                          "Don't continue to highlight searched phrases.
 set incsearch                                           "But do highlight as you type your search.
 set wildmenu                                            "Use wildmenu
-set wildmode=longest:full:full                          "Wild mode for whilemenu
+set wildmode=longest:full,full                          "Wild mode for whilemenu
 set mouse=a                                             "Mouse click when just reading
 
 """ KEY MAPPINGS """
