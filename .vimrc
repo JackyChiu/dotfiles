@@ -47,8 +47,6 @@ set wildignore=*.o,*.class,*.pyc                        "Wild menu to ignore com
 set mouse=a                                             "Mouse click when just reading
 
 """ KEY MAPPINGS """
-" No need for shift key
-nnoremap ; :
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %
