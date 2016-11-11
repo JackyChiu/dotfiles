@@ -23,9 +23,10 @@ SPACESHIP_RUBY_SHOW=false
 SPACESHIP_PROMPT_TRUNC=0
 
 # Default vim
-alias vim="/usr/local/bin/vim"
 export VISUAL="/usr/local/bin/vim"
 export EDITOR="$VISUAL"
+alias vim=$VISUAL
+alias vi=$VISUAL
 
 # npm
 export PATH="$HOME/.npm-packages/bin:$PATH"

@@ -27,24 +27,29 @@ call vundle#end()
 filetype plugin indent on
 
 """ BEHAVIOUR """
-set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
+" Misc
 set autoread                                            "Auto read changes outside of vim
 set clipboard=unnamed		        	                "System register to be same as unnamed
+let g:ycm_autoclose_preview_window_after_completion = 1 "Close autocomplete preview window after completion
+set mouse=a                                             "Mouse click when just reading
+" Spacing and tabs
+set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
 set tabstop=4 			            	                "Existing tabs to be shown with 4 spaces
 set shiftwidth=4                                        "Size of indent
 set softtabstop=4                                       "Backspace tab
 set expandtab 			            	                "Tab to be 4 spaces
-let g:ycm_autoclose_preview_window_after_completion = 1 "Close autocomplete preview window after completion
+" Backup and swap files
 set backupdir=~/.vim/.backup                            "Dir for vim to save backup files
 set directory=~/.vim/.swap                              "Dir for vim to save swap files
+" Search 
 set nohlsearch                                          "Don't continue to highlight searched phrases.
 set incsearch                                           "But do highlight as you type your search.
 set ignorecase                                          "Ignore casing when searching
 set smartcase                                           "When searching be smart about casing
+" Wildmenu
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full,full                          "Wild mode for wildmenu
 set wildignore=*.o,*.class,*.pyc                        "Wild menu to ignore compiled files
-set mouse=a                                             "Mouse click when just reading
 
 """ KEY MAPPINGS """
 " Easier way to enter new line
