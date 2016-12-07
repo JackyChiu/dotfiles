@@ -67,8 +67,10 @@ let g:onedark_termcolors=256                            "Set onedark to use 256 
 syntax on                                               "Syntax highlighting on 
 colorscheme onedark                                     "Use onedark theme
 hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
+hi LineNr ctermfg=darkGrey
 hi CursorLineNr ctermfg=blue                            "Make current line number blue
-
+set cursorline                                          "Shows a visual cursor line
+hi CursorLine term=bold cterm=bold guibg=Grey40         "Light grey colour for cursorline
 """ Airline settings"
 let g:airline_theme='onedark'                           "Airline to use onedark theme
 let g:airline_powerline_fonts = 1                       "Airline to use powerline font
