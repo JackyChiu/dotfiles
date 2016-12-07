@@ -39,8 +39,10 @@ set shiftwidth=4                                        "Size of indent
 set softtabstop=4                                       "Backspace tab
 set expandtab 			            	                "Tab to be 4 spaces
 " Backup and swap files
-set backupdir=~/.vim/.backup                            "Dir for vim to save backup files
-set directory=~/.vim/.swap                              "Dir for vim to save swap files
+set undofile
+set backupdir=~/.vim/.backup//                          "Dir for vim to save backup files
+set directory=~/.vim/.swap//                            "Dir for vim to save swap files
+set undodir=~/.vim/.undo//                               "Undo dir for vim
 " Search 
 set nohlsearch                                          "Don't continue to highlight searched phrases.
 set incsearch                                           "But do highlight as you type your search.
