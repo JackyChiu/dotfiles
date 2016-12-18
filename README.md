@@ -24,7 +24,12 @@ Install plugins for vim
 - Using Oh My Zsh in iTerm2
 - Zsh theme: Spaceship, https://github.com/denysdovhan/spaceship-zsh-theme
 - Terminal theme: Atom One Dark, https://github.com/nathanbuchar/atom-one-dark-terminal
+- Vim theme: Atom One Dark, https://github.com/joshdick/onedark.vim
 
-# Images
-![Imgur](http://i.imgur.com/EnFFpy8.png)
-(Image updated on 2016-08-16) 
+## Tmux Panes
+![tmux](images/tmux-screenshot.png)
+
+## Vim Windows
+![vim](images/vim-screenshot.png)
+
+(Image updated on 2016-12-18) 
