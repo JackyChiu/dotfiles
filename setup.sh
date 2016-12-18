@@ -20,4 +20,5 @@ done
 # Dir for backup/swap files
 mkdir -p ~/.vim/.backup
 mkdir -p ~/.vim/.swap
-echo "Dirs made for backup/swap files"
+mkdir -p ~/.vim/.undo
+echo "Dirs made for backup/swap/undo files"
