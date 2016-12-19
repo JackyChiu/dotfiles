@@ -42,7 +42,7 @@ set expandtab 			            	                "Tab to be 4 spaces
 set undofile
 set backupdir=~/.vim/.backup//                          "Dir for vim to save backup files
 set directory=~/.vim/.swap//                            "Dir for vim to save swap files
-set undodir=~/.vim/.undo//                               "Undo dir for vim
+set undodir=~/.vim/.undo//                              "Undo dir for vim
 " Search 
 set nohlsearch                                          "Don't continue to highlight searched phrases.
 set incsearch                                           "But do highlight as you type your search.
@@ -59,6 +59,11 @@ nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %
 nnoremap <tab> %
 vnoremap <tab> %
+" Faster screen resizes
+nnoremap <C-w>> 20<C-w>>
+nnoremap <C-w>< 20<C-w><
+nnoremap <C-w>+ 20<C-w>+
+nnoremap <C-w>- 20<C-w>
 
 """ VISUAL """
 set showmatch	                    	                "Matching braces/brackets
@@ -69,7 +74,7 @@ let g:onedark_termcolors=256                            "Set onedark to use 256 
 syntax on                                               "Syntax highlighting on 
 colorscheme onedark                                     "Use onedark theme
 hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
-hi LineNr ctermfg=darkGrey
+hi LineNr ctermfg=darkGrey                              "Lighter line numbers from OneDark theme
 hi CursorLineNr ctermfg=blue                            "Make current line number blue
 set cursorline                                          "Shows a visual cursor line
 hi CursorLine term=bold cterm=bold guibg=Grey40         "Light grey colour for cursorline
