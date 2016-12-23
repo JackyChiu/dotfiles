@@ -12,16 +12,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'           "Vundle to install plugins
-Plugin 'scrooloose/nerdtree'            "Project tree view
-Plugin 'Valloric/YouCompleteMe'         "Auto completions ;)
-Plugin 'christoomey/vim-tmux-navigator' "Vim-Tmux navigation
-Plugin 'tpope/vim-surround'             "To add quotes and braces
-Plugin 'airblade/vim-gitgutter'         "Git additions and removals
-Plugin 'sheerun/vim-polyglot'           "Better syntax highlighting
-Plugin 'vim-airline/vim-airline'        "Airline bar for vim
-Plugin 'vim-airline/vim-airline-themes' "Need for airline themes to work
-Plugin 'tpope/vim-fugitive'             "Git wrapper for vim
+Plugin 'VundleVim/Vundle.vim'               "Vundle to install plugins
+Plugin 'scrooloose/nerdtree'                "Project tree view
+Plugin 'Valloric/YouCompleteMe'             "Auto completions ;)
+Plugin 'christoomey/vim-tmux-navigator'     "Vim-Tmux navigation
+Plugin 'tpope/vim-surround'                 "To add quotes and braces
+Plugin 'airblade/vim-gitgutter'             "Git additions and removals
+Plugin 'sheerun/vim-polyglot'               "Better syntax highlighting
+Plugin 'vim-airline/vim-airline'            "Airline bar for vim
+Plugin 'vim-airline/vim-airline-themes'     "Need for airline themes to work
+Plugin 'tpope/vim-fugitive'                 "Git wrapper for vim
+Plugin 'tmux-plugins/vim-tmux-focus-events' "Improve autoread in tmux!
+Plugin 'kien/ctrlp.vim'                     "Fuzzy finder
 
 call vundle#end()
 filetype plugin indent on
@@ -51,9 +53,14 @@ set smartcase                                           "When searching be smart
 " Wildmenu
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full,full                          "Wild mode for wildmenu
-set wildignore=*.o,*.class,*.pyc                        "Wild menu to ignore compiled files
-
+set wildignore=*.o,*.class,*.pyc,*.git                  "Wild menu to ignore compiled files
 """ KEY MAPPINGS """
+" CtrlP keymap
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Ioen in current dir of file
+let g:ctrlp_working_path_mode = 'ra'
+
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %

@@ -1,6 +1,6 @@
 ## JackyChiu's dotfiles
-Trying out a new workflow with tmux+vim <br/>
-*Disclamer*: Most configs were found online and I picked whichever I found useful
+My dotfiles used for my workflow with tmux+vim <br/>
+*Disclamer: Most configs were found online and I picked whichever I found useful*
 
 ## Installing
 If you want to checkout my enviroment you can use my setup script or manually copy paste all the dotfiles into your `~` dir
@@ -18,7 +18,7 @@ Install plugins for vim
     vim ~/.vimrc
     :PluginInstall
 
-*Side note*: Mouse seting commands for .tmux.conf only work with tmux 2.1 +
+*Side note: Mouse seting commands for .tmux.conf only work with tmux 2.1 +*
 
 ## Extra info
 - Using Oh My Zsh in iTerm2
