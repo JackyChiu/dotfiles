@@ -23,7 +23,7 @@ Plugin 'vim-airline/vim-airline'            "Airline bar for vim
 Plugin 'vim-airline/vim-airline-themes'     "Need for airline themes to work
 Plugin 'tpope/vim-fugitive'                 "Git wrapper for vim
 Plugin 'tmux-plugins/vim-tmux-focus-events' "Improve autoread in tmux!
-Plugin 'kien/ctrlp.vim'                     "Fuzzy finder
+Plugin 'ctrlpvim/ctrlp.vim'                     "Fuzzy finder
 
 call vundle#end()
 filetype plugin indent on
@@ -54,13 +54,14 @@ set smartcase                                           "When searching be smart
 set wildmenu                                            "Use wildmenu
 set wildmode=longest:full,full                          "Wild mode for wildmenu
 set wildignore=*.o,*.class,*.pyc,*.git                  "Wild menu to ignore compiled files
+
+let g:ctrlp_working_path_mode = 'ra'                     "Open in current dir of file
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " Ignore files in gitignore
+
 """ KEY MAPPINGS """
 " CtrlP keymap
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-" Ioen in current dir of file
-let g:ctrlp_working_path_mode = 'ra'
-
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
 " Easier to use tab than %
