@@ -13,7 +13,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'               "Vundle to install plugins
-Plugin 'scrooloose/nerdtree'                "Project tree view
 Plugin 'Valloric/YouCompleteMe'             "Auto completions ;)
 Plugin 'christoomey/vim-tmux-navigator'     "Vim-Tmux navigation
 Plugin 'tpope/vim-surround'                 "To add quotes and braces
@@ -31,28 +30,29 @@ filetype plugin indent on
 
 """ BEHAVIOUR """
 " Misc
-set autoread                                            "Auto read changes outside of vim
-set clipboard=unnamed		        	                      "System register to be same as unnamed
-set mouse=a                                             "Mouse click when just reading
+set autoread														"Auto read changes outside of vim
+set clipboard=unnamed		        	    	"System register to be same as unnamed
+set mouse=a                           	"Mouse click when just reading
 " Spacing and tabs
-set backspace=indent,eol,start                          "Add this to your vimrc to make the backspace work like in most other programs
-set tabstop=2 			            	                      "Existing tabs to be shown with 4 spaces
-set shiftwidth=2                                        "Size of indent
-set softtabstop=2                                       "Backspace tab
+set backspace=indent,eol,start        	"Add this to your vimrc to make the backspace work like in most other programs
+set tabstop=2 			            	    	"Existing tabs to be shown with 4 spaces
+set shiftwidth=2                      	"Size of indent
+set softtabstop=2                     	"Backspace tab
+set expandtab														"Tabs to spaces
 " Backup and swap files
 set undofile
-set backupdir=~/.vim/.backup//                          "Dir for vim to save backup files
-set directory=~/.vim/.swap//                            "Dir for vim to save swap files
-set undodir=~/.vim/.undo//                              "Undo dir for vim
+set backupdir=~/.vim/.backup//        	"Dir for vim to save backup files
+set directory=~/.vim/.swap//          	"Dir for vim to save swap files
+set undodir=~/.vim/.undo//            	"Undo dir for vim
 " Search 
-set nohlsearch                                          "Don't continue to highlight searched phrases.
-set incsearch                                           "But do highlight as you type your search.
-set ignorecase                                          "Ignore casing when searching
-set smartcase                                           "When searching be smart about casing
+set nohlsearch                        	"Don't continue to highlight searched phrases.
+set incsearch                         	"But do highlight as you type your search.
+set ignorecase                        	"Ignore casing when searching
+set smartcase                         	"When searching be smart about casing
 " Wildmenu
-set wildmenu                                            "Use wildmenu
-set wildmode=longest:full,full                          "Wild mode for wildmenu
-set wildignore=*.o,*.class,*.pyc,*.git                  "Wild menu to ignore compiled files
+set wildmenu                          	"Use wildmenu
+set wildmode=longest:full,full        	"Wild mode for wildmenu
+set wildignore=*.o,*.class,*.pyc,*.git	"Wild menu to ignore compiled files
 """ KEY MAPPINGS """
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
@@ -66,18 +66,18 @@ nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
 """ VISUAL """
-set showmatch	                    	                    "Matching braces/brackets
-set ruler	                        	                    "Show file title
-set number		                                          "Show absolute number on current line
-set relativenumber                     	                "Relative numbering
-let g:onedark_termcolors=256                            "Set onedark to use 256 colors
-syntax on                                               "Syntax highlighting on 
-colorscheme onedark                                     "Use onedark theme
-hi MatchParen cterm=bold ctermbg=blue ctermfg=black     "Matching paren hightlight color change
-hi LineNr ctermfg=darkGrey                              "Lighter line numbers from OneDark theme
-hi CursorLineNr ctermfg=blue                            "Make current line number blue
-set cursorline                                          "Shows a visual cursor line
-hi CursorLine term=bold cterm=bold guibg=Grey40         "Light grey colour for cursorline
+set showmatch	                    	                  "Matching braces/brackets
+set ruler	                        	                  "Show file title
+set number		                                        "Show absolute number on current line
+set relativenumber                     	              "Relative numbering
+let g:onedark_termcolors=256                          "Set onedark to use 256 colors
+syntax on                                             "Syntax highlighting on 
+colorscheme onedark                                   "Use onedark theme
+hi MatchParen cterm=bold ctermbg=blue ctermfg=black   "Matching paren hightlight color change
+hi LineNr ctermfg=darkGrey                            "Lighter line numbers from OneDark theme
+hi CursorLineNr ctermfg=blue                          "Make current line number blue
+set cursorline                                        "Shows a visual cursor line
+hi CursorLine term=bold cterm=bold guibg=Grey40       "Light grey colour for cursorline
 
 """ PLUGINS """
 "Airline settings"
@@ -91,7 +91,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1 "Close autocomplete prev
 "CtrlP
 let g:ctrlp_map = '<c-p>'                               "Map CtrlP to use <c-p>
 let g:ctrlp_cmd = 'CtrlP'                               "CtrlP as defualt command
-let g:ctrlp_working_path_mode = 'ra'                     "Open in current dir of file
+let g:ctrlp_working_path_mode = 'ra'                    "Open in current dir of file
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " Ignore files in gitignore
 "Synatasic settings
 set statusline+=%#warningmsg#
