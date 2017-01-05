@@ -33,3 +33,6 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
+
+# added by travis gem
+[ -f /Users/jackychiu/.travis/travis.sh ] && source /Users/jackychiu/.travis/travis.sh
