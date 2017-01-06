@@ -3,7 +3,7 @@
 # Varibles
 backup=~/dotfiles_backup
 dir=$(pwd)
-dotfiles=".vimrc .tmux.conf .vim .zshrc .gitignore_global"
+dotfiles=".vimrc .tmux.conf .vim .zshrc .gitignore_global .tern-project"
 
 # Backup
 mkdir -p $backup
