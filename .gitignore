@@ -1,0 +1,5 @@
+# vim dir's
+.vim/.backup
+.vim/.swap
+.vim/.undo
+
