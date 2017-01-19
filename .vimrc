@@ -99,7 +99,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1                           "Check on opening file
 let g:syntastic_check_on_wq = 0                             "Don't check on save quit
 let g:syntastic_javascript_checkers = ['eslint']            "Defualt to use eslint for javascript
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint' "Use the local exe eslint in project
