@@ -34,5 +34,9 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
-# added by travis gem
-[ -f /Users/jackychiu/.travis/travis.sh ] && source /Users/jackychiu/.travis/travis.sh
+# Alias
+alias dotfiles="/Users/jackychiu/Dev/dotfiles"
+alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
+alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
+alias 2100="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2100"
+
