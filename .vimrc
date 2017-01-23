@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""
-"""""	JackyChiu	"""""
-"""""	Vim Dotfile	"""""
+"""""	    JackyChiu	    """""
+"""""	    Vim Dotfile	  """""
 """""""""""""""""""""""""""""
 
 """ GENERAL """
@@ -51,6 +51,7 @@ set smartcase                         	"When searching be smart about casing
 set wildmenu                          	"Use wildmenu
 set wildmode=longest:full,full        	"Wild mode for wildmenu
 set wildignore=*.o,*.class,*.pyc,*.git	"Wild menu to ignore compiled files
+
 """ KEY MAPPINGS """
 " Easier way to enter new line
 nnoremap <CR> i<CR><ESC>
@@ -105,3 +106,7 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
+""" LANG SPECIFIC KEY MAPS """
+au BufNewFile,BufRead *.java
+  \ map <leader>jc :!javac %<CR> |
+  \ map <leader>jj :!java %:r<CR>
