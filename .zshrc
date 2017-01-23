@@ -35,6 +35,7 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 alias ctags="`brew --prefix`/bin/ctags"
 
 # Alias
+alias dev="/Users/jackychiu/Dev"
 alias dotfiles="/Users/jackychiu/Dev/dotfiles"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
