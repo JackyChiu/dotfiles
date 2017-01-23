@@ -8,24 +8,22 @@ set nocompatible	"Disable vi compatibility mode
 filetype off		
 
 """ PLUGINS  """
-"Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'               "Vundle to install plugins
-Plugin 'Valloric/YouCompleteMe'             "Auto completions ;)
-Plugin 'christoomey/vim-tmux-navigator'     "Vim-Tmux navigation
-Plugin 'tpope/vim-surround'                 "To add quotes and braces
-Plugin 'airblade/vim-gitgutter'             "Git additions and removals
-Plugin 'sheerun/vim-polyglot'               "Better syntax highlighting
-Plugin 'vim-syntastic/syntastic'            "Linter
-Plugin 'vim-airline/vim-airline'            "Airline bar for vim
-Plugin 'vim-airline/vim-airline-themes'     "Need for airline themes to work
-Plugin 'tpope/vim-fugitive'                 "Git wrapper for vim
-Plugin 'tmux-plugins/vim-tmux-focus-events' "Improve autoread in tmux!
-Plugin 'ctrlpvim/ctrlp.vim'                 "Fuzzy finder
+Plug 'VundleVim/Vundle.vim'               "Vundle to install plugins
+Plug 'Valloric/YouCompleteMe'             "Auto completions ;)
+Plug 'christoomey/vim-tmux-navigator'     "Vim-Tmux navigation
+Plug 'tpope/vim-surround'                 "To add quotes and braces
+Plug 'airblade/vim-gitgutter'             "Git additions and removals
+Plug 'sheerun/vim-polyglot'               "Better syntax highlighting
+Plug 'vim-syntastic/syntastic'            "Linter
+Plug 'vim-airline/vim-airline'            "Airline bar for vim
+Plug 'vim-airline/vim-airline-themes'     "Need for airline themes to work
+Plug 'tpope/vim-fugitive'                 "Git wrapper for vim
+Plug 'tmux-plugins/vim-tmux-focus-events' "Improve autoread in tmux!
+Plug 'ctrlpvim/ctrlp.vim'                 "Fuzzy finder
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 """ BEHAVIOUR """
