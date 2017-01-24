@@ -118,13 +118,15 @@ highlight link SyntasticStyleWarningSign SignColumn
 let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] 
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] ,
+      \   'right': [ ['path'], ['fileformat', 'fileencoding', 'filetype'] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'LightlineFugitive',
       \   'readonly': 'LightlineReadonly',
       \   'modified': 'LightlineModified',
-      \   'filename': 'LightlineFilename'
+      \   'filename': 'LightlineFilename',
+      \   'path': 'LightLinePath'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
@@ -153,4 +155,8 @@ function! LightlineFilename()
   return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
         \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+function! LightLinePath()
+    return expand('%:p')
 endfunction
