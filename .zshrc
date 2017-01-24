@@ -18,19 +18,20 @@ fi
 SPACESHIP_RUBY_SHOW=false
 SPACESHIP_PROMPT_TRUNC=0
 
+#npm
+export PATH="$HOME/.npm-packages/bin:$PATH"
+
 # Default vim
 export VISUAL="/usr/local/bin/vim"
 export EDITOR="$VISUAL"
+
+###ALIAS###
+#vim
 alias vim=$VISUAL
 alias vi=$VISUAL
-
-# npm
-export PATH="$HOME/.npm-packages/bin:$PATH"
-
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
-
-# Alias
+#directories
 alias dev="/Users/jackychiu/Dev"
 alias dotfiles="/Users/jackychiu/Dev/dotfiles"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
