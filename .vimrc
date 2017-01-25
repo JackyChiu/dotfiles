@@ -10,7 +10,6 @@ filetype off
 """PLUGINS """
 call plug#begin()
 
-Plug 'VundleVim/Vundle.vim'              "Vundle to install plugins
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }            "Auto completions ;)
 Plug 'christoomey/vim-tmux-navigator'    "Vim-Tmux navigation
 Plug 'tpope/vim-surround'                "To add quotes and braces
