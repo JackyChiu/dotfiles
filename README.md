@@ -1,6 +1,5 @@
 ## JackyChiu's dotfiles
 My dotfiles used for my workflow with tmux+vim <br/>
-*Disclamer: Most configs were found online and I picked whichever I found useful*
 
 ## Installing
 If you want to checkout my enviroment you can use my setup script or manually copy paste all the dotfiles into your `~` dir
@@ -10,15 +9,16 @@ cd dotfiles
 ./setup.sh
 ```
 
-If you don't have Vundle for vim installed in your `.vim` dir
+If you don't have vim-plug for vim installed in your `.vim` dir
 ```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Install plugins for vim
 ```bash
 vim ~/.vimrc
-:PluginInstall
+:PlugInstall
 ```
 
 *Side note: Mouse seting commands for .tmux.conf only work with tmux 2.1 +*
@@ -28,11 +28,9 @@ vim ~/.vimrc
 - Zsh theme: Spaceship, https://github.com/denysdovhan/spaceship-zsh-theme
 - Terminal theme: Atom One Dark, https://github.com/nathanbuchar/atom-one-dark-terminal
 - Vim theme: Atom One Dark, https://github.com/joshdick/onedark.vim
+- Lightline theme: Atom One Dark, https://github.com/joshdick/onedark.vim
 
-## Tmux Panes
-![tmux](images/tmux-screenshot.png)
+## Screenshot
+![setup](images/setup.png)
 
-## Vim Windows
-![vim](images/vim-screenshot.png)
-
-(Image updated on 2016-12-18) 
+(Image updated on 2017-01-24) 
