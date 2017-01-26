@@ -121,39 +121,23 @@ shift + lctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - ri
 # remap left-control x       -> forward delete
 lctrl - x         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- delete"
 
-
-
 # enable kwm compatibility mode
 khd kwm on
-
-
 
 # set border color for different modes
 khd mode default color 0xddd5c4a1
 khd mode switcher color 0xddbdd322
-khd mode ytd color 0xddd75f5f
 khd mode swap color 0xdd458588
-khd mode tree color 0xddfabd2f
 khd mode space color 0xddb16286
-khd mode info color 0xddcd950c
-
-
 
 # toggle between modes
 ctrl - f                :   khd -e "mode activate switcher"
 switcher + ctrl - f     :   khd -e "mode activate default"
-ytd + ctrl - f          :   khd -e "mode activate default"
 swap + ctrl - f         :   khd -e "mode activate default"
 space + ctrl - f        :   khd -e "mode activate default"
-tree + ctrl - f         :   khd -e "mode activate default"
 
-switcher - w            :   khd -e "mode activate ytd"
 switcher - a            :   khd -e "mode activate swap"
 switcher - s            :   khd -e "mode activate space"
-switcher - d            :   khd -e "mode activate tree"
-switcher - q            :   khd -e "mode activate info"
-
-
 
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
@@ -189,27 +173,6 @@ switcher + shift - 1    :   kwmc display -f 0
 switcher + shift - 2    :   kwmc display -f 1
 switcher + shift - 3    :   kwmc display -f 2
 
-
-
-# ytd mode
-ytd - x                 :   ytc play;\
-                            khd -e "mode activate default"
-
-ytd - s                 :   ytc mkfav;\
-                            khd -e "mode activate default"
-
-# 0x32 == <
-ytd - 0x32              :   ytc fav
-ytd - z                 :   ytc prev
-ytd - c                 :   ytc next
-ytd - v                 :   ytc stop
-ytd - a                 :   ytc volup
-ytd - d                 :   ytc voldown
-ytd - right             :   ytc seekfw
-ytd - left              :   ytc seekbk
-
-
-
 # swap mode
 swap - h                :   kwmc window -s west
 swap - j                :   kwmc window -s south
@@ -236,8 +199,6 @@ swap + shift - 1        :   kwmc window -m display 0
 swap + shift - 2        :   kwmc window -m display 1
 swap + shift - 3        :   kwmc window -m display 2
 
-
-
 # space mode
 space - a               :   kwmc space -t bsp
 space - s               :   kwmc space -t monocle
@@ -261,37 +222,6 @@ space + shift - up      :   kwmc space -p decrease top
 space + shift - down    :   kwmc space -p decrease bottom
 space + shift - p       :   kwmc space -p decrease all
 
-
-
-# tree mode
-tree - f                :   kwmc window -z fullscreen
-tree - d                :   kwmc window -z parent
-tree - w                :   kwmc window -t focused
-tree - r                :   kwmc tree rotate 90
-
-tree - s                :   kwmc window -c split - mode toggle;\
-                            khd -e "mode activate default"
-
-tree - c                :   kwmc window -c type toggle;\
-                            khd -e "mode activate default"
-
-tree - h                :   kwmc window -c expand 0.05 west
-tree - j                :   kwmc window -c expand 0.05 south
-tree - k                :   kwmc window -c expand 0.05 north
-tree - l                :   kwmc window -c expand 0.05 east
-tree + shift - h        :   kwmc window -c reduce 0.05 west
-tree + shift - j        :   kwmc window -c reduce 0.05 south
-tree + shift - k        :   kwmc window -c reduce 0.05 north
-tree + shift - l        :   kwmc window -c reduce 0.05 east
-
-tree - p                :   kwmc tree -pseudo create
-tree + shift - p        :   kwmc tree -pseudo destroy
-
-tree - o                :   kwmc window -s prev
-tree + shift - o        :   kwmc window -s next
-
-
-
 # default
 cmd + alt + ctrl - m    :   kwmc window -mk focused
 cmd + alt + ctrl - h    :   kwmc window -mk west wrap
@@ -299,7 +229,3 @@ cmd + alt + ctrl - l    :   kwmc window -mk east wrap
 cmd + alt + ctrl - j    :   kwmc window -mk south wrap
 cmd + alt + ctrl - k    :   kwmc window -mk north wrap
 
-#cmd - 0x2A              :   khd -w "aasvi93@hotmail.com"
-cmd - 7                 :   khd -w "\\"
-cmd - 8                 :   khd -w "{"
-cmd - 9                 :   khd -w "}"

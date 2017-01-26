@@ -30,6 +30,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 #directories
 alias dev="/Users/jackychiu/Dev"
 alias dot="/Users/jackychiu/Dev/dotfiles"
+alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
 alias 2100="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2100"
