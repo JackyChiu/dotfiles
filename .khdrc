@@ -95,11 +95,6 @@ lctrl - j         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- down"
 lctrl - k         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- up"
 lctrl - l         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- right"
 
-shift + lctrl - h ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift - left"
-shift + lctrl - j ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift - down"
-shift + lctrl - k ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift - up"
-shift + lctrl - l ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift - right"
-
 # remap left-control 0 / 4   -> start / end of line
 lctrl - 0         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - left"
 lctrl - 4         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - right"
@@ -125,9 +120,9 @@ lctrl - x         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- delete"
 khd kwm on
 
 # set border color for different modes
-khd mode default color 0xddd5c4a1
-khd mode switcher color 0xddbdd322
-khd mode swap color 0xdd458588
+khd mode default color 0xdd72bef2
+khd mode switcher color 0xdda7cc8c
+khd mode swap color 0xdde88388
 khd mode space color 0xddb16286
 
 # toggle between modes
