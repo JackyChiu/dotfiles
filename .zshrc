@@ -9,11 +9,6 @@ plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR="$VISUAL"
-fi
-
 # RUBY
 SPACESHIP_RUBY_SHOW=false
 SPACESHIP_PROMPT_TRUNC=0
@@ -29,11 +24,12 @@ export EDITOR="$VISUAL"
 #vim
 alias vim=$VISUAL
 alias vi=$VISUAL
+alias lvst="vim --startuptime /dev/stdout +qall"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 #directories
 alias dev="/Users/jackychiu/Dev"
-alias dotfiles="/Users/jackychiu/Dev/dotfiles"
+alias dot="/Users/jackychiu/Dev/dotfiles"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
 alias 2100="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2100"
