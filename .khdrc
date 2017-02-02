@@ -98,7 +98,6 @@ lctrl - l         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- right"
 # remap left-control 0 / 4   -> start / end of line
 lctrl - 0         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - left"
 lctrl - 4         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - right"
-
 # remap left-control g / G   -> start / end of text
 lctrl - g         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - up"
 lctrl + shift - g ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - down"
@@ -116,29 +115,30 @@ shift + lctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - ri
 # remap left-control x       -> forward delete
 lctrl - x         ![HyperTerm,Terminal,iTerm2]      :   khd -p "- delete"
 
+# undo
+lcrtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
+
 # enable kwm compatibility mode
 khd kwm on
 
 # set border color for different modes
 khd mode default color 0xdd72bef2
 khd mode switcher color 0xdda7cc8c
-khd mode swap color 0xdde88388
+khd mode swap color 0xddd291e4
 khd mode space color 0xddb16286
 
 # toggle between modes
-ctrl - f                :   khd -e "mode activate switcher"
-switcher + ctrl - f     :   khd -e "mode activate default"
-swap + ctrl - f         :   khd -e "mode activate default"
-space + ctrl - f        :   khd -e "mode activate default"
+ctrl - s                :   khd -e "mode activate switcher"
+switcher + ctrl - s     :   khd -e "mode activate default"
+swap + ctrl - s         :   khd -e "mode activate default"
+space + ctrl - s        :   khd -e "mode activate default"
 
-switcher - a            :   khd -e "mode activate swap"
-switcher - s            :   khd -e "mode activate space"
+switcher - s            :   khd -e "mode activate swap"
+switcher - a            :   khd -e "mode activate space"
 
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
-
-switcher - return       :   open -na /Applications/HyperTerm.app;\
-                            khd -e "mode activate default"
+switcher + shift - r    :   kwmc config reload
 
 switcher - h            :   kwmc window -f west
 switcher - l            :   kwmc window -f east
@@ -147,26 +147,8 @@ switcher - k            :   kwmc window -f north
 switcher - n            :   kwmc window -fm prev
 switcher - m            :   kwmc window -fm next
 
-#switcher - 1            :   kwmc space -fExperimental 1
-#switcher - 2            :   kwmc space -fExperimental 2
-#switcher - 3            :   kwmc space -fExperimental 3
-#switcher - 4            :   kwmc space -fExperimental 4
-#switcher - 5            :   kwmc space -fExperimental 5
-#switcher - 6            :   kwmc space -fExperimental 6
-#
-#switcher - z            :   kwmc space -fExperimental left
-#switcher - c            :   kwmc space -fExperimental right
-#switcher - f            :   kwmc space -fExperimental previous
-
-switcher + shift - z    :   kwmc window -m space left;\
-                            kwmc space -fExperimental left
-
-switcher + shift - c    :   kwmc window -m space right;\
-                            kwmc space -fExperimental right
-
 switcher + shift - 1    :   kwmc display -f 0
 switcher + shift - 2    :   kwmc display -f 1
-switcher + shift - 3    :   kwmc display -f 2
 
 # swap mode
 swap - h                :   kwmc window -s west
@@ -175,29 +157,12 @@ swap - k                :   kwmc window -s north
 swap - l                :   kwmc window -s east
 swap - m                :   kwmc window -s mark
 
-#swap + shift - k        :   kwmc window -m north
-#swap + shift - l        :   kwmc window -m east
-#swap + shift - j        :   kwmc window -m south
-#swap + shift - h        :   kwmc window -m west
-#swap + shift - m        :   kwmc window -m mark
-#
-#swap - 1                :   kwmc window -m space 1
-#swap - 2                :   kwmc window -m space 2
-##swap - 3                :   kwmc window -m space 3
-##swap - 4                :   kwmc window -m space 4
-#swap - 5                :   kwmc window -m space 5
-#
-#swap - z                :   kwmc window -m space left
-#swap - c                :   kwmc window -m space right
-#
-#swap + shift - 1        :   kwmc window -m display 0
-#swap + shift - 2        :   kwmc window -m display 1
-#swap + shift - 3        :   kwmc window -m display 2
+swap + shift - 1        :   kwmc window -m display 0
+swap + shift - 2        :   kwmc window -m display 1
 
 # space mode
 space - a               :   kwmc space -t bsp
 space - s               :   kwmc space -t monocle
-space - d               :   kwmc space -t float
 
 space - x               :   kwmc space -g increase horizontal
 space - y               :   kwmc space -g increase vertical
@@ -205,22 +170,14 @@ space - y               :   kwmc space -g increase vertical
 space + shift - x       :   kwmc space -g decrease horizontal
 space + shift - y       :   kwmc space -g decrease vertical
 
-space - left            :   kwmc space -p increase left
-space - right           :   kwmc space -p increase right
-space - up              :   kwmc space -p increase top
-space - down            :   kwmc space -p increase bottom
+space - h               :   kwmc space -p increase left
+space - l               :   kwmc space -p increase right
+space - k               :   kwmc space -p increase top
+space - j               :   kwmc space -p increase bottom
 space - p               :   kwmc space -p increase all
 
-space + shift - left    :   kwmc space -p decrease left
-space + shift - right   :   kwmc space -p decrease right
-space + shift - up      :   kwmc space -p decrease top
-space + shift - down    :   kwmc space -p decrease bottom
+space + shift - h       :   kwmc space -p decrease left
+space + shift - l       :   kwmc space -p decrease right
+space + shift - k       :   kwmc space -p decrease top
+space + shift - j       :   kwmc space -p decrease bottom
 space + shift - p       :   kwmc space -p decrease all
-
-# default
-cmd + alt + ctrl - m    :   kwmc window -mk focused
-cmd + alt + ctrl - h    :   kwmc window -mk west wrap
-cmd + alt + ctrl - l    :   kwmc window -mk east wrap
-cmd + alt + ctrl - j    :   kwmc window -mk south wrap
-cmd + alt + ctrl - k    :   kwmc window -mk north wrap
-
