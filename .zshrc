@@ -34,4 +34,5 @@ alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
 alias 2100="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2100"
+alias 2003="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2003"
 

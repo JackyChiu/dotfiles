@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
 Plug 'ctrlpvim/ctrlp.vim'                "Fuzzy finder
 Plug 'shime/vim-livedown', { 'for': 'markdown' } "Live preview
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' } "Java autocomplete
 
 call plug#end()
 
@@ -70,8 +71,11 @@ nnoremap <C-w>- 20<C-w>
 
 """LANG SPECIFIC KEY MAPS"""
 au BufNewFile,BufRead *.java
-      \ map <leader>jc :!javac %<CR> |
-      \ map <leader>jj :!java %:r<CR>
+      \ map <leader>C :!javac %<CR> |
+      \ map <leader>J :!java %:r<CR> |
+      \ map <leader>D :!java -ea %:r<CR>
+
+au FileType java setlocal omnifunc=javacomplete#Complete
 
 """VISUAL"""
 "Settings

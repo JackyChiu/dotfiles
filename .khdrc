@@ -147,16 +147,16 @@ switcher - k            :   kwmc window -f north
 switcher - n            :   kwmc window -fm prev
 switcher - m            :   kwmc window -fm next
 
-switcher - 1            :   kwmc space -fExperimental 1
-switcher - 2            :   kwmc space -fExperimental 2
-switcher - 3            :   kwmc space -fExperimental 3
-switcher - 4            :   kwmc space -fExperimental 4
-switcher - 5            :   kwmc space -fExperimental 5
-switcher - 6            :   kwmc space -fExperimental 6
-
-switcher - z            :   kwmc space -fExperimental left
-switcher - c            :   kwmc space -fExperimental right
-switcher - f            :   kwmc space -fExperimental previous
+#switcher - 1            :   kwmc space -fExperimental 1
+#switcher - 2            :   kwmc space -fExperimental 2
+#switcher - 3            :   kwmc space -fExperimental 3
+#switcher - 4            :   kwmc space -fExperimental 4
+#switcher - 5            :   kwmc space -fExperimental 5
+#switcher - 6            :   kwmc space -fExperimental 6
+#
+#switcher - z            :   kwmc space -fExperimental left
+#switcher - c            :   kwmc space -fExperimental right
+#switcher - f            :   kwmc space -fExperimental previous
 
 switcher + shift - z    :   kwmc window -m space left;\
                             kwmc space -fExperimental left
@@ -175,24 +175,24 @@ swap - k                :   kwmc window -s north
 swap - l                :   kwmc window -s east
 swap - m                :   kwmc window -s mark
 
-swap + shift - k        :   kwmc window -m north
-swap + shift - l        :   kwmc window -m east
-swap + shift - j        :   kwmc window -m south
-swap + shift - h        :   kwmc window -m west
-swap + shift - m        :   kwmc window -m mark
-
-swap - 1                :   kwmc window -m space 1
-swap - 2                :   kwmc window -m space 2
-swap - 3                :   kwmc window -m space 3
-swap - 4                :   kwmc window -m space 4
-swap - 5                :   kwmc window -m space 5
-
-swap - z                :   kwmc window -m space left
-swap - c                :   kwmc window -m space right
-
-swap + shift - 1        :   kwmc window -m display 0
-swap + shift - 2        :   kwmc window -m display 1
-swap + shift - 3        :   kwmc window -m display 2
+#swap + shift - k        :   kwmc window -m north
+#swap + shift - l        :   kwmc window -m east
+#swap + shift - j        :   kwmc window -m south
+#swap + shift - h        :   kwmc window -m west
+#swap + shift - m        :   kwmc window -m mark
+#
+#swap - 1                :   kwmc window -m space 1
+#swap - 2                :   kwmc window -m space 2
+##swap - 3                :   kwmc window -m space 3
+##swap - 4                :   kwmc window -m space 4
+#swap - 5                :   kwmc window -m space 5
+#
+#swap - z                :   kwmc window -m space left
+#swap - c                :   kwmc window -m space right
+#
+#swap + shift - 1        :   kwmc window -m display 0
+#swap + shift - 2        :   kwmc window -m display 1
+#swap + shift - 3        :   kwmc window -m display 2
 
 # space mode
 space - a               :   kwmc space -t bsp
