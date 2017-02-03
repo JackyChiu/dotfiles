@@ -1,10 +1,13 @@
+##############################
+#####   JackyChiu       ######
+#####   zsh Dotfile     ######
+##############################
+
 export ZSH=/Users/jackychiu/.oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="spaceship"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -27,7 +30,7 @@ alias vi=$VISUAL
 alias lvst="vim --startuptime /dev/stdout +qall"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
-#directories
+#directories (you on't want these)
 alias dev="/Users/jackychiu/Dev"
 alias dot="/Users/jackychiu/Dev/dotfiles"
 alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"

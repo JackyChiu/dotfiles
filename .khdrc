@@ -1,4 +1,7 @@
-# sample config for khd
+##############################
+#####   JackyChiu       ######
+#####   khd Dotfile     ######
+##############################
 
 # NOTE(koekeishiya): A bind is written in the form:
 #                   <keysym> [!] [<app list>] [->] : <command>
