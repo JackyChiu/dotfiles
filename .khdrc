@@ -122,10 +122,10 @@ lcrtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
 khd kwm on
 
 # set border color for different modes
-khd mode default color 0xdd72bef2
-khd mode switcher color 0xdda7cc8c
-khd mode swap color 0xddd291e4
-khd mode space color 0xddb16286
+khd mode default color 0xdd72bef2 #Blue
+khd mode switcher color 0xdddbaa79 #Yellow
+khd mode swap color 0xddd291e4 #Purple
+khd mode space color 0xddb16286 #Red
 
 # toggle between modes
 ctrl - s                :   khd -e "mode activate switcher"
