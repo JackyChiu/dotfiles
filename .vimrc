@@ -9,8 +9,6 @@ filetype off
 
 """PLUGINS """
 call plug#begin()
-
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }            "Auto completions ;)
 Plug 'christoomey/vim-tmux-navigator'    "Vim-Tmux navigation
 Plug 'tpope/vim-surround'                "To add quotes and braces
 Plug 'airblade/vim-gitgutter'            "Git additions and removals
@@ -20,9 +18,12 @@ Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
 Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
 Plug 'ctrlpvim/ctrlp.vim'                "Fuzzy finder
-Plug 'shime/vim-livedown', { 'for': 'markdown' } "Live preview
-Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' } "Java autocomplete
-
+"Auto completions ;)
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+"Live preview
+Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
+"Java autocomplete
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' } 
 call plug#end()
 
 """BEHAVIOUR"""
@@ -30,10 +31,11 @@ call plug#end()
 set autoread														"Auto read changes outside of vim
 set clipboard=unnamed		        	    	"System register to be same as unnamed
 set mouse=a                           	"Mouse click when just reading
+set ttimeoutlen=10                      "Faster to exit insert mode
 
 "Spacing and tabs
 set backspace=indent,eol,start        	"Add this to your vimrc to make the backspace work like in most other programs
-set tabstop=2 			            	    	"Existing tabs to be shown with 4 spaces
+set tabstop=2 			            	    	"Existing tabs to be shown with 2 spaces
 set shiftwidth=2                      	"Size of indent
 set softtabstop=2                     	"Backspace tab
 set expandtab														"Tabs to spaces
@@ -69,7 +71,7 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
-"""LANG SPECIFIC KEY MAPS"""
+"""LANG SPECIFIC"""
 au BufNewFile,BufRead *.java
       \ map <leader>C :!javac %<CR> |
       \ map <leader>J :!java %:r<CR> |
@@ -136,7 +138,6 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 set laststatus=2                                       "Used to see airline without opening split
-set ttimeoutlen=10                                     "Faster to exit insert mode
 set noshowmode                                         "Don't repeat vim modes in indicator
 
 function! LightlineModified()
