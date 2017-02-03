@@ -144,8 +144,6 @@ switcher - h            :   kwmc window -f west
 switcher - l            :   kwmc window -f east
 switcher - j            :   kwmc window -f south
 switcher - k            :   kwmc window -f north
-switcher - n            :   kwmc window -fm prev
-switcher - m            :   kwmc window -fm next
 
 switcher + shift - 1    :   kwmc display -f 0
 switcher + shift - 2    :   kwmc display -f 1
@@ -155,29 +153,10 @@ swap - h                :   kwmc window -s west
 swap - j                :   kwmc window -s south
 swap - k                :   kwmc window -s north
 swap - l                :   kwmc window -s east
-swap - m                :   kwmc window -s mark
 
 swap + shift - 1        :   kwmc window -m display 0
 swap + shift - 2        :   kwmc window -m display 1
 
 # space mode
-space - a               :   kwmc space -t bsp
-space - s               :   kwmc space -t monocle
-
-space - x               :   kwmc space -g increase horizontal
-space - y               :   kwmc space -g increase vertical
-
-space + shift - x       :   kwmc space -g decrease horizontal
-space + shift - y       :   kwmc space -g decrease vertical
-
-space - h               :   kwmc space -p increase left
-space - l               :   kwmc space -p increase right
-space - k               :   kwmc space -p increase top
-space - j               :   kwmc space -p increase bottom
-space - p               :   kwmc space -p increase all
-
-space + shift - h       :   kwmc space -p decrease left
-space + shift - l       :   kwmc space -p decrease right
-space + shift - k       :   kwmc space -p decrease top
-space + shift - j       :   kwmc space -p decrease bottom
-space + shift - p       :   kwmc space -p decrease all
+space - b               :   kwmc space -t bsp
+space - m               :   kwmc space -t monocle
