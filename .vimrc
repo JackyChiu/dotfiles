@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
 Plug 'ctrlpvim/ctrlp.vim'                "Fuzzy finder
 "Auto completions ;)
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Java autocomplete
