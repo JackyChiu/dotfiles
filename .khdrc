@@ -141,7 +141,6 @@ switcher - a            :   khd -e "mode activate space"
 
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
-switcher + shift - r    :   kwmc config reload
 
 switcher - h            :   kwmc window -f west
 switcher - l            :   kwmc window -f east

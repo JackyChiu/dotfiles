@@ -72,12 +72,11 @@ nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
 """LANG SPECIFIC"""
-au BufNewFile,BufRead *.java
-      \ map <leader>C :!javac %<CR> |
-      \ map <leader>J :!java %:r<CR> |
-      \ map <leader>D :!java -ea %:r<CR>
-
 au FileType java setlocal omnifunc=javacomplete#Complete
+au BufNewFile,BufRead *.java
+      \ nnoremap <leader>jb :!javac %<CR> |
+      \ nnoremap <leader>jj :!java %:r<CR> |
+      \ nnoremap <leader>jd :!java -ea %:r<CR>
 
 """VISUAL"""
 "Settings
