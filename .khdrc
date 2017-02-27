@@ -164,3 +164,5 @@ swap + shift - 2        :   kwmc window -m display 1
 # space mode
 space - b               :   kwmc space -t bsp
 space - m               :   kwmc space -t monocle
+space - p               :   kwmc space -p increase all
+space + shift - p       :   kwmc space -p decrease all
