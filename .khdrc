@@ -139,6 +139,9 @@ space + ctrl - s        :   khd -e "mode activate default"
 switcher - s            :   khd -e "mode activate swap"
 switcher - a            :   khd -e "mode activate space"
 
+space - a               :   khd -e "mode activate switcher"
+swap - s                :   khd -e "mode activate switcher"
+
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
 
