@@ -152,8 +152,8 @@ switcher - k            :   kwmc window -f north
 switcher - n            :   kwmc window -f prev
 switcher - m            :   kwmc window -f next
 
-switcher + shift - 1    :   kwmc display -f 0
-switcher + shift - 2    :   kwmc display -f 1
+switcher - 1    :   kwmc display -f 0
+switcher - 2    :   kwmc display -f 1
 
 # swap mode
 swap - h                :   kwmc window -s west
@@ -161,8 +161,8 @@ swap - j                :   kwmc window -s south
 swap - k                :   kwmc window -s north
 swap - l                :   kwmc window -s east
 
-swap + shift - 1        :   kwmc window -m display 0
-swap + shift - 2        :   kwmc window -m display 1
+swap - 1        :   kwmc window -m display 0
+swap - 2        :   kwmc window -m display 1
 
 # space mode
 space - b               :   kwmc space -t bsp

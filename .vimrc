@@ -3,10 +3,6 @@
 """""	  Vim Dotfile	    """""
 """""""""""""""""""""""""""""
 
-"Pls keep
-set nocompatible	"Disable vi compatibility mode
-filetype off		
-
 """PLUGINS """
 call plug#begin()
 Plug 'christoomey/vim-tmux-navigator'    "Vim-Tmux navigation
