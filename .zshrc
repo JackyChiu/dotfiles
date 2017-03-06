@@ -18,6 +18,9 @@ SPACESHIP_PROMPT_TRUNC=0
 
 #npm
 export PATH="$HOME/.npm-packages/bin:$PATH"
+#golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Default vim
 export VISUAL="/usr/local/bin/vim"

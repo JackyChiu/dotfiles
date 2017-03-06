@@ -14,6 +14,8 @@ Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
 Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
 Plug 'ctrlpvim/ctrlp.vim'                "Fuzzy finder
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 "Auto completions ;)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 "Live preview
