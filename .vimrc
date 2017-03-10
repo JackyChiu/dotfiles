@@ -13,7 +13,8 @@ Plug 'vim-syntastic/syntastic'           "Linter
 Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
 Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
-Plug 'ctrlpvim/ctrlp.vim'                "Fuzzy finder
+" Fuzzy finder
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 "Auto completions ;)
@@ -69,6 +70,9 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
+"FZF
+nnoremap <C-t> :FZF<CR>
+
 """LANG SPECIFIC"""
 au FileType java setlocal omnifunc=javacomplete#Complete
 au BufNewFile,BufRead *.java
@@ -95,12 +99,6 @@ hi CursorLine term=bold cterm=bold guibg=Grey40      "Light grey colour for curs
 """PLUGINS"""
 "Youcompleteme
 let g:ycm_autoclose_preview_window_after_completion = 1"Close autocomplete preview window after completion
-
-"CtrlP
-let g:ctrlp_map = '<c-p>'                              "Map CtrlP to use <c-p>
-let g:ctrlp_cmd = 'CtrlP'                              "CtrlP as defualt command
-let g:ctrlp_working_path_mode = 'ra'                   "Open in current dir of file
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']"Ignore files in gitignore
 
 "Synatasic settings
 set statusline+=%#warningmsg#

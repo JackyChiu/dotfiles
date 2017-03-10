@@ -26,6 +26,13 @@ export PATH=$PATH:$GOPATH/bin
 export VISUAL="/usr/local/bin/vim"
 export EDITOR="$VISUAL"
 
+# FZF fuzzy find
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
+
 ###ALIAS###
 #vim
 alias vim=$VISUAL
@@ -41,4 +48,3 @@ alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 alias w17="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017"
 alias 2100="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2100"
 alias 2003="/Users/jackychiu/Google\ Drive/Carleton/Winter\ 2017/SYSC2003"
-
