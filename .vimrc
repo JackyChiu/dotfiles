@@ -163,5 +163,5 @@ function! LightlineFilename()
 endfunction
 
 function! LightLinePath()
-  return winwidth(0) > 70 ? expand('%:p:~:h') : ''
+  return winwidth(0) > 100 ? expand('%:p:~:h') : ''
 endfunction
