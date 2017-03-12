@@ -73,7 +73,12 @@ nnoremap <C-w>- 20<C-w>
 "FZF
 nnoremap <C-t> :FZF<CR>
 
-"""LANG SPECIFIC"""
+"""FILE SPECIFIC"""
+"Set spell for these files
+au FileType gitcommit setlocal spell
+au FileType markdown setlocal spell
+
+"Java
 au FileType java setlocal omnifunc=javacomplete#Complete
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>jb :!javac %<CR> |
