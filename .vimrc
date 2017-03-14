@@ -85,6 +85,12 @@ au BufNewFile,BufRead *.java
       \ nnoremap <leader>jj :!java %:r<CR> |
       \ nnoremap <leader>jd :!java -ea %:r<CR>
 
+"Go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
 """VISUAL"""
 "Settings
 set showmatch	                    	                 "Matching braces/brackets
@@ -105,15 +111,26 @@ hi CursorLine term=bold cterm=bold guibg=Grey40      "Light grey colour for curs
 "Youcompleteme
 let g:ycm_autoclose_preview_window_after_completion = 1"Close autocomplete preview window after completion
 
+"Vim-go
+"More highlights!
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 "Synatasic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0                            "Don't check on save quit
+"Javascript
 let g:syntastic_javascript_checkers = ['eslint']           "Defualt to use eslint for javascript
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'"Use the local exe eslint in project
+"Go
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
 "Cleaner display of errors!
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
@@ -163,5 +180,5 @@ function! LightlineFilename()
 endfunction
 
 function! LightLinePath()
-  return winwidth(0) > 100 ? expand('%:p:~:h') : ''
+  return winwidth(0) > 70 ? expand('%:p:~:h') : ''
 endfunction
