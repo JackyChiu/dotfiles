@@ -5,14 +5,15 @@
 
 """PLUGINS """
 call plug#begin()
-Plug 'christoomey/vim-tmux-navigator'    "Vim-Tmux navigation
-Plug 'tpope/vim-surround'                "To add quotes and braces
-Plug 'airblade/vim-gitgutter'            "Git additions and removals
-Plug 'sheerun/vim-polyglot', { 'tag': 'v2.13.0' }              "Better syntax highlighting
-Plug 'vim-syntastic/syntastic'           "Linter
-Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
-Plug 'tpope/vim-fugitive'                "Git wrapper for vim
-Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
+Plug 'christoomey/vim-tmux-navigator'       "Vim-Tmux navigation
+Plug 'tpope/vim-surround'                   "To add quotes and braces
+Plug 'airblade/vim-gitgutter'               "Git additions and removals
+Plug 'vim-syntastic/syntastic'              "Linter
+Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
+Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
+Plug 'tmux-plugins/vim-tmux-focus-events'   "Improve autoread in tmux!
+"Better syntax highlighting
+Plug 'sheerun/vim-polyglot', { 'tag': 'v2.13.0' }
 "" Fuzzy finder
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 "" Golang
