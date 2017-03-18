@@ -8,7 +8,7 @@ call plug#begin()
 Plug 'christoomey/vim-tmux-navigator'    "Vim-Tmux navigation
 Plug 'tpope/vim-surround'                "To add quotes and braces
 Plug 'airblade/vim-gitgutter'            "Git additions and removals
-Plug 'sheerun/vim-polyglot'              "Better syntax highlighting
+Plug 'sheerun/vim-polyglot', { 'tag': 'v2.13.0' }              "Better syntax highlighting
 Plug 'vim-syntastic/syntastic'           "Linter
 Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
 Plug 'tpope/vim-fugitive'                "Git wrapper for vim
@@ -106,11 +106,8 @@ endif
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme onedark
-hi MatchParen cterm=bold ctermbg=blue ctermfg=black  "Matching paren hightlight color change
-hi LineNr ctermfg=darkGrey                           "Lighter line numbers from OneDark theme
-hi CursorLineNr ctermfg=blue                         "Make current line number blue
-set cursorline                                       "Shows a visual cursor line
-hi CursorLine term=bold cterm=bold guibg=Grey40      "Light grey colour for cursorline
+hi CursorLineNr guifg=LightBlue                           "Make current line number blue
+set cursorline                                            "Shows a visual cursor line
 
 """PLUGINS"""
 "Youcompleteme
