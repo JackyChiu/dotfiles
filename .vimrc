@@ -13,15 +13,15 @@ Plug 'vim-syntastic/syntastic'           "Linter
 Plug 'itchyny/lightline.vim'             "Powerline (lighter version)
 Plug 'tpope/vim-fugitive'                "Git wrapper for vim
 Plug 'tmux-plugins/vim-tmux-focus-events'"Improve autoread in tmux!
-" Fuzzy finder
+"" Fuzzy finder
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-" Golang
+"" Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
-"Auto completions ;)
+""Auto completions ;)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
-"Live preview
+""Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
-"Java autocomplete
+""Java autocomplete
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' } 
 call plug#end()
 
@@ -99,8 +99,13 @@ set number		                                       "Show absolute number on curr
 set relativenumber                     	             "Relative numbering
 
 "Colours
-let g:onedark_termcolors=256                         "Set onedark to use 256 colors
-colorscheme onedark                                  "Use onedark theme
+if (has("termguicolors"))
+    set termguicolors
+endif
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme onedark
 hi MatchParen cterm=bold ctermbg=blue ctermfg=black  "Matching paren hightlight color change
 hi LineNr ctermfg=darkGrey                           "Lighter line numbers from OneDark theme
 hi CursorLineNr ctermfg=blue                         "Make current line number blue
