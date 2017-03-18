@@ -3,4 +3,5 @@
 .vim/.swap
 .vim/.undo
 .vim/.netrwhist
+.vim/plugged
 
