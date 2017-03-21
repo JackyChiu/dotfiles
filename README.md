@@ -2,9 +2,9 @@
 My beloved dotfiles, for development and window management. 
 
 ## vim+tmux
-![setup](images/setup.png)
+![setup](.github/setup.png)
 ## kwm+khd+ubersicth
-![fullScreen](images/fullScreen.png)
+![fullScreen](.github/fullScreen.png)
 
 ## Installing
 If you want to checkout my enviroment you can use my setup script or manually copy paste all the dotfiles into your `~` dir

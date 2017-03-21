@@ -80,11 +80,11 @@ au FileType gitcommit setlocal spell
 au FileType markdown setlocal spell
 
 "Java
-au FileType java setlocal omnifunc=javacomplete#Complete
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>jb :!javac %<CR> |
       \ nnoremap <leader>jj :!java %:r<CR> |
       \ nnoremap <leader>jd :!java -ea %:r<CR>
+au FileType java setlocal omnifunc=javacomplete#Complete
 
 "Go
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -94,21 +94,22 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 
 """VISUAL"""
 "Settings
-set showmatch	                    	                 "Matching braces/brackets
-set ruler	                        	                 "Show file title
-set number		                                       "Show absolute number on current line
-set relativenumber                     	             "Relative numbering
+set showmatch	                              "Matching braces/brackets
+set ruler	                                  "Show file title
+set number		                              "Show absolute number on current line
+set relativenumber                          "Relative numbering
+set scrolloff=5                             "Always 5 lines before or after cusor
+set cursorline                              "Shows a visual cursor line
+hi CursorLineNr guifg=LightBlue             "Make current line number blue
 
 "Colours
 if (has("termguicolors"))
-    set termguicolors
+  set termguicolors
 endif
 " set Vim-specific sequences for RGB colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme onedark
-hi CursorLineNr guifg=LightBlue                           "Make current line number blue
-set cursorline                                            "Shows a visual cursor line
 
 """PLUGINS"""
 "Youcompleteme
