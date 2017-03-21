@@ -7,7 +7,7 @@ My beloved dotfiles, for development and window management.
 ![fullScreen](.github/fullScreen.png)
 
 ## Installing
-If you want to checkout my enviroment you can use my setup script or manually copy paste all the dotfiles into your `~` dir
+I have a handly setup.sh script ready for installation, but you probably don't want all my files so go into the script and modify the line that defines the dotfiles to install
 ```bash 
 git clone https://github.com/JackyChiu/dotfiles.git
 cd dotfiles
@@ -33,13 +33,15 @@ vim ~/.vimrc
 - tmux
 
 ## Window Managment: 
-- kwm
-- khd
-- Ubersicth
+- [kwm](https://github.com/koekeishiya/kwm)
+- [khd](https://github.com/koekeishiya/khd)
+- [Ubersicth](http://tracesof.net/uebersicht/)
 
 ## Extra info
 - Using Oh My Zsh in iTerm2
-- Zsh theme: Spaceship, https://github.com/denysdovhan/spaceship-zsh-theme
-- Terminal theme: Atom One Dark, https://github.com/nathanbuchar/atom-one-dark-terminal
-- Vim theme: Atom One Dark, https://github.com/joshdick/onedark.vim
-- Lightline theme: Atom One Dark, https://github.com/joshdick/onedark.vim
+- Zsh theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
+- Terminal theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
+- Vim theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
+- Lightline theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
+- Nerbar theme: [Atom One Dark](https://github.com/JackyChiu/nerdbar.widget)
+
