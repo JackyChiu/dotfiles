@@ -149,8 +149,8 @@ switcher - h            :   kwmc window -f west
 switcher - l            :   kwmc window -f east
 switcher - j            :   kwmc window -f south
 switcher - k            :   kwmc window -f north
-switcher - n            :   kwmc window -f prev
-switcher - m            :   kwmc window -f next
+switcher - n            :   kwmc window -f next
+switcher - p            :   kwmc window -f prev
 
 switcher - 1    :   kwmc display -f 0
 switcher - 2    :   kwmc display -f 1
