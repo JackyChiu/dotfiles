@@ -1255,12 +1255,14 @@
 	<string>291 210 1034 495 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>928 598 606 456 0 0 1920 1057 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>760 468 400 129 0 0 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>370 132 700 622 0 0 1440 900 </string>
+	<string>-1070 23 700 622 -1440 -109 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>171 103 606 456 0 0 1440 900 </string>
+	<string>269 145 606 456 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>881 525 796 473 0 0 1920 1080 </string>
+	<string>881 592 918 381 0 0 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 474 592 584 0 0 1920 1058 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
@@ -2513,7 +2515,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>7.7913369545569795</real>
+			<real>11.161838942307691</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -3223,7 +3225,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.090906989644970418</real>
+			<real>0.14091623520710062</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -3344,7 +3346,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-18T04:47:25Z</date>
+	<date>2017-03-28T00:34:23Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

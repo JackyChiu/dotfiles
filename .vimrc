@@ -100,7 +100,6 @@ set number		                              "Show absolute number on current line
 set relativenumber                          "Relative numbering
 set scrolloff=5                             "Always 5 lines before or after cusor
 set cursorline                              "Shows a visual cursor line
-hi CursorLineNr guifg=LightBlue             "Make current line number blue
 
 "Colours
 if (has("termguicolors"))
