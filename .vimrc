@@ -81,9 +81,8 @@ au FileType markdown setlocal spell
 
 "Java
 au BufNewFile,BufRead *.java
-      \ nnoremap <leader>jb :!javac %<CR> |
-      \ nnoremap <leader>jj :!java %:r<CR> |
-      \ nnoremap <leader>jd :!java -ea %:r<CR>
+      \ nnoremap <leader>b :!javac %<CR> |
+      \ nnoremap <leader>r :!java -ea %:r<CR>
 au FileType java setlocal omnifunc=javacomplete#Complete
 
 "Go
@@ -104,10 +103,10 @@ set cursorline                              "Shows a visual cursor line
 "Colours
 if (has("termguicolors"))
   set termguicolors
+  "Set Vim-specific sequences for RGB colors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
-" set Vim-specific sequences for RGB colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme onedark
 
 """PLUGINS"""
@@ -122,6 +121,8 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+"Auto add imports
+let g:go_fmt_command = "goimports"
 
 "Synatasic settings
 let g:syntastic_always_populate_loc_list = 1
