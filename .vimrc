@@ -111,7 +111,7 @@ colorscheme onedark
 
 """PLUGINS"""
 "Youcompleteme
-let g:ycm_autoclose_preview_window_after_completion = 1"Close autocomplete preview window after completion
+let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete preview window after completion
 
 "Vim-go
 "More highlights!
@@ -121,8 +121,9 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-"Auto add imports
-let g:go_fmt_command = "goimports"
+
+let g:go_fmt_command = "goimports"        "Auto add imports
+let g:go_def_mapping_enabled = 0          "Don't use C-t
 
 "Synatasic settings
 let g:syntastic_always_populate_loc_list = 1
