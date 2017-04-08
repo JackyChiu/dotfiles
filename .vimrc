@@ -74,6 +74,10 @@ nnoremap <C-w>- 20<C-w>
 "FZF
 nnoremap <C-t> :FZF<CR>
 
+"I do :W all the time
+command W w
+command Wq wq
+
 """FILE SPECIFIC"""
 "Set spell for these files
 au FileType gitcommit setlocal spell
