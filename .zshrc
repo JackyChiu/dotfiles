@@ -35,8 +35,11 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 ###ALIAS###
-#vim
+# vim
 alias lvst="vim --startuptime /dev/stdout +qall"
+
+# I do this too often
+alias brsk="brew services restart kwm"
 
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
