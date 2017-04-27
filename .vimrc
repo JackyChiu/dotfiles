@@ -13,6 +13,7 @@ Plug 'vim-syntastic/syntastic'              "Linter
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
+Plug 'SirVer/ultisnips'                     "Snippets
 ""Auto completions ;)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 "" Golang
@@ -144,6 +145,11 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+"UltiSnips
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "Lightline (copy pasta material)
 let g:lightline = {
