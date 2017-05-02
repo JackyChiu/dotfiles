@@ -35,6 +35,9 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 ###ALIAS###
+# docker
+alias dqs='/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh' # Open Docker Terminal
+
 # vim
 alias lvst="vim --startuptime /dev/stdout +qall"
 
