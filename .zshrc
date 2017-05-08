@@ -21,6 +21,7 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 #golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 # Default vim
 export VISUAL="/usr/local/bin/vim"
