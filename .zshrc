@@ -36,13 +36,13 @@ bindkey '^I' $fzf_default_completion
 
 ###ALIAS###
 # docker
-alias dqs=/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh # Open Docker Terminal
+alias dqs="/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh" # Open Docker Terminal
 
 # vim
 alias lvst="vim --startuptime /dev/stdout +qall"
 
 # I do this too often
-alias brsk="brew services restart kwm"
+alias bsrk="brew services restart kwm"
 
 # ctags
 alias ctags=`brew --prefix`/bin/ctags
@@ -50,14 +50,15 @@ alias ctags=`brew --prefix`/bin/ctags
 #directories (you on't want these)
 alias dev=/Users/jackychiu/Dev
 alias dot=/Users/jackychiu/Dev/dotfiles
-alias widget=/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget
-alias carleton=/Users/jackychiu/Google\ Drive/Carleton
+alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
+alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 
 ### WORK EXPORTS ###
 #java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin
 #maven
 export PATH=$PATH:/usr/local/Cellar/maven/3.5.0/bin
 #groovy
 export GRAILS_HOME=$HOME/Dev/klip/libs/grails-1.3.9
-export PATH=$PATH:$HOME/Dev/klip/libs/grails-1.3.9/bin
+export PATH=$PATH:$GRAILS_HOME/bin
