@@ -13,6 +13,7 @@ Plug 'vim-syntastic/syntastic'              "Linter
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
+Plug 'scrooloose/nerdtree'                  "Tree explore for large projects
 Plug 'SirVer/ultisnips'                     "Snippets
 ""Auto completions ;)
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
@@ -198,4 +199,12 @@ function! LightLinePath()
   return winwidth(0) > 70 ? expand('%:p:~:h') : ''
 endfunction
 
-set secure                "Disable unsafe commends in project vimrcs
+"NerdTree
+map <C-n> :NERDTreeToggle<CR>
+"NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"Close vim if NerdTree is last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
+
+set secure                "Disable unsafe commands in project vimrcs
