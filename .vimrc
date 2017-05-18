@@ -32,6 +32,7 @@ set autoread														"Auto read changes outside of vim
 set clipboard=unnamed		        	    	"System register to be same as unnamed
 set mouse=a                           	"Mouse click when just reading
 set ttimeoutlen=10                      "Faster to exit insert mode
+set exrc                                "Allow for project specific vimrc
 
 "Spacing and tabs
 set backspace=indent,eol,start        	"Add this to your vimrc to make the backspace work like in most other programs
@@ -196,3 +197,5 @@ endfunction
 function! LightLinePath()
   return winwidth(0) > 70 ? expand('%:p:~:h') : ''
 endfunction
+
+set secure                "Disable unsafe commends in project vimrcs
