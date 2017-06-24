@@ -44,6 +44,9 @@ alias lvst="vim --startuptime /dev/stdout +qall"
 # I do this too often
 alias bsrk="brew services restart kwm"
 
+# Open current git project
+alias gh="open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)"
+
 # ctags
 alias ctags=`brew --prefix`/bin/ctags
 
