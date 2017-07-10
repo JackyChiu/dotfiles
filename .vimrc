@@ -158,7 +158,7 @@ let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] ,
-      \   'right': [ ['path'], ['fileformat', 'fileencoding', 'filetype'] ]
+      \   'right': [ ['path'], ['filetype'] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'LightlineFugitive',
