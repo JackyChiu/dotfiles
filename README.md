@@ -1,8 +1,9 @@
 ## JackyChiu's dotfiles
-My beloved dotfiles, for development and window management. 
+My beloved dotfiles, for development and window management 😊
 
 ## vim+tmux
 ![setup](.github/setup.png)
+
 ## kwm+khd+ubersicth
 ![fullScreen](.github/fullScreen.png)
 
@@ -11,19 +12,30 @@ I have a handly setup.sh script ready for installation, but you probably don't w
 ```bash 
 git clone https://github.com/JackyChiu/dotfiles.git
 cd dotfiles
+
+# Links dotfiles to home dir and setups some dirs
 ./setup.sh
 ```
 
-If you don't have vim-plug for vim installed in your `.vim` dir
+### Vim Setup
 ```bash
+# vim-plug install
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
 
-Install plugins for vim
-```bash
+# vim plugin install
 vim ~/.vimrc
 :PlugInstall
+```
+
+### Tmux Setup
+
+```bash
+# reattach-to-user-namespace
+brew install reattach-to-user-namespace
+
+# tpm (tmux package manager)
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 *Side note: Mouse seting commands for .tmux.conf only work with tmux 2.1 +*
