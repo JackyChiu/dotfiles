@@ -20,7 +20,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 "" Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 "" Fuzzy finder
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 ""Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 ""Java autocomplete
@@ -36,7 +36,7 @@ set ttimeoutlen=10                      "Faster to exit insert mode
 set exrc                                "Allow for project specific vimrc
 
 "Spacing and tabs
-set backspace=indent,eol,start        	"Add this to your vimrc to make the backspace work like in most other programs
+set backspace=2                         "Make backspace work like most other apps
 set tabstop=2 			            	    	"Existing tabs to be shown with 2 spaces
 set shiftwidth=2                      	"Size of indent
 set softtabstop=2                     	"Backspace tab
@@ -59,45 +59,6 @@ set wildmenu                          	"Use wildmenu
 set wildmode=longest:full,full        	"Wild mode for wildmenu
 set wildignore=*.o,*.class,*.pyc,*.git	"Wild menu to ignore compiled files
 
-"""KEY MAPPINGS"""
-"Easier way to enter new line
-nnoremap <CR> i<CR><ESC>
-
-"Easier to use tab than %
-nnoremap <tab> %
-vnoremap <tab> %
-
-"Faster screen resizes
-nnoremap <C-w>> 20<C-w>>
-nnoremap <C-w>< 20<C-w><
-nnoremap <C-w>+ 20<C-w>+
-nnoremap <C-w>- 20<C-w>
-
-"FZF
-nnoremap <C-t> :FZF<CR>
-
-"I do :W all the time
-command W w
-command Wq wq
-
-"""FILE SPECIFIC"""
-"Set spell for these files
-au FileType gitcommit setlocal spell
-au FileType markdown setlocal spell
-
-"Java
-au BufNewFile,BufRead *.java
-      \ nnoremap <leader>b :!javac %<CR> |
-      \ nnoremap <leader>r :!java -ea %:r<CR>
-au FileType java setlocal omnifunc=javacomplete#Complete
-
-"Go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
-au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
-
 """VISUAL"""
 "Settings
 set showmatch	                              "Matching braces/brackets
@@ -116,7 +77,40 @@ if (has("termguicolors"))
 endif
 colorscheme onedark
 
+"""KEY MAPPINGS"""
+"Faster screen resizes
+nnoremap <C-w>> 20<C-w>>
+nnoremap <C-w>< 20<C-w><
+nnoremap <C-w>+ 20<C-w>+
+nnoremap <C-w>- 20<C-w>
+
+"I do :W all the time
+command! W w
+command! Wq wq
+
+"""FILE SPECIFIC"""
+"Set spell for these files
+au FileType gitcommit setlocal spell
+au FileType markdown setlocal spell
+
+"Java
+au BufNewFile,BufRead *.java
+      \ nnoremap <leader>b :!javac %<CR> |
+      \ nnoremap <leader>r :!java -ea %:r<CR>
+au FileType java setlocal omnifunc=javacomplete#Complete
+
+"Go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>R <Plug>(go-rename)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
+
 """PLUGINS"""
+"FZF
+nnoremap <C-t> :FZF<CR>
+
 "Youcompleteme
 let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete preview window after completion
 
@@ -201,7 +195,7 @@ function! LightLinePath()
 endfunction
 
 "NerdTree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 "NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif

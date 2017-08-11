@@ -29,15 +29,12 @@ export EDITOR=$VISUAL
 # FZF fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-export FZF_DEFAULT_OPTS="--reverse --height 20%"
+export FZF_DEFAULT_OPTS="--preview 'cat {}' --reverse --height 20%"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 ###ALIAS###
-# docker
-alias dqs="/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh" # Open Docker Terminal
-
 # vim
 alias lvst="vim --startuptime /dev/stdout +qall"
 
