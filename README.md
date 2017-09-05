@@ -1,11 +1,8 @@
 ## JackyChiu's dotfiles
 My beloved dotfiles, for development and window management 😊
 
-## vim+tmux
+## Result
 ![setup](.github/setup.png)
-
-## kwm+khd+ubersicth
-![fullScreen](.github/fullScreen.png)
 
 ## Installing
 I have a handly setup.sh script ready for installation, but you probably don't want all my files so go into the script and modify the line that defines the dotfiles to install

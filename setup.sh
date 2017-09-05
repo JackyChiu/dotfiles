@@ -22,3 +22,5 @@ mkdir -p ~/.vim/.backup
 mkdir -p ~/.vim/.swap
 mkdir -p ~/.vim/.undo
 echo "Dirs made for backup/swap/undo files"
+
+source ~/.zshrc

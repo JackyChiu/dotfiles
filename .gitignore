@@ -4,4 +4,4 @@
 .vim/.undo
 .vim/.netrwhist
 .vim/plugged
-
+.vim/spell
