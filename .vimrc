@@ -84,6 +84,8 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
+nnoremap <CR> i<CR><ESC>
+
 "I do :W all the time
 command! W w
 command! Wq wq
