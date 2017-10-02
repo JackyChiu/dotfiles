@@ -34,6 +34,7 @@ set clipboard=unnamed		        	    	"System register to be same as unnamed
 set mouse=a                           	"Mouse click when just reading
 set ttimeoutlen=10                      "Faster to exit insert mode
 set exrc                                "Allow for project specific vimrc
+set ma                                  "Allow jump to quickfix files
 
 "Spacing and tabs
 set backspace=2                         "Make backspace work like most other apps
@@ -112,6 +113,19 @@ au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 """PLUGINS"""
 "FZF
 nnoremap <C-t> :FZF<CR>
+nnoremap <C-f> :F<space>
+set grepprg=rg\ --vimgrep               "Use ripgrep
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+let g:rg_command = 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '
+command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 "Youcompleteme
 let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete preview window after completion

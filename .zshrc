@@ -33,7 +33,11 @@ export EDITOR=$VISUAL
 
 # FZF fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# --files: List files that would be searched but do not search
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_OPTS="--preview 'cat {}' --reverse --height 20%"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
