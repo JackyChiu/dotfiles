@@ -7,10 +7,11 @@ export ZSH=/Users/jackychiu/.oh-my-zsh
 
 plugins=(git tmux)
 
-source $ZSH/oh-my-zsh.sh
-
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="spaceship"
+
+source $ZSH/oh-my-zsh.sh
+
 export SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   host          # Hostname section
@@ -18,7 +19,6 @@ export SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   exec_time     # Execution time
   line_sep      # Line break
-  vi_mode       # Vi-mode indicator
   jobs          # Backgound jobs indicator
   char          # Prompt character
 )
@@ -37,6 +37,30 @@ export PATH=$PATH:/usr/local/Cellar/maven/3.5.0/bin
 # Default vim
 export VISUAL=/usr/local/bin/vim
 export EDITOR=$VISUAL
+
+### VI MODE ### https://github.com/bl/dotfiles/blob/master/.zsh/prompt.zsh
+# vi mode
+bindkey -v
+# set timeout for switching modes to be very low
+export KEYTIMEOUT=1
+# display the current (vim-like) mode on the right prompt
+function zle-line-init zle-keymap-select {
+	VIM_NORMAL="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+	VIM_INSERT="%{$fg_bold[green]%} [% INSERT]%  %{$reset_color%}"
+	RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT} $VCS_PROMPT"
+	zle reset-prompt
+}
+# Remove the (vim-like) mode prompts before executing. This way they don't
+# display in the history of the previous prompts (unnecessary to see what mode I
+# completed the prompt on)
+function zle-line-finish {
+	RPS1="$VCS_PROMPT"
+	zle reset-prompt
+}
+# bind functions above to the following events:
+zle -N zle-line-init # executed every time line editor starts reading a new line
+zle -N zle-keymap-select # executed every time mode switches (ie vicmd/main)
+zle -N zle-line-finish # executed at the end of a prompts execution
 
 # FZF fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
