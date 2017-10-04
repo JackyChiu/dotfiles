@@ -41,6 +41,8 @@ export EDITOR=$VISUAL
 ### VI MODE ### https://github.com/bl/dotfiles/blob/master/.zsh/prompt.zsh
 # vi mode
 bindkey -v
+bindkey '^P' up-history
+bindkey '^N' down-history
 # set timeout for switching modes to be very low
 export KEYTIMEOUT=1
 # display the current (vim-like) mode on the right prompt
