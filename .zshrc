@@ -5,7 +5,11 @@
 
 export ZSH=/Users/jackychiu/.oh-my-zsh
 
-plugins=(git tmux)
+plugins=(
+  git
+  tmux
+  zsh-autosuggestions
+)
 
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="spaceship"
