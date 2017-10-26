@@ -15,10 +15,15 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 "Linter
 Plug 'w0rp/ale', { 'for': 'js' }
-""Live preview
+"Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
+"Colors
+Plug 'joshdick/onedark.vim'
 call plug#end()
 		  
+"Colorscheme
+colorscheme onedark
+
 "Youcompleteme		
 let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete preview window after completion
 
