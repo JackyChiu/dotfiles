@@ -2,6 +2,8 @@
 call plug#begin()
 Plug 'christoomey/vim-tmux-navigator'       "Vim-Tmux navigation
 Plug 'tmux-plugins/vim-tmux-focus-events'   "Improve autoread in tmux!
+Plug '/usr/local/opt/fzf'                   "Fuzzy finder
+Plug 'junegunn/fzf.vim'                     "fzf vim funcs
 Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
 Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
@@ -11,8 +13,6 @@ Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 "" Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
-"" Fuzzy finder
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
 "Linter
 Plug 'w0rp/ale', { 'for': 'js' }
 ""Live preview
@@ -25,6 +25,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete pr
 "FZF
 nnoremap <C-t> :FZF<CR>
 nnoremap <C-f> :F<space>
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 set grepprg=rg\ --vimgrep               "Use ripgrep
 " --column: Show column number
 " --line-number: Show line number

@@ -32,11 +32,6 @@ export PATH=$PATH:$HOME/.npm-packages/bin
 #golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-#java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin
-#maven
-export PATH=$PATH:/usr/local/Cellar/maven/3.5.0/bin
 
 # Default vim
 export VISUAL=/usr/local/bin/vim
