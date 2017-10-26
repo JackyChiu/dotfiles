@@ -4,7 +4,6 @@ Plug 'christoomey/vim-tmux-navigator'       "Vim-Tmux navigation
 Plug 'tmux-plugins/vim-tmux-focus-events'   "Improve autoread in tmux!
 Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
 Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
-Plug 'w0rp/ale'                             "Linter
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
@@ -14,6 +13,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 "" Fuzzy finder
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' }
+"Linter
+Plug 'w0rp/ale', { 'for': 'js' }
 ""Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 call plug#end()
@@ -47,7 +48,6 @@ let g:go_highlight_types = 1
 
 let g:go_fmt_command = "goimports"        "Auto add imports
 let g:go_def_mapping_enabled = 0          "Don't use C-t
-let g:go_list_type = "quickfix"           "use quickfix window for vim-go errors
 let g:go_auto_type_info = 1               "var type info
 
 au FileType go nmap <leader>r <Plug>(go-run)
