@@ -94,6 +94,7 @@ alias gh="open https://github.$(git config remote.origin.url | cut -f2 -d. | tr 
 alias ctags=`brew --prefix`/bin/ctags
 
 #directories (you on't want these)
+alias gojc=$GOPATH/src/github.com/JackyChiu
 alias dev=/Users/jackychiu/Dev
 alias dot=/Users/jackychiu/Dev/dotfiles
 alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
