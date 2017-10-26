@@ -18,6 +18,9 @@ Plug 'w0rp/ale', { 'for': 'js' }
 ""Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 call plug#end()
+		  
+"Youcompleteme		
+let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete preview window after completion
 
 "FZF
 nnoremap <C-t> :FZF<CR>
