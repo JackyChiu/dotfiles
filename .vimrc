@@ -64,11 +64,16 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
+"Enter to enter new line
 nnoremap <CR> i<CR><ESC>
 
 "I do :W all the time
 command! W w
 command! Wq wq
+
+"Quickfix window movement
+map <C-n> :cnext<CR>
+map <C-p> :cprevious<CR>
 
 """FILE SPECIFIC"""
 "Set spell for these files
