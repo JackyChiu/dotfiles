@@ -83,6 +83,7 @@ command! Wq wq
 let g:rg_command = 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '
 command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 nnoremap <C-f> :Find<space>
+vnoremap <C-f> y:Find<space><C-R>"<CR>
 
 "Quickfix window 
 let b:quickfix_is_open = 0
