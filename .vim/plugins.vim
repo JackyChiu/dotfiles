@@ -29,21 +29,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1   "Close autocomplete pr
 
 "FZF
 nnoremap <C-t> :FZF<CR>
-nnoremap <C-f> :F<space>
-" [Buffers] Jump to the existing window if possible
-let g:fzf_buffers_jump = 1
+let g:fzf_buffers_jump = 1              "[Buffers] Jump to the existing window if possible
 set grepprg=rg\ --vimgrep               "Use ripgrep
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
-let g:rg_command = 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '
-command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
 
 "Vim-go
 "More highlights!
@@ -59,6 +46,7 @@ let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"        "Auto add imports
 let g:go_def_mapping_enabled = 0          "Don't use C-t
 let g:go_auto_type_info = 1               "var type info
+let g:go_list_type = "quickfix"           
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>R <Plug>(go-rename)
