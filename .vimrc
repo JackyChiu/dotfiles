@@ -14,6 +14,7 @@ set mouse=a                           	"Mouse click when just reading
 set ttimeoutlen=10                      "Faster to exit insert mode
 set exrc                                "Allow for project specific vimrc
 set ma                                  "Allow jump to quickfix files
+set autowrite                           "write content itself ex. build 
 
 "Spacing and tabs
 set backspace=2                         "Make backspace work like most other apps

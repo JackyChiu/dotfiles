@@ -46,15 +46,15 @@ let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"        "Auto add imports
 let g:go_def_mapping_enabled = 0          "Don't use C-t
 let g:go_auto_type_info = 1               "var type info
-let g:go_list_type = "quickfix"           
+let g:go_list_type = "quickfix"           "always use quickfix window
 
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>R <Plug>(go-rename)
+au FileType go nmap <leader>R <Plug>(go-rename)<C-f>
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
-au FileType go nmap <leader>f :GoDeclsDir<cr>
+au FileType go nmap <leader>f :GoDeclsDir<CR>
 au Filetype go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 
