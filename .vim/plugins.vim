@@ -55,6 +55,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<cr>
+au Filetype go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 
 "Lightline (copy pasta material)
