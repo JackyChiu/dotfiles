@@ -87,16 +87,14 @@ nnoremap <C-f> :Find<space>
 vnoremap <C-f> y:Find<space><C-R>"<CR>
 
 "Quickfix window 
-let b:quickfix_is_open = 0
 function! QuickfixToggle()
- if b:quickfix_is_open
-        cclose
-        let b:quickfix_is_open = 0
-    else
-        copen
-        let b:quickfix_is_open = 1
+    let windowCount = winnr("$")
+    copen
+    " check for if a new window openned
+    if windowCount == winnr("$")
+      cclose
     endif
-endfunction 
+endfunction
 
 nnoremap <C-n> :cnext<CR>
 nnoremap <C-p> :cprevious<CR>
