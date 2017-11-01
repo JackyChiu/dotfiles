@@ -105,7 +105,7 @@ nnoremap <C-c> :call QuickfixToggle()<CR>
 au FileType gitcommit setlocal spell
 au FileType markdown setlocal spell
 "Quickfix to always open on bottom
-au FileType quickfix wincmd J
+au FileType qf wincmd J
 
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>b :!javac %<CR> |
