@@ -21,6 +21,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'w0rp/ale', { 'for': 'js' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
+Plug 'joshdick/onedark.vim'
 call plug#end()
 		  
 "FZF
@@ -55,6 +56,7 @@ au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 
 "Lightline (copy pasta material)
 let g:lightline = {
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] ,
       \   'right': [ ['path'], ['filetype'] ]
@@ -114,6 +116,7 @@ set showmatch	                          "Matching braces/brackets
 set number		                          "Show absolute number on current line
 set relativenumber                      "Relative numbering
 set scrolloff=5                         "Always 5 lines before or after cusor
+set cursorline                              "Shows a visual cursor line
 
 """KEY MAPPINGS"""
 "Faster screen resizes
