@@ -25,6 +25,7 @@ set showmatch	                          "Matching braces/brackets
 set number		                          "Show absolute number on current line
 set relativenumber                      "Relative numbering
 set scrolloff=5                         "Always 5 lines before or after cusor
+set cursorline                          "highlight current line slightly
 
 "Colours
 if has("termguicolors")
