@@ -73,6 +73,7 @@ endfunction
 nnoremap <C-n> :cnext<CR>
 nnoremap <C-p> :cprevious<CR>
 nnoremap <C-c> :call QuickfixToggle()<CR>
+hi! link QuickFixLine Normal
 
 """FILE SPECIFIC"""
 "Spellcheck for these files
