@@ -34,7 +34,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Default vim
-export VISUAL=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/nvim
 export EDITOR=$VISUAL
 
 ### VI MODE ### https://github.com/bl/dotfiles/blob/master/.zsh/prompt.zsh
