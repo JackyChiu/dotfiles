@@ -26,6 +26,7 @@ set number		                          "Show absolute number on current line
 set relativenumber                      "Relative numbering
 set scrolloff=5                         "Always 5 lines before or after cusor
 set cursorline                          "highlight current line slightly
+set nohlsearch                        	"Don't continue to highlight searched phrases.
 
 "Colours
 if has("termguicolors")
