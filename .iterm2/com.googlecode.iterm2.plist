@@ -44230,7 +44230,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>357 327 228 325 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>291 210 1034 495 0 0 1440 900 </string>
+	<string>886 36 1034 361 0 0 1920 1080 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>928 598 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
@@ -44242,7 +44242,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 145 606 469 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>326 167 796 473 0 0 1920 1080 </string>
+	<string>997 473 796 473 0 0 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 474 592 584 0 0 1920 1058 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
