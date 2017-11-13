@@ -30,7 +30,7 @@ export SPACESHIP_PROMPT_ORDER=(
 #npm
 export PATH=$PATH:$HOME/.npm-packages/bin
 #golang
-export GOPATH=$HOME/go
+export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 
 # Default vim
