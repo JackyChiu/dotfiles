@@ -31,6 +31,7 @@ set completeopt-=preview
 "FZF
 nnoremap <C-t> :FZF<CR>
 let g:fzf_buffers_jump = 1              "[Buffers] Jump to the existing window if possible
+set grepprg=rg\ --vimgrep               "Use ripgrep
 
 "Vim-go
 "More highlights!
