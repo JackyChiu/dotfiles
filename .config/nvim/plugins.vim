@@ -11,14 +11,20 @@ Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
-Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
+Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 "Linter
-Plug 'w0rp/ale', { 'for': 'js' }
+Plug 'w0rp/ale', { 'for': ['js', 'ruby'] }
+"Javascript/Typescript
+Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
+Plug 'mhartington/nvim-typescript', { 'for': 'ts' }
+"Rubies
+Plug 'tpope/vim-rails',  { 'for': 'ruby' }
+Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
+"Themes
 Plug 'joshdick/onedark.vim'
 call plug#end()
 
