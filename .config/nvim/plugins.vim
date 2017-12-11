@@ -19,6 +19,8 @@ Plug 'w0rp/ale', { 'for': ['js', 'ruby'] }
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 Plug 'mhartington/nvim-typescript', { 'for': 'ts' }
+Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
+Plug 'peitalin/vim-jsx-typescript', { 'for': 'ts' }
 "Rubies
 Plug 'tpope/vim-rails',  { 'for': 'ruby' }
 Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
