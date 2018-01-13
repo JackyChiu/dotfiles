@@ -70,7 +70,7 @@ zle -N zle-line-finish # executed at the end of a prompts execution
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
-export FZF_DEFAULT_OPTS="--preview 'cat {}' --reverse --height 20%"
+export FZF_DEFAULT_OPTS="--preview 'cat {}' --reverse --height 40%"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
