@@ -32,6 +32,8 @@ export PATH=$PATH:$HOME/.npm-packages/bin
 #golang
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
+#rust
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Default vim
 export VISUAL=/usr/local/bin/nvim

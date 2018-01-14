@@ -18,12 +18,12 @@ Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 Plug 'w0rp/ale', { 'for': ['js', 'ruby'] }
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
-Plug 'mhartington/nvim-typescript', { 'for': 'ts' }
-Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
-Plug 'peitalin/vim-jsx-typescript', { 'for': 'ts' }
+Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
 "Rubies
 Plug 'tpope/vim-rails',  { 'for': 'ruby' }
 Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
+" Rust
+Plug 'sebastianmarkow/deoplete-rust'
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
@@ -35,6 +35,8 @@ colorscheme onedark
 "Deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
+let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 "FZF
 nnoremap <C-t> :FZF<CR>
