@@ -5,3 +5,6 @@
 .vim/.netrwhist
 .vim/plugged
 .vim/spell
+.config/nvim/plugged
+.config/nvim/.netrwhist
+.config/configstore

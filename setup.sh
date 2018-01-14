@@ -11,18 +11,13 @@ dotfiles="
 .gitignore_global 
 .tern-config 
 .khdrc 
-.kwm/*
-.iterm2/*
-.config/nvim/*"
+.kwm
+.iterm2
+.config"
 
 # Backup
 mkdir -p $backup
 echo "Backup dir: $backup"
-
-# Dirs
-mkdir ~/.iterm2
-mkdir ~/.kwm
-mkdir -p ~/.config/nvim
 
 # Move backups and create sym links
 for dotfile in $dotfiles; do
