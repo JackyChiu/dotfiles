@@ -44199,6 +44199,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -44236,19 +44241,19 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>30 30 1860 1005 0 0 1920 1080 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>760 468 400 129 0 0 1920 1080 </string>
+	<string>760 713 400 129 0 0 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>610 222 700 622 0 0 1920 1080 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 145 606 469 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>997 565 918 381 0 0 1920 1080 </string>
+	<string>-1113 273 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 474 592 584 0 0 1920 1058 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
 	<string>398 606 260 68 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 900 </string>
+	<string>155 98 570 264 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>225 223 1074 537 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -46260,7 +46265,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-18T02:43:48Z</date>
+	<date>2018-01-01T16:51:23Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -46323,6 +46328,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>

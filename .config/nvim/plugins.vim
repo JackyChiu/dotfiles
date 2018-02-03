@@ -56,7 +56,6 @@ let g:go_highlight_types = 1
 
 let g:go_fmt_command = "goimports"        "Auto add imports
 let g:go_def_mapping_enabled = 0          "Don't use C-t
-let g:go_auto_type_info = 1               "var type info
 let g:go_list_type = "quickfix"           "always use quickfix window
 
 au FileType go nmap <leader>r <Plug>(go-run)
