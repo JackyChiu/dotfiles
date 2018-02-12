@@ -23,7 +23,7 @@ Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
 Plug 'tpope/vim-rails',  { 'for': 'ruby' }
 Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
 " Rust
-Plug 'sebastianmarkow/deoplete-rust'
+Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
