@@ -33,6 +33,7 @@ export PATH=$PATH:$HOME/.npm-packages/bin
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 #rust
+export PATH=$PATH:$HOME/.cargo/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Default vim
@@ -78,17 +79,8 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion
 
 ###ALIAS###
-# vim
-alias lvst="vim --startuptime /dev/stdout +qall"
-
 # I do this too often
 alias bsrk="brew services restart kwm"
-
-# Open current git project
-alias gh="open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)"
-
-# ctags
-alias ctags=`brew --prefix`/bin/ctags
 
 #directories (you on't want these)
 alias gojc=$GOPATH/src/github.com/JackyChiu
