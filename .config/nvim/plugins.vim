@@ -23,6 +23,7 @@ Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
 Plug 'tpope/vim-rails',  { 'for': 'ruby' }
 Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
 " Rust
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
@@ -35,6 +36,9 @@ colorscheme onedark
 "Deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+
+" Rust
+let g:rustfmt_autosave = 1
 let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
 let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
