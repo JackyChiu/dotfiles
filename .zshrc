@@ -29,9 +29,11 @@ export SPACESHIP_PROMPT_ORDER=(
 
 #npm
 export PATH=$PATH:$HOME/.npm-packages/bin
+
 #golang
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
+
 #rust
 export PATH=$PATH:$HOME/.cargo/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
