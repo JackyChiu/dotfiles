@@ -15,7 +15,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 "Linter
-Plug 'w0rp/ale', { 'for': ['js', 'ruby'] }
+Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust'] }
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
