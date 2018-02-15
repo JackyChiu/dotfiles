@@ -4,7 +4,7 @@ Plug 'christoomey/vim-tmux-navigator'       "Vim-Tmux navigation
 Plug 'tmux-plugins/vim-tmux-focus-events'   "Improve autoread in tmux!
 Plug '/usr/local/opt/fzf'                   "Fuzzy finder
 Plug 'junegunn/fzf.vim'                     "fzf vim funcs
-Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
+Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }                 "Better syntax highlighting
 Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
@@ -21,7 +21,7 @@ Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
 "Rubies
 Plug 'tpope/vim-rails',  { 'for': 'ruby' }
-Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
+Plug 'uplus/deoplete-solargraph', { 'for': 'ruby' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
