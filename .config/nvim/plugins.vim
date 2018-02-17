@@ -15,7 +15,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 "Linter
-Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust'] }
+Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust', 'elixir'] }
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
@@ -25,6 +25,8 @@ Plug 'uplus/deoplete-solargraph', { 'for': 'ruby' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
+" Elixir
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
@@ -41,6 +43,11 @@ set completeopt-=preview
 let g:rustfmt_autosave = 1
 let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
 let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+
+" Elixir
+let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
+au FileType elixir nnoremap <buffer> <silent>gd :ExDef<CR>
+autocmd BufWritePost *.ex, *.exs silent :! mix format %
 
 "FZF
 nnoremap <C-t> :FZF<CR>
@@ -69,7 +76,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<CR>
-au Filetype go nmap <leader>rf :GoReferrers<CR>
+au FileType go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 
 "Lightline (copy pasta material)
