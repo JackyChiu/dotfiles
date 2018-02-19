@@ -31,23 +31,29 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
-colorscheme onedark
+"Colours
+let g:nord_italic = 1
+let g:nord_uniform_status_lines = 1
+let g:nord_comment_brightness = 20
+let g:nord_uniform_diff_background = 1
+colorscheme nord
 
 "Deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 
-" Rust
+"Rust
 let g:rustfmt_autosave = 1
 let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
 let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
-" Elixir
+"Elixir
 let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
 au FileType elixir nnoremap <buffer> <silent>gd :ExDef<CR>
-autocmd BufWritePost *.ex, *.exs silent :! mix format %
+"autocmd BufWritePost *.ex, *.exs silent :! mix format %
 
 "FZF
 nnoremap <C-t> :FZF<CR>
@@ -81,7 +87,7 @@ au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 
 "Lightline (copy pasta material)
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] ,
       \   'right': [ ['path'], ['filetype'] ]
