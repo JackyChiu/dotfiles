@@ -59,8 +59,10 @@ command! Wq wq
 " --color: Search color options
 let g:rg_command = 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '
 command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
+set grepprg=rg\ --vimgrep
 nnoremap <C-f> :Find<space>
 vnoremap <C-f> y:Find<space><C-R>"<CR>
+vnoremap <C-g> y:grep<space><C-R>"<CR>
 
 "Quickfix window 
 function! QuickfixToggle()
@@ -76,13 +78,13 @@ nnoremap <C-n> :cnext<CR>
 nnoremap <C-p> :cprevious<CR>
 nnoremap <C-c> :call QuickfixToggle()<CR>
 hi! link QuickFixLine Normal
+"Quickfix to always open on bottom
+au FileType qf wincmd J
 
 """FILE SPECIFIC"""
 "Spellcheck for these files
 au FileType gitcommit setlocal spell
 au FileType markdown setlocal spell
-"Quickfix to always open on bottom
-au FileType qf wincmd J
 
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>b :!javac %<CR> |

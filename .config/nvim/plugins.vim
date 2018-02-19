@@ -52,13 +52,15 @@ let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchain
 
 "Elixir
 let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
+let g:alchemist_iex_term_split = 'split'
+au FileType elixir nmap <leader>r :IEx<CR>
 au FileType elixir nnoremap <buffer> <silent>gd :ExDef<CR>
-"autocmd BufWritePost *.ex, *.exs silent :! mix format %
+autocmd BufWritePost *.ex silent :! mix format %
+autocmd BufWritePost *.exs silent :! mix format %
 
 "FZF
 nnoremap <C-t> :FZF<CR>
 let g:fzf_buffers_jump = 1              "[Buffers] Jump to the existing window if possible
-set grepprg=rg\ --vimgrep               "Use ripgrep
 
 "Vim-go
 "More highlights!
