@@ -34,19 +34,6 @@ if has("termguicolors")
 endif
 
 """KEY MAPPINGS"""
-"Faster screen resizes
-nnoremap <C-w>> 20<C-w>>
-nnoremap <C-w>< 20<C-w><
-nnoremap <C-w>+ 20<C-w>+
-nnoremap <C-w>- 20<C-w>
-
-"Enter to enter new line
-nnoremap <CR> i<CR><ESC>
-
-"I do :W all the time
-command! W w
-command! Wq wq
-
 "rg search
 " --column: Show column number
 " --line-number: Show line number
@@ -62,7 +49,25 @@ command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args
 set grepprg=rg\ --vimgrep
 nnoremap <C-f> :Find<space>
 vnoremap <C-f> y:Find<space><C-R>"<CR>
+
+"Vimgrep 
 vnoremap <C-g> y:grep<space><C-R>"<CR>
+
+"Search and replace
+vnoremap <C-s> y::%s/<C-R>"/<C-R>"/g<C-F>F/;l
+
+"Enter to enter new line
+nnoremap <CR> i<CR><ESC>
+
+"I do :W all the time
+command! W w
+command! Wq wq
+
+"Faster screen resizes
+nnoremap <C-w>> 20<C-w>>
+nnoremap <C-w>< 20<C-w><
+nnoremap <C-w>+ 20<C-w>+
+nnoremap <C-w>- 20<C-w>
 
 "Quickfix window 
 function! QuickfixToggle()
@@ -73,7 +78,6 @@ function! QuickfixToggle()
     cclose
   endif
 endfunction
-
 nnoremap <C-n> :cnext<CR>
 nnoremap <C-p> :cprevious<CR>
 nnoremap <C-c> :call QuickfixToggle()<CR>
