@@ -63,6 +63,12 @@ nnoremap <CR> i<CR><ESC>
 command! W w
 command! Wq wq
 
+"Navigation in :terminal pls
+tnoremap <C-h> <C-\><C-n><C-h>
+tnoremap <C-j> <C-\><C-n><C-j>
+tnoremap <C-k> <C-\><C-n><C-k>
+tnoremap <C-l> <C-\><C-n><C-l>
+
 "Faster screen resizes
 nnoremap <C-w>> 20<C-w>>
 nnoremap <C-w>< 20<C-w><
