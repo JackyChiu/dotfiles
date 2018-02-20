@@ -55,8 +55,9 @@ let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
 let g:alchemist_iex_term_split = 'split'
 au FileType elixir nmap <leader>r :IEx<CR>
 au FileType elixir nnoremap <buffer> <silent>gd :ExDef<CR>
-autocmd BufWritePost *.ex silent :! mix format %
-autocmd BufWritePost *.exs silent :! mix format %
+au BufRead,BufNewFile  *.exs setfiletype elixir
+au BufWritePost *.ex silent :! mix format %
+au BufWritePost *.exs silent :! mix format %
 
 "FZF
 nnoremap <C-t> :FZF<CR>
