@@ -11,6 +11,7 @@ set ma                                  "Allow jump to quickfix files
 set autowrite                           "write content itself ex. build 
 set undofile
 set wildignore=*.git	                  "Wild menu to ignore compiled files
+set spell                               "Save me please - spell check in comments
 
 "Spacing and tabs
 set backspace=2                         "Make backspace work like most other apps
