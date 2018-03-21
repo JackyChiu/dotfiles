@@ -96,8 +96,17 @@ au FileType qf wincmd J
 au FileType gitcommit setlocal spell
 au FileType markdown setlocal spell
 
+"Elixir
+au BufRead,BufNewFile  *.exs setfiletype elixir
+au BufWritePost *.ex silent :! mix format %
+au BufWritePost *.exs silent :! mix format %
+
+"Java
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>b :!javac %<CR> |
       \ nnoremap <leader>r :!java -ea %:r<CR>
+
+"EJSON
+au BufRead,BufNewFile  *.ejson setfiletype json
 
 set secure                              "Disable unsafe commands in project vimrcs
