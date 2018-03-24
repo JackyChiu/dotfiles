@@ -45,6 +45,10 @@ colorscheme nord
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 
+"Ale
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
 "Rust
 let g:rustfmt_autosave = 1
 let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
