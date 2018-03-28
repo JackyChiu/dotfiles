@@ -48,6 +48,11 @@ set completeopt-=preview
 "Ale
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'ruby': ['rubocop'],
+\   'javascript': ['eslint'],
+\}
 
 "Rust
 let g:rustfmt_autosave = 1
