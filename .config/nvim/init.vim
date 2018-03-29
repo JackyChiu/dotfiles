@@ -92,6 +92,9 @@ hi! link QuickFixLine Normal
 au FileType qf wincmd J
 
 """FILE SPECIFIC"""
+"Strip whitespaces
+autocmd BufWritePre * %s/\s\+$//e
+
 "Spellcheck for these files
 au FileType gitcommit setlocal spell
 au FileType markdown setlocal spell
