@@ -4,16 +4,17 @@
 backup=~/dotfiles_backup
 dir=$(pwd)
 dotfiles="
-.vimrc 
-.tmux.conf 
-.vim 
-.zshrc 
-.gitignore_global 
-.tern-config 
-.khdrc 
+.vimrc
+.tmux.conf
+.vim
+.zshrc
+.gitignore_global
+.tern-config
+.khdrc
 .kwm
 .iterm2
-.config"
+.config/nvim/plugins.vim
+.config/nvim/init.vim"
 
 # Backup
 mkdir -p $backup

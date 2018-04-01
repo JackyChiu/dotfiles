@@ -118,9 +118,6 @@ shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - rig
 # undo
 lcrtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
 
-# enable kwm compatibility mode
-khd kwm on
-
 # set border color for different modes
 khd mode default color 0xdd72bef2 #Blue
 khd mode switcher color 0xdddbaa79 #Yellow

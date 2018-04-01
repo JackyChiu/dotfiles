@@ -1,10 +1,6 @@
-# vim dir's
-.vim/.backup
-.vim/.swap
-.vim/.undo
-.vim/.netrwhist
-.vim/plugged
-.vim/spell
+# nvim dir's
 .config/nvim/plugged
 .config/nvim/.netrwhist
 .config/configstore
+.config/gcloud
+.config/hub
