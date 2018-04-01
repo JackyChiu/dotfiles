@@ -12,8 +12,7 @@ dotfiles="
 .khdrc
 .kwm
 .iterm2
-.config/nvim/plugins.vim
-.config/nvim/init.vim"
+.config"
 
 # Backup
 mkdir -p $backup
