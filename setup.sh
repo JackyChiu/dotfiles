@@ -4,10 +4,9 @@
 backup=~/dotfiles_backup
 dir=$(pwd)
 dotfiles="
-.vimrc
 .tmux.conf
-.vim
 .zshrc
+.gitconfig
 .gitignore_global
 .tern-config
 .khdrc
@@ -27,9 +26,3 @@ for dotfile in $dotfiles; do
 	ln -s $dir/$dotfile ~/$dotfile
 	echo "Symbloic link for $dotfile made in ~\n"
 done
-
-# Dir for backup/swap files
-mkdir -p ~/.vim/.backup
-mkdir -p ~/.vim/.swap
-mkdir -p ~/.vim/.undo
-echo "Dirs made for backup/swap/undo files\n"
