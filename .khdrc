@@ -119,10 +119,10 @@ shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - rig
 lcrtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
 
 # set border color for different modes
-khd mode default color 0xdd72bef2 #Blue
-khd mode switcher color 0xdddbaa79 #Yellow
-khd mode swap color 0xddd291e4 #Purple
-khd mode space color 0xddb16286 #Red
+khd mode default on_enter kwmc config border focused color 0xdd72bef2 #Blue
+khd mode switcher on_enter kwmc config border focused color 0xdddbaa79 #Yellow
+khd mode swap on_enter kwmc config border focused color 0xddd291e4 #Purple
+khd mode space on_enter kwmc config border focused color 0xddb16286 #Red
 
 # toggle between modes
 ctrl - s                :   khd -e "mode activate switcher"
