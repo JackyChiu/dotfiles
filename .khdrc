@@ -116,13 +116,13 @@ shift + ctrl - b ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - lef
 shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - right"
 
 # undo
-crtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
+crtl - u         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - z"
 
 # set border color for different modes
-khd mode default on_enter kwmc config border focused color 0xdd72bef2 #Blue
-khd mode switcher on_enter kwmc config border focused color 0xdddbaa79 #Yellow
-khd mode swap on_enter kwmc config border focused color 0xddd291e4 #Purple
-khd mode space on_enter kwmc config border focused color 0xddb16286 #Red
+khd mode default  on_enter chunkc set focused_border_color 0xdd72bef2 #Blue
+khd mode switcher on_enter chunkc set focused_border_color 0xdddbaa79 #Yellow
+khd mode swap     on_enter chunkc set focused_border_color 0xddd291e4 #Purple
+khd mode space    on_enter chunkc set focused_border_color 0xddb16286 #Red
 
 # toggle between modes
 ctrl - s                :   khd -e "mode activate switcher"
@@ -139,27 +139,27 @@ swap - s                :   khd -e "mode activate switcher"
 # switcher mode
 switcher - r            :   khd -e "reload" # reload config
 
-switcher - h            :   kwmc window -f west
-switcher - l            :   kwmc window -f east
-switcher - j            :   kwmc window -f south
-switcher - k            :   kwmc window -f north
-switcher - n            :   kwmc window -f next
-switcher - p            :   kwmc window -f prev
+switcher - h            :   chunkc tiling::window --focus west
+switcher - l            :   chunkc tiling::window --focus east
+switcher - j            :   chunkc tiling::window --focus south
+switcher - k            :   chunkc tiling::window --focus north
+switcher - n            :   chunkc tiling::window --focus next
+switcher - p            :   chunkc tiling::window --focus prev
 
-switcher - 1    :   kwmc display -f 0
-switcher - 2    :   kwmc display -f 1
+switcher - 1            :   chunkc tiling::monitor -f 1
+switcher - 2            :   chunkc tiling::monitor -f 2
 
 # swap mode
-swap - h                :   kwmc window -s west
-swap - j                :   kwmc window -s south
-swap - k                :   kwmc window -s north
-swap - l                :   kwmc window -s east
+swap - h                :   chunkc tiling::window --swap west
+swap - j                :   chunkc tiling::window --swap south
+swap - k                :   chunkc tiling::window --swap north
+swap - l                :   chunkc tiling::window --swap east
 
-swap - 1        :   kwmc window -m display 0
-swap - 2        :   kwmc window -m display 1
+swap - 1                :   chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
+swap - 2                :   chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
 
 # space mode
-space - b               :   kwmc space -t bsp
-space - m               :   kwmc space -t monocle
+space - b               :   chunkc tiling::desktop --layout bsp
+space - m               :   chunkc tiling::desktop --layout monocle
 space - p               :   kwmc space -p increase all
 space + shift - p       :   kwmc space -p decrease all
