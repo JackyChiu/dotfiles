@@ -1,4 +1,8 @@
 #!/bin/bash
+################################
+#####   JackyChiu         ######
+#####   Chunkwm Dotfile   ######
+################################
 
 #
 # NOTE: specify the absolutepath of the file to use for logging.

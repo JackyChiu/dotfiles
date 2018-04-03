@@ -11,8 +11,8 @@ dotfiles="
 .tern-config
 .khdrc
 .chunkwmrc
-.iterm2
-.config"
+.iterm2/
+.config/"
 
 # Backup
 mkdir -p $backup
