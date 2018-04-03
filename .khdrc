@@ -116,7 +116,7 @@ shift + ctrl - b ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - lef
 shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - right"
 
 # undo
-lcrtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
+crtl - u ![HyperTerm,Terminal,iTerm2] : khd -p "cmd - z"
 
 # set border color for different modes
 khd mode default on_enter kwmc config border focused color 0xdd72bef2 #Blue
