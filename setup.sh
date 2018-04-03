@@ -10,7 +10,7 @@ dotfiles="
 .gitignore_global
 .tern-config
 .khdrc
-.kwm
+.chunkwmrc
 .iterm2
 .config"
 

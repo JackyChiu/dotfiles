@@ -86,9 +86,7 @@
 # - button4 : khd -w "mouse-button 4 pressed"
 
 # TODO(koekeishiya): possibly allow combined syntax such as
-# [switcher,ytd] + ctrl - f : khd -e "mode activate default"
-
-
+# [focus,ytd] + ctrl - f : khd -e "mode activate default"
 
 # vi-mode for non-terminal applications
 
@@ -119,47 +117,59 @@ shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - rig
 crtl - u         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - z"
 
 # set border color for different modes
-khd mode default  on_enter chunkc set focused_border_color 0xdd72bef2 #Blue
-khd mode switcher on_enter chunkc set focused_border_color 0xdddbaa79 #Yellow
-khd mode swap     on_enter chunkc set focused_border_color 0xddd291e4 #Purple
-khd mode space    on_enter chunkc set focused_border_color 0xddb16286 #Red
+khd mode default  on_enter chunkc border::color 0xdd72bef2 #blue
+khd mode focus    on_enter chunkc border::color 0xdddbaa79 #yellow
+khd mode swap     on_enter chunkc border::color 0xddd291e4 #purple
+khd mode layout   on_enter chunkc border::color 0xddb16286 #red
 
 # toggle between modes
-ctrl - s                :   khd -e "mode activate switcher"
-switcher + ctrl - s     :   khd -e "mode activate default"
+ctrl - s                :   khd -e "mode activate focus"
+focus + ctrl - s        :   khd -e "mode activate default"
 swap + ctrl - s         :   khd -e "mode activate default"
-space + ctrl - s        :   khd -e "mode activate default"
+layout + ctrl - s       :   khd -e "mode activate default"
 
-switcher - s            :   khd -e "mode activate swap"
-switcher - a            :   khd -e "mode activate space"
+focus - s               :   khd -e "mode activate swap"
+focus - a               :   khd -e "mode activate layout"
 
-space - a               :   khd -e "mode activate switcher"
-swap - s                :   khd -e "mode activate switcher"
+layout - a              :   khd -e "mode activate focus"
+swap - s                :   khd -e "mode activate focus"
 
-# switcher mode
-switcher - r            :   khd -e "reload" # reload config
+### focus mode ###
+focus - r               :   khd -e "reload" # reload config
 
-switcher - h            :   chunkc tiling::window --focus west
-switcher - l            :   chunkc tiling::window --focus east
-switcher - j            :   chunkc tiling::window --focus south
-switcher - k            :   chunkc tiling::window --focus north
-switcher - n            :   chunkc tiling::window --focus next
-switcher - p            :   chunkc tiling::window --focus prev
+# focus windows
+focus - h               :   chunkc tiling::window --focus west
+focus - l               :   chunkc tiling::window --focus east
+focus - j               :   chunkc tiling::window --focus south
+focus - k               :   chunkc tiling::window --focus north
+focus - n               :   chunkc tiling::window --focus next
+focus - p               :   chunkc tiling::window --focus prev
 
-switcher - 1            :   chunkc tiling::monitor -f 1
-switcher - 2            :   chunkc tiling::monitor -f 2
+# focus monitors
+focus - 1               :   chunkc tiling::monitor -f 1
+focus - 2               :   chunkc tiling::monitor -f 2
 
-# swap mode
+# full screen
+focus - f               :   chunkc tiling::window --toggle native-fullscreen
+
+### swap mode ###
+# swap windows
 swap - h                :   chunkc tiling::window --swap west
 swap - j                :   chunkc tiling::window --swap south
 swap - k                :   chunkc tiling::window --swap north
 swap - l                :   chunkc tiling::window --swap east
 
+swap - r                :   chunkc tiling::desktop --rotate 90
+
+# swap monitors
 swap - 1                :   chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
 swap - 2                :   chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
 
-# space mode
-space - b               :   chunkc tiling::desktop --layout bsp
-space - m               :   chunkc tiling::desktop --layout monocle
-space - p               :   kwmc space -p increase all
-space + shift - p       :   kwmc space -p decrease all
+# swap desktops
+swap + ctrl - 1         :   chunkc tiling::window --send-to-desktop 1; khd -p "cmd + alt - 1"
+swap + ctrl - 2         :   chunkc tiling::window --send-to-desktop 2; khd -p "cmd + alt - 2"
+
+### layout mode ###
+# switch layout
+layout - b               :   chunkc tiling::desktop --layout bsp
+layout - m               :   chunkc tiling::desktop --layout monocle
