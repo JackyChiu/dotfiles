@@ -77,8 +77,8 @@ chunkc set mouse_modifier                fn
 #
 
 chunkc set focused_border_color          0xdd72bef2
-chunkc set focused_border_width          5
-chunkc set focused_border_radius         5
+chunkc set focused_border_width          8
+chunkc set focused_border_radius         8
 chunkc set focused_border_skip_floating  0
 
 #
