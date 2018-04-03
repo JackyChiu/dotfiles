@@ -83,6 +83,7 @@ bindkey '^I' $fzf_default_completion
 ###ALIAS###
 # I do this too often
 alias bsrk="brew services restart kwm"
+alias bsrc="brew services restart chunkwm"
 
 #directories (you on't want these)
 alias gojc=$GOPATH/src/github.com/JackyChiu
