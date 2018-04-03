@@ -90,3 +90,9 @@ alias dev=/Users/jackychiu/Dev
 alias dot=/Users/jackychiu/Dev/dotfiles
 alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jackychiu/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jackychiu/src/google-cloud-sdk/completion.zsh.inc'; fi
