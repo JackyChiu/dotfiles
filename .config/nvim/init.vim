@@ -45,16 +45,17 @@ endif
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 " --color: Search color options
 let g:rg_command = 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '
-command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Find call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, fzf#vim#with_preview('right:50%'))
 set grepprg=rg\ --vimgrep
-nnoremap <C-f> :Find<space>
+nnoremap <C-f> :Find<space><C-F>i
 vnoremap <C-f> y:Find<space><C-R>"<CR>
 
 "Vimgrep
 vnoremap <C-g> y:grep<space><C-R>"<CR>
+nnoremap <C-g> :grep<space><C-F>i
 
 "Search and replace
-vnoremap <C-s> y::%s/<C-R>"/<C-R>"/g<C-F>F/;l
+vnoremap <C-S> y::%s/<C-R>"/<C-R>"/g<C-F>F/;l
 
 "Enter to enter new line
 nnoremap <CR> i<CR><ESC>
