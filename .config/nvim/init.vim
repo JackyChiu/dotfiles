@@ -8,7 +8,7 @@ source ~/.config/nvim/plugins.vim
 " General
 set clipboard=unnamed		        	    	"System register to be same as unnamed
 set ma                                  "Allow jump to quickfix files
-set autowrite                           "write content itself ex. build 
+set autowrite                           "write content itself ex. build
 set undofile
 set wildignore=*.git	                  "Wild menu to ignore compiled files
 
@@ -50,7 +50,7 @@ set grepprg=rg\ --vimgrep
 nnoremap <C-f> :Find<space>
 vnoremap <C-f> y:Find<space><C-R>"<CR>
 
-"Vimgrep 
+"Vimgrep
 vnoremap <C-g> y:grep<space><C-R>"<CR>
 
 "Search and replace
@@ -75,7 +75,7 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
-"Quickfix window 
+"Quickfix window
 function! QuickfixToggle()
   let windowCount = winnr("$")
   copen
