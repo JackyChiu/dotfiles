@@ -29,6 +29,9 @@ Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
+" Writing Docs
+Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'txt'] }
+Plug 'junegunn/limelight.vim' , { 'for': ['markdown', 'txt'] }
 "Themes
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
@@ -93,6 +96,10 @@ au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<CR>
 au FileType go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
+
+"Lightlime
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 "Lightline (copy pasta material)
 let g:lightline = {

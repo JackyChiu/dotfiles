@@ -112,5 +112,3 @@ au BufNewFile,BufRead *.java
 
 "EJSON
 au BufRead,BufNewFile  *.ejson setfiletype json
-
-set secure                              "Disable unsafe commands in project vimrcs
