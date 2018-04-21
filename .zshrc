@@ -3,7 +3,9 @@
 #####   zsh Dotfile     ######
 ##############################
 
+### SHELL ###
 export ZSH=/Users/jackychiu/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 plugins=(
   git
@@ -13,9 +15,6 @@ plugins=(
 
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="spaceship"
-
-source $ZSH/oh-my-zsh.sh
-
 export SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   host          # Hostname section
@@ -26,21 +25,6 @@ export SPACESHIP_PROMPT_ORDER=(
   jobs          # Backgound jobs indicator
   char          # Prompt character
 )
-
-#npm
-export PATH=$PATH:$HOME/.npm-packages/bin
-
-#golang
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-
-#rust
-export PATH=$PATH:$HOME/.cargo/bin
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-
-# Default vim
-export VISUAL=/usr/local/bin/nvim
-export EDITOR=$VISUAL
 
 ### VI MODE ### https://github.com/bl/dotfiles/blob/master/.zsh/prompt.zsh
 # vi mode
@@ -68,6 +52,22 @@ zle -N zle-line-init # executed every time line editor starts reading a new line
 zle -N zle-keymap-select # executed every time mode switches (ie vicmd/main)
 zle -N zle-line-finish # executed at the end of a prompts execution
 
+### PATHS ###
+#npm
+export PATH=$PATH:$HOME/.npm-packages/bin
+
+#golang
+export GOPATH=$HOME
+export PATH=$PATH:$GOPATH/bin
+
+#rust
+export PATH=$PATH:$HOME/.cargo/bin
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# Default vim
+export VISUAL=/usr/local/bin/nvim
+export EDITOR=$VISUAL
+
 # FZF fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # --files: List files that would be searched but do not search
@@ -78,17 +78,12 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_DEFAULT_OPTS="--preview 'cat {}' --reverse --height 40%"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
-bindkey '^I' $fzf_default_completion
 
-###ALIAS###
+### ALIAS ###
 # I do this too often
-alias bsrk="brew services restart kwm"
 alias bsrc="brew services restart chunkwm"
-
-#directories (you on't want these)
+#directories (you won't want these)
 alias gojc=$GOPATH/src/github.com/JackyChiu
-alias dev=/Users/jackychiu/Dev
-alias dot=/Users/jackychiu/Dev/dotfiles
 alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
 alias carleton="/Users/jackychiu/Google\ Drive/Carleton"
 
