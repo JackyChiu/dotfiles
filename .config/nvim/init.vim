@@ -76,6 +76,10 @@ nnoremap <C-w>< 20<C-w><
 nnoremap <C-w>+ 20<C-w>+
 nnoremap <C-w>- 20<C-w>
 
+"Expected up/down behaviour on multilines
+nmap k gk
+nmap j gj
+
 "Quickfix window
 function! QuickfixToggle()
   let windowCount = winnr("$")
