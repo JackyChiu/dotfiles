@@ -10,6 +10,8 @@ Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
+Plug 'SirVer/ultisnips'                     "Snippet Engine
+Plug 'honza/vim-snippets'                   "Language Snippets
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Linter
@@ -19,9 +21,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
-Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
 "Rubies
-Plug 'tpope/vim-rails',  { 'for': 'ruby' }
 Plug 'uplus/deoplete-solargraph', { 'for': 'ruby' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
