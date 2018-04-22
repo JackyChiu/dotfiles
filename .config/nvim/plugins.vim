@@ -102,6 +102,7 @@ au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<CR>
 au FileType go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
+au FileType go nnoremap <buffer> <silent> <C-]> :GoDef<CR>
 
 "Lightlime
 autocmd! User GoyoEnter Limelight
