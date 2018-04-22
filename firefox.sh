@@ -1,7 +1,13 @@
 #/bin/bash
 
-mkdir -p ~/Library/Application\ Support/Firefox/Profiles/gxcsf7j2.default/chrome
-rm ~/Library/Application\ Support/Firefox/Profiles/gxcsf7j2.default/chrome/userChrome.css
+profiles=~/Library/Application\ Support/Firefox/Profiles
+if ! [[ -d  $profiles ]]; then
+  echo "Looks like firefox isn't installed"
+  exit 1
+fi
 
-ln -s $(pwd)/userChrome.css ~/Library/Application\ Support/Firefox/Profiles/gxcsf7j2.default/chrome/userChrome.css
-
+for dir in $(ls "$profiles"); do
+  [[ $dir != *default ]] && exit 1
+  ! [[ -d "$profiles/$dir/chrome" ]] && mkdir -p $profiles/$dir/chrome
+  ln -snf userChrome.css "$profiles/$dir/chrome"
+done
