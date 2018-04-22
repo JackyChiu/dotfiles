@@ -9,13 +9,14 @@ Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
+Plug 'janko-m/vim-test'                     "Test runner
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Linter
+Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust', 'elixir'] }
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
-"Linter
-Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust', 'elixir'] }
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 Plug 'peitalin/vim-jsx-typescript', { 'for': 'js' }
@@ -56,6 +57,11 @@ let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \   'javascript': ['eslint'],
 \}
+
+"vim-test
+nmap <leader>tn :TestNearest<CR>
+nmap <leader>tf :TestFile<CR>
+nmap <leader>tl :TestLast<CR>
 
 "Rust
 let g:rustfmt_autosave = 1
