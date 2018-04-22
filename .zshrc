@@ -63,6 +63,21 @@ alias bsrc="brew services restart chunkwm"
 alias k=kubectl
 alias kgp='k get pods'
 
+review() {
+  local default_branch=$(git rev-parse --abbrev-ref HEAD)
+  local branch="${1:-$default_branch}"
+
+  git fetch origin $branch
+  git checkout $branch
+  git rebase origin/$branch
+
+  if [[ -a "dev.yml" ]]; then
+    dev up
+  fi
+
+  nvim -c "let g:gitgutter_diff_base = 'master'" $(git diff --name-only origin/master)
+}
+
 #Directories (you won't want these)
 alias gojc=$GOPATH/src/github.com/JackyChiu
 alias widget="/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget"
