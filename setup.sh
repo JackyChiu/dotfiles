@@ -11,17 +11,23 @@ dotfiles="
 .tern-config
 .khdrc
 .chunkwmrc
-.iterm2/
-.config/"
+.iterm2
+.config/nvim"
 
 # Backup
 mkdir -p $backup
-echo "Backup dir: $backup"
+echo "Backup dir: $backup\n"
 
-# Move backups and create sym links
 for dotfile in $dotfiles; do
-	mv ~/$dotfile $backup
-	echo "Current $dotfile moved to: $backup\n"
-	ln -s $dir/$dotfile ~/$dotfile
-	echo "Symbloic link for $dotfile made in ~\n"
+  # move backups
+  [ -h ~/$dotfile ] && unlink ~/$dotfile
+	if [ -f ~/$dotfile ]; then
+    mv ~/$dotfile $backup/$dotfile
+    echo "Current $dotfile moved to: $backup/$dotfile"
+  fi
+
+  # make symlinks
+  [ -d $dotfile ] && mkdir -p ~/$(dirname $dotfile)
+  ln -s $dir/$dotfile ~/$dotfile
+	echo "Symbloic link for ~/$dotfile"
 done
