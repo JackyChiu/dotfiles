@@ -72,7 +72,8 @@ let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchain
 let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
 let g:alchemist_iex_term_split = 'split'
 au FileType elixir nmap <leader>r :IEx<CR>
-au FileType elixir nnoremap <buffer> <silent>gd :ExDef<CR>
+au FileType elixir nnoremap <buffer> <silent> gd :ExDef<CR>
+au FileType elixir nnoremap <buffer> <silent> <C-]> :ExDef<CR>
 
 "FZF
 nnoremap <C-t> :FZF<CR>
