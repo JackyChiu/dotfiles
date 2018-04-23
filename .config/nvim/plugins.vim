@@ -7,11 +7,11 @@ Plug 'junegunn/fzf.vim'                     "fzf vim funcs
 Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }                 "Better syntax highlighting
 Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
-Plug 'tpope/vim-surround'                   "Easy brace and quote changes
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
 Plug 'SirVer/ultisnips'                     "Snippet Engine
 Plug 'honza/vim-snippets'                   "Language Snippets
+Plug 'benmills/vimux'                       "Open tmux window in vim
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Linter
@@ -59,6 +59,7 @@ let g:ale_fixers = {
 \}
 
 "vim-test
+let test#strategy = "vimux"
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>tl :TestLast<CR>
