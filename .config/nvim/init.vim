@@ -1,32 +1,31 @@
 """""""""""""""""""""""""""""
-"""""	  JackyChiu	      """""
-"""""	  Nvim Dotfile	  """""
+"""""   JackyChiu       """""
+"""""   Nvim Dotfile    """""
 """""""""""""""""""""""""""""
 
 source ~/.config/nvim/plugins.vim
 
 " General
-set clipboard=unnamed		        	    	"System register to be same as unnamed
+set clipboard=unnamed                   "System register to be same as unnamed
 set ma                                  "Allow jump to quickfix files
 set autowrite                           "write content itself ex. build
 set undofile
-set wildignore=*.git	                  "Wild menu to ignore compiled files
+set wildignore=*.git                    "Wild menu to ignore compiled files
 
 "Spacing and tabs
-set backspace=2                         "Make backspace work like most other apps
-set tabstop=2 			       	            "Existing tabs to be shown with 2 spaces
-set shiftwidth=2                      	"Size of indent
-set softtabstop=2                     	"Backspace tab
-set expandtab														"Tabs to spaces
+set backspace=2                         "Backspace deletes 2 spaces
+set tabstop=2                           "Existing tabs to be shown with 2 spaces
+set shiftwidth=2                        "Size of indent with window shifts
+set expandtab                           "Tabs to spaces
 
 """VISUAL"""
 "Settings
-set showmatch	                          "Matching braces/brackets
-set number		                          "Show absolute number on current line
+set showmatch                           "Matching braces/brackets
+set number                              "Show absolute number on current line
 set relativenumber                      "Relative numbering
 set scrolloff=5                         "Always 5 lines before or after cusor
 set cursorline                          "highlight current line slightly
-set nohlsearch                        	"Don't continue to highlight searched phrases.
+set nohlsearch                          "Don't continue to highlight searched phrases.
 
 "Colours
 if has("termguicolors")
