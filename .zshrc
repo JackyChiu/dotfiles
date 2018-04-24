@@ -49,7 +49,7 @@ export EDITOR=$VISUAL
 # --hidden: Search hidden files and folders
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!{.git/*,vendor/*}"'
 export FZF_DEFAULT_OPTS="--preview 'head -100 {}' --reverse --height 40%"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS
