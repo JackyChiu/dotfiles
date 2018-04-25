@@ -64,6 +64,9 @@ vnoremap <C-S> y::%s/<C-R>"/<C-R>"/g<C-F>F/;l
 "Enter to enter new line
 nnoremap <CR> i<CR><ESC>
 
+"Escape terminal
+tnoremap <Esc> <C-\><C-n>
+
 "I do :W all the time
 command! W w
 command! Wq wq
