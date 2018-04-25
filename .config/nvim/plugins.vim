@@ -58,10 +58,11 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 
-"vim-test
-let test#strategy = "vimux"
+"Vim-test
+let test#strategy = "neovim"
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
+nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 
 "Rust

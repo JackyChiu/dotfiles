@@ -68,14 +68,17 @@ nnoremap <CR> i<CR><ESC>
 command! W w
 command! Wq wq
 
-"Escape terminal
-tnoremap <leader><ESC> <C-\><C-n>
+"Make escape work in the Neovim terminal.
+tnoremap <Esc> <C-\><C-n>
 
 "Navigation in :terminal pls
 tnoremap <C-h> <C-\><C-n><C-h>
 tnoremap <C-j> <C-\><C-n><C-j>
 tnoremap <C-k> <C-\><C-n><C-k>
 tnoremap <C-l> <C-\><C-n><C-l>
+
+"Line numbering in terminal
+autocmd TermOpen * setlocal nu rnu
 
 "Faster screen resizes
 nnoremap <C-w>> 20<C-w>>
