@@ -9,5 +9,5 @@ fi
 for dir in $(ls "$profiles"); do
   [[ $dir != *default ]] && exit 1
   ! [[ -d "$profiles/$dir/chrome" ]] && mkdir -p $profiles/$dir/chrome
-  ln -snf userChrome.css "$profiles/$dir/chrome"
+  ln -snf $(pwd)/userChrome.css "$profiles/$dir/chrome"
 done
