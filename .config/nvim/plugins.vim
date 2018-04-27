@@ -100,6 +100,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>R <Plug>(go-rename)<C-f>
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>tc <Plug>(go-test-compile)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<CR>
