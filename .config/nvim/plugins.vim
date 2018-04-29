@@ -85,6 +85,7 @@ au FileType elixir nnoremap <buffer> <silent> <C-]> :ExDef<CR>
 nnoremap <C-t> :FZF<CR>
 " Find test file quickly
 nnoremap <expr> <C-T> ":FZF<CR>" . expand("%:t:r") . "_test"
+nnoremap <C-b> :Buffers<CR>
 let g:fzf_buffers_jump = 1              "[Buffers] Jump to the existing window if possible
 
 "Vim-go
