@@ -58,8 +58,12 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 
+"Vimux
+let g:VimuxHeight = "25"
+nnoremap <leader>tq :VimuxCloseRunner<CR>
+
 "Vim-test
-let test#strategy = "neovim"
+let test#strategy = "vimux"
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>ts :TestSuite<CR>
