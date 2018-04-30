@@ -69,7 +69,7 @@ command! W w
 command! Wq wq
 
 "Make escape work in the Neovim terminal.
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n> TODO this is messing with esc in fzf
 
 "Navigation in :terminal pls
 tnoremap <C-h> <C-\><C-n><C-h>

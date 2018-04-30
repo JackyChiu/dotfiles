@@ -84,7 +84,7 @@ au FileType elixir nnoremap <buffer> <silent> <C-]> :ExDef<CR>
 "FZF
 nnoremap <C-t> :FZF<CR>
 " Find test file quickly
-nnoremap <expr> <C-T> ":FZF<CR>" . expand("%:t:r") . "_test"
+nnoremap <expr> <leader>tt ":FZF<CR>" . expand("%:t:r") . "_test"
 nnoremap <C-b> :Buffers<CR>
 let g:fzf_buffers_jump = 1              "[Buffers] Jump to the existing window if possible
 
@@ -106,7 +106,6 @@ let g:go_list_type = "quickfix"           "always use quickfix window
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>R <Plug>(go-rename)<C-f>
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>tc <Plug>(go-test-compile)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
