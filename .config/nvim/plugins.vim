@@ -59,7 +59,8 @@ let g:ale_fixers = {
 \}
 
 "Vimux
-let g:VimuxHeight = "25"
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "35"
 nnoremap <leader>tq :VimuxCloseRunner<CR>
 
 "Vim-test
