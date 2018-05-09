@@ -12,6 +12,7 @@ Plug 'janko-m/vim-test'                     "Test runner
 Plug 'SirVer/ultisnips'                     "Snippet Engine
 Plug 'honza/vim-snippets'                   "Language Snippets
 Plug 'benmills/vimux'                       "Open tmux window in vim
+Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Linter
