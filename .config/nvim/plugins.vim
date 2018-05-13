@@ -16,7 +16,7 @@ Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Linter
-Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'rust', 'elixir'] }
+Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'elixir'] }
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
