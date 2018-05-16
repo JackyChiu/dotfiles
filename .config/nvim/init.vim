@@ -3,6 +3,7 @@
 """""   Nvim Dotfile    """""
 """""""""""""""""""""""""""""
 
+let mapleader = "\<Space>"              "Remap leader
 source ~/.config/nvim/plugins.vim
 
 " General
@@ -11,7 +12,6 @@ set ma                                  "Allow jump to quickfix files
 set autowrite                           "write content itself ex. build
 set undofile
 set wildignore=*.git                    "Wild menu to ignore compiled files
-let mapleader = " "                     "Remap leader
 
 "Spacing and tabs
 set backspace=2                         "Backspace deletes 2 spaces
