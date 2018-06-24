@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # Varibles
 backup=~/dotfiles_backup
@@ -16,18 +16,18 @@ dotfiles="
 
 # Backup
 mkdir -p $backup
-echo "Backup dir: $backup\n"
+echo "Backup dir: $backup"
 
 for dotfile in $dotfiles; do
   # move backups
-  [[ -h ~/$dotfile ]] && unlink ~/$dotfile
+  [[ -h ~/$dotfile ]] && unlink ~/"$dotfile"
 	if [[ -f ~/$dotfile ]]; then
-    mv ~/$dotfile $backup/$dotfile
+    mv ~/"$dotfile" "$backup"/"$dotfile"
     echo "Current $dotfile moved to: $backup/$dotfile"
   fi
 
   # make symlinks
-  [[ -d $dotfile ]] && mkdir -p ~/$(dirname $dotfile)
-  ln -s $dir/$dotfile ~/$dotfile
+  [[ -d $dotfile ]] && mkdir -p ~/"$(dirname "$dotfile")"
+  ln -s "$dir"/"$dotfile" ~/"$dotfile"
 	echo "Symbloic link for ~/$dotfile"
 done
