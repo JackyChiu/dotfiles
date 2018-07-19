@@ -15,25 +15,24 @@ Plug 'benmills/vimux'                       "Open tmux window in vim
 Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" LSP client
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
 "Linter
 Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'elixir'] }
 " Golang
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
 "Javascript/Typescript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
-"Rubies
-Plug 'uplus/deoplete-solargraph', { 'for': 'ruby' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
-" Writing Docs
-Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'txt'] }
-Plug 'junegunn/limelight.vim' , { 'for': ['markdown', 'txt'] }
 "Themes
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
@@ -50,14 +49,26 @@ colorscheme nord
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 
+"LSP Client
+let g:LanguageClient_autoStop = 0
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio'],
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls']
+    \ }
+
+nnoremap <silent> M :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <leader>R :call LanguageClient#textDocument_rename()<CR>
+
 "Ale
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   'ruby': ['rubocop'],
-\   'javascript': ['eslint'],
-\}
+      \   'ruby': ['rubocop'],
+      \   'javascript': ['eslint'],
+      \}
 
 "Vimux
 let g:VimuxOrientation = "h"

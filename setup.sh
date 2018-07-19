@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Varibles
 backup=~/dotfiles_backup

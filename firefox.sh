@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 profiles=~/Library/Application\ Support/Firefox/Profiles
 if ! [[ -d  $profiles ]]; then
