@@ -25,8 +25,6 @@ Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'elixir'] }
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
-"Javascript/Typescript
-Plug 'carlitux/deoplete-ternjs', { 'for': 'js', 'do': 'npm install -g tern' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Elixir
@@ -34,7 +32,6 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
-Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
@@ -52,8 +49,12 @@ set completeopt-=preview
 "LSP Client
 let g:LanguageClient_autoStop = 0
 let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio'],
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls']
+    \ 'go':             ['go-langserver'],
+    \ 'ruby':           ['solargraph', 'stdio'],
+    \ 'rust':           ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript':     ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'typescript':     ['javascript-typescript-stdio'],
     \ }
 
 nnoremap <silent> M :call LanguageClient_contextMenu()<CR>
