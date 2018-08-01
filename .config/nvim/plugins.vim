@@ -21,7 +21,7 @@ Plug 'autozimu/LanguageClient-neovim', {
       \ 'do': 'bash install.sh',
       \ }
 "Linter
-Plug 'w0rp/ale', { 'for': ['js', 'ruby', 'elixir'] }
+Plug 'w0rp/ale'
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
