@@ -49,7 +49,6 @@ set completeopt-=preview
 "LSP Client
 let g:LanguageClient_autoStop = 0
 let g:LanguageClient_serverCommands = {
-    \ 'go':             ['go-langserver'],
     \ 'ruby':           ['solargraph', 'stdio'],
     \ 'rust':           ['rustup', 'run', 'nightly', 'rls'],
     \ 'javascript':     ['javascript-typescript-stdio'],
@@ -76,8 +75,15 @@ let g:VimuxOrientation = "h"
 let g:VimuxHeight = "35"
 nnoremap <leader>tq :VimuxCloseRunner<CR>
 
+
 "Vim-test
 let test#strategy = "vimux"
+let test#go#gotest#options = {
+  \ 'nearest': '-v',
+  \ 'file':    '',
+  \ 'suite':   '--race',
+  \ }
+
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>ts :TestSuite<CR>
