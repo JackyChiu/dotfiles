@@ -128,10 +128,6 @@ au FileType go nmap <leader>rf :GoReferrers<CR>
 au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
 au FileType go nnoremap <buffer> <silent> <C-]> :GoDef<CR>
 
-"Lightlime
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 "Lightline (copy pasta material)
 let g:lightline = {
       \ 'colorscheme': 'nord',
