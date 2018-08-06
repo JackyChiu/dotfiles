@@ -44778,7 +44778,7 @@
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>524576</integer>
+	<integer>270592</integer>
 	<key>HotkeyWindowFloatsAboveOtherWindows</key>
 	<true/>
 	<key>IRMemory</key>
@@ -44859,13 +44859,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 145 606 469 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>154 579 796 473 0 0 1920 1080 </string>
+	<string>795 431 796 473 0 0 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 474 592 584 0 0 1920 1058 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
 	<string>398 606 260 68 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 545 901 471 0 0 1920 1080 </string>
+	<string>47 49 1825 966 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>225 223 1074 537 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -45208,7 +45208,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -45241,7 +45241,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux attach -t dot || tmux new -s dot</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -45879,7 +45879,7 @@
 			<key>Window Type</key>
 			<integer>12</integer>
 			<key>Working Directory</key>
-			<string>$GOPATH/src/github.com/JackyChiu</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -46207,7 +46207,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -46234,7 +46234,7 @@
 			<key>Guid</key>
 			<string>8493FCF2-00A1-45D9-9498-FB209282931E</string>
 			<key>Has Hotkey</key>
-			<true/>
+			<false/>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -46266,7 +46266,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux attach -t dot || tmux new -s dot</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -46908,7 +46908,7 @@
 			<key>Window Type</key>
 			<integer>1</integer>
 			<key>Working Directory</key>
-			<string>$GOPATH/src/github.com/JackyChiu</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>NoSyncConfirmBeta</key>
@@ -47007,7 +47007,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-28T17:22:04Z</date>
+	<date>2018-08-06T01:00:35Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
