@@ -150,7 +150,7 @@ focus - 1               :   chunkc tiling::monitor -f 1
 focus - 2               :   chunkc tiling::monitor -f 2
 
 # full screen
-focus - f               :   chunkc tiling::window --toggle native-fullscreen
+focus - f               :   chunkc tiling::window --toggle native-fullscreen; khd -e "mode activate default"
 
 ### swap mode ###
 # swap windows
