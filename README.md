@@ -1,18 +1,7 @@
 ## JackyChiu's dotfiles
 My beloved dotfiles, for development and window management 😊
 
-## Result
 ![setup](.github/setup.png)
-
-## Installing
-I have a handly setup.sh script ready for installation, but you probably don't want all my files so go into the script and modify the line that defines the dotfiles to install
-```bash 
-git clone https://github.com/JackyChiu/dotfiles.git
-cd dotfiles
-
-# Links dotfiles to home dir and setups some dirs
-./setup.sh
-```
 
 ### Vim Setup
 ```bash
@@ -35,22 +24,16 @@ brew install reattach-to-user-namespace
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-*Side note: Mouse seting commands for .tmux.conf only work with tmux 2.1 +*
+## Development Tools:
+- [neovim](https://github.com/neovim/neovim)
+- [tmux](https://github.com/tmux/tmux)
 
-## Development Workflow:
-- vim
-- tmux
-
-## Window Managment: 
-- [kwm](https://github.com/koekeishiya/kwm)
+## Window Management:
+- [chunkwm](https://github.com/koekeishiya/chunkwm)
 - [khd](https://github.com/koekeishiya/khd)
 - [Ubersicth](http://tracesof.net/uebersicht/)
 
 ## Extra info
-- Using Oh My Zsh in iTerm2
-- Zsh theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
-- Terminal theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
-- Vim theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
-- Lightline theme: [Atom One Dark](https://github.com/joshdick/onedark.vim)
-- Nerbar theme: [Atom One Dark](https://github.com/JackyChiu/nerdbar.widget)
-
+- Zsh Theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
+- iTerm & Neovim Theme: [Nord](https://github.com/arcticicestudio)
+- Background Image: [Unsplash](https://unsplash.com/photos/yUjM1jV5obM)
