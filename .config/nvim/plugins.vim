@@ -4,7 +4,6 @@ Plug 'christoomey/vim-tmux-navigator'       "Vim-Tmux navigation
 Plug 'tmux-plugins/vim-tmux-focus-events'   "Improve autoread in tmux!
 Plug '/usr/local/opt/fzf'                   "Fuzzy finder
 Plug 'junegunn/fzf.vim'                     "fzf vim funcs
-Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }                 "Better syntax highlighting
 Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
@@ -13,6 +12,8 @@ Plug 'SirVer/ultisnips'                     "Snippet Engine
 Plug 'honza/vim-snippets'                   "Language Snippets
 Plug 'benmills/vimux'                       "Open tmux window in vim
 Plug 'jparise/vim-graphql'                  "GraphQL highlighting
+"Better syntax highlighting
+Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " LSP client
