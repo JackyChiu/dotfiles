@@ -76,7 +76,6 @@ let g:VimuxOrientation = "h"
 let g:VimuxHeight = "35"
 nnoremap <leader>tq :VimuxCloseRunner<CR>
 
-
 "Vim-test
 let test#strategy = "vimux"
 let test#go#gotest#options = {
