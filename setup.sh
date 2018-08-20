@@ -2,7 +2,7 @@
 
 # Varibles
 backup=~/dotfiles_backup
-dir=$(pwd)
+dir="$(pwd)"
 dotfiles="
 .tmux.conf
 .zshrc
@@ -18,6 +18,9 @@ dotfiles="
 mkdir -p $backup
 echo "Backup dir: $backup"
 
+# Setup config
+mkdir ~/.config
+
 for dotfile in $dotfiles; do
   # move backups
   [[ -h ~/$dotfile ]] && unlink ~/"$dotfile"
@@ -27,7 +30,6 @@ for dotfile in $dotfiles; do
   fi
 
   # make symlinks
-  [[ -d $dotfile ]] && mkdir -p ~/"$(dirname "$dotfile")"
   ln -s "$dir"/"$dotfile" ~/"$dotfile"
 	echo "Symbloic link for ~/$dotfile"
 done
