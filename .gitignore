@@ -1,4 +1,5 @@
 # nvim dir's
+.config/nvim/plugged
 .config/nvim/.netrwhist
 .config/configstore
 .config/gcloud
