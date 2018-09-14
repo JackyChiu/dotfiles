@@ -174,3 +174,6 @@ swap + ctrl - 2         :   chunkc tiling::window --send-to-desktop 2; khd -p "c
 layout - b               :   chunkc tiling::desktop --layout bsp;     khd -e "mode activate default"
 layout - m               :   chunkc tiling::desktop --layout monocle; khd -e "mode activate default"
 layout - f               :   chunkc tiling::desktop --layout float;   khd -e "mode activate default"
+
+layout - p               :   chunkc tiling::desktop --padding inc
+layout + shift - p       :   chunkc tiling::desktop --padding dec
