@@ -114,8 +114,13 @@ alias gojc='$GOPATH/src/github.com/JackyChiu'
 alias widget='/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
 alias carleton='/Users/jackychiu/Google\ Drive/Carleton'
 
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jackychiu/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jackychiu/src/google-cloud-sdk/completion.zsh.inc'; fi
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/jackychiu/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
