@@ -84,7 +84,7 @@ kpod () {
 
 # Select and exec into pod
 kexec () {
-  kubectl exec -it "$(kpod)" -- /bin/bash
+  kubectl exec -it "$(kpod)" -- /bin/sh
 }
 
 # Select and describe pod
