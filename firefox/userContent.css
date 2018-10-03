@@ -1,0 +1,33 @@
+@-moz-document url("about:home"),
+url("about:newtab") {
+    .search-wrapper,
+    .tile {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+    }
+    .card-outer {
+        border-radius: 15px !important;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+    }
+    html {
+        height: 100% !important
+    }
+    body {
+        background: -moz-linear-gradient(138deg, rgb(88, 85, 158) 0%, rgb(141, 62, 146) 20%, rgb(187, 59, 75) 80%) !important;
+        height: 100% !important;
+        margin: 0 !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+    }
+    .title,
+    .section-title span,
+    .topic,
+    .edit-topsites-wrapper .edit-topsites-button button {
+        color: white !important;
+    }
+    .section-title span, .prefs-pane-button button {
+        fill: white !important;
+    }
+    .topic .topic-link, .topic .topic-read-more {
+        color: white !important;
+    }
+}
