@@ -44859,13 +44859,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 145 606 469 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>376 349 796 486 0 0 1680 1050 </string>
+	<string>376 431 796 486 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 474 592 584 0 0 1920 1058 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
 	<string>398 606 260 68 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 49 1825 966 0 0 1920 1080 </string>
+	<string>0 0 1680 1050 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>225 223 1074 537 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -45870,6 +45870,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
@@ -46899,6 +46901,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
