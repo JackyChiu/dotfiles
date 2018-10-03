@@ -12,7 +12,6 @@ plugins=(
   zsh-autosuggestions
   vi-mode
 )
-source $ZSH/oh-my-zsh.sh
 
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="spaceship"
@@ -26,6 +25,8 @@ export SPACESHIP_PROMPT_ORDER=(
   jobs          # Backgound jobs indicator
   char          # Prompt character
 )
+
+source $ZSH/oh-my-zsh.sh
 
 ### PATHS ###
 #npm
