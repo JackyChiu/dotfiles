@@ -1,9 +1,9 @@
 [user]
-	name = Jacky Chiu
-	email = jackyzhanchiu@gmail.com
+  name = Jacky Chiu
+  email = jackyzhanchiu@gmail.com
 
 [core]
-	excludesfile = /Users/jackychiu/.gitignore_global
+  excludesfile = /Users/jackychiu/.gitignore_global
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
