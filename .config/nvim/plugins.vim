@@ -16,7 +16,6 @@ Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " Tabnine completeion
 Plug 'tbodt/deoplete-tabnine', { 'for': ['ruby', 'java'], 'do': './install.sh' }
 "" LSP client
