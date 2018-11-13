@@ -114,6 +114,7 @@ review () {
 alias gojc='$GOPATH/src/github.com/JackyChiu'
 alias widget='/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
 alias carleton='/Users/jackychiu/Google\ Drive/Carleton'
+alias go-play='nvim $GOPATH/src/main.go'
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
