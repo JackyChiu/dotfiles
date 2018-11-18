@@ -9,5 +9,3 @@
   insteadOf = https://github.com/
 [diff]
 	algorithm = patience
-[protocol]
-	version = 2
