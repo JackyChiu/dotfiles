@@ -21,6 +21,7 @@ Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
+Plug 'zxqfl/tabnine-vim', { 'for': ['ruby', 'java'] }
 "Linter
 Plug 'w0rp/ale'
 " Golang
