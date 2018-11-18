@@ -117,10 +117,10 @@ shift + ctrl - e ![HyperTerm,Terminal,iTerm2]      :   khd -p "shift + alt - rig
 crtl - u         ![HyperTerm,Terminal,iTerm2]      :   khd -p "cmd - z"
 
 # set border color for different modes
-khd mode default  on_enter chunkc border::color 0xdd72bef2 #blue
-khd mode focus    on_enter chunkc border::color 0xdddbaa79 #yellow
-khd mode swap     on_enter chunkc border::color 0xddd291e4 #purple
-khd mode layout   on_enter chunkc border::color 0xddb16286 #red
+khd mode default  on_enter chunkc border::color 0xdd81a1c1 #blue
+khd mode focus    on_enter chunkc border::color 0xddeacb8a #yellow
+khd mode swap     on_enter chunkc border::color 0xddb48dac #purple
+khd mode layout   on_enter chunkc border::color 0xddbf6069 #red
 
 # toggle between modes
 ctrl - s                :   khd -e "mode activate focus"
