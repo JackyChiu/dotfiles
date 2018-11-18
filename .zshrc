@@ -10,21 +10,33 @@ plugins=(
   github
   tmux
   zsh-autosuggestions
+  zsh-syntax-highlighting
   vi-mode
 )
 
-# Look in ~/.oh-my-zsh/themes/
+# Look in ~/$ZSH_CUSTOM/themes/
 export ZSH_THEME="spaceship"
+
 export SPACESHIP_PROMPT_ORDER=(
+  time          # Time stamps section
   user          # Username section
-  host          # Hostname section
   dir           # Current directory section
+  host          # Hostname section
   git           # Git section (git_branch + git_status)
   exec_time     # Execution time
   line_sep      # Line break
   jobs          # Backgound jobs indicator
   char          # Prompt character
 )
+
+export SPACESHIP_RPROMPT_ORDER=(
+  vi_mode       # Vi-mode indicator
+)
+
+export SPACESHIP_CHAR_SYMBOL="λ "
+export SPACESHIP_VI_MODE_INSERT="[INSERT]"
+export SPACESHIP_VI_MODE_NORMAL="[NORMAL]"
+export SPACESHIP_VI_MODE_COLOR="green"
 
 source $ZSH/oh-my-zsh.sh
 
