@@ -4,8 +4,9 @@
 
 [core]
   excludesfile = /Users/jackychiu/.gitignore_global
+  autocrlf = input
 
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [diff]
-	algorithm = patience
+  algorithm = patience
