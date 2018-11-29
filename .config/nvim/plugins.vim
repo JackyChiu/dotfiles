@@ -25,8 +25,7 @@ Plug 'zxqfl/tabnine-vim', { 'for': ['ruby', 'java'] }
 "Linter
 Plug 'w0rp/ale'
 " Golang
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Elixir
