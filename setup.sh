@@ -12,7 +12,8 @@ dotfiles="
 .khdrc
 .chunkwmrc
 .iterm2
-.config/nvim"
+.config/nvim
+.config/alacritty"
 
 # Backup
 mkdir -p $backup
