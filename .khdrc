@@ -116,6 +116,8 @@ shift + ctrl - e ![Alacritty,iTerm2]      :   khd -p "shift + alt - right"
 # undo
 crtl - u         ![Alacritty,iTerm2]      :   khd -p "cmd - z"
 
+ctrl - space : open /Applications/Alacritty.app
+
 # set border color for different modes
 khd mode default  on_enter chunkc border::color 0xdd81a1c1 #blue
 khd mode focus    on_enter chunkc border::color 0xddeacb8a #yellow
