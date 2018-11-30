@@ -16,12 +16,13 @@ Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" LSP client
+" Tabnine completeion
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+"" LSP client
 Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-Plug 'zxqfl/tabnine-vim', { 'for': ['ruby', 'java'] }
 "Linter
 Plug 'w0rp/ale'
 " Golang
