@@ -5,6 +5,7 @@ backup=~/dotfiles_backup
 dir="$(pwd)"
 dotfiles="
 .tmux.conf
+.zlogin
 .zshrc
 .gitconfig
 .gitignore_global
