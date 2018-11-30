@@ -27,7 +27,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 5
-    y: 5
+    y: 2
 
   # Window decorations
   #
