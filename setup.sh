@@ -31,6 +31,10 @@ for dotfile in $dotfiles; do
   fi
 
   # make symlinks
-  ln -s "$dir"/"$dotfile" ~/"$dotfile"
+  if [[ -d $dotfile ]]; then
+    ln -sF "$dir"/"$dotfile" ~/"$(dirname "$dotfile")"
+  else
+    ln -sF "$dir"/"$dotfile" ~/"$dotfile"
+  fi
 	echo "Symbloic link for ~/$dotfile"
 done
