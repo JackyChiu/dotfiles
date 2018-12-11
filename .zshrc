@@ -141,4 +141,4 @@ if [ -f '/Users/jackychiu/src/google-cloud-sdk/completion.zsh.inc' ]; then sourc
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jackychiu/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}$HOME/.kube/config:$HOME/.kube/config.shopify.cloudplatform
+export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config.shopify.cloudplatform
