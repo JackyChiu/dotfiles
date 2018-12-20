@@ -123,6 +123,20 @@ review () {
   nvim -c "let g:gitgutter_diff_base = 'master'" "$(git diff --name-only origin/master)"
 }
 
+gcb () {
+  branch=$(git for-each-ref --color --sort=-committerdate \
+     refs/heads/ \
+     --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) | (%(color:green)%(committerdate:relative)%(color:reset)) %(color:bold)%(authorname)%(color:reset) - %(contents:subject)' | \
+         fzf --ansi | \
+         cut -f2 -d'*' | \
+         cut -f1 -d'|' | \
+         xargs)
+
+  if [ ! -z "$branch" ] ; then
+     git checkout "$branch"
+  fi
+}
+
 #Directories (you won't want these)
 alias gojc='$GOPATH/src/github.com/JackyChiu'
 alias widget='/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
