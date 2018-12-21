@@ -5,6 +5,7 @@ backup=~/dotfiles_backup
 dir="$(pwd)"
 dotfiles="
 .tmux.conf
+.zlogin
 .zshrc
 .gitconfig
 .gitignore_global
@@ -12,7 +13,8 @@ dotfiles="
 .khdrc
 .chunkwmrc
 .iterm2
-.config/nvim"
+.config/nvim
+.config/alacritty"
 
 # Backup
 mkdir -p $backup
@@ -30,6 +32,10 @@ for dotfile in $dotfiles; do
   fi
 
   # make symlinks
-  ln -s "$dir"/"$dotfile" ~/"$dotfile"
+  if [[ -d $dotfile ]]; then
+    ln -sF "$dir"/"$dotfile" ~/"$(dirname "$dotfile")"
+  else
+    ln -sF "$dir"/"$dotfile" ~/"$dotfile"
+  fi
 	echo "Symbloic link for ~/$dotfile"
 done

@@ -16,17 +16,19 @@ Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" LSP client
+
+" Tabnine completeion
+Plug 'tbodt/deoplete-tabnine', { 'for': ['ruby', 'java'], 'do': './install.sh' }
+"" LSP client
 Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-Plug 'zxqfl/tabnine-vim', { 'for': ['ruby', 'java'] }
 "Linter
 Plug 'w0rp/ale'
 " Golang
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'zchee/deoplete-go', { 'for': 'go', 'do': 'make'}
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
+Plug 'zchee/deoplete-go'
 " Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Elixir
