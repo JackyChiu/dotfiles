@@ -16,7 +16,6 @@ Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " Tabnine completeion
 Plug 'tbodt/deoplete-tabnine', { 'for': ['ruby', 'java'], 'do': './install.sh' }
 "" LSP client
@@ -55,9 +54,6 @@ let g:LanguageClient_autoStop = 0
 let g:LanguageClient_serverCommands = {
     \ 'ruby':           ['solargraph', 'stdio'],
     \ 'rust':           ['rustup', 'run', 'stable', 'rls'],
-    \ 'javascript':     ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'typescript':     ['javascript-typescript-stdio'],
     \ }
 
 nnoremap <silent> M :call LanguageClient_contextMenu()<CR>
@@ -71,7 +67,6 @@ let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
       \   'ruby': ['rubocop'],
-      \   'javascript': ['eslint'],
       \}
 
 "Vimux
