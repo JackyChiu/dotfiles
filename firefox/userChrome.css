@@ -2,7 +2,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 * {
-    font-size: 10px !important;
+  font-size: 10px !important;
 }
 
 
@@ -11,140 +11,141 @@
 /* changes padding of toolbar buttons */
 
 toolbar .toolbarbutton-1 {
-    margin: -2px !important;
-    padding: 0px 4px 0px 4px !important;
+  margin: -2px !important;
+  padding: 0px 4px 0px 4px !important;
 }
 
 /* adjusts the padding and margin of the URL box buttons */
 
 :root .urlbar-icon {
-    width: 20px !important;
-    height: 20px !important;
-    padding: 4px !important;
+  width: 20px !important;
+  height: 20px !important;
+  padding: 4px !important;
 }
 
 /* adjusts the padding and margin of the icons before the URL */
 #identity-icon, #tracking-protection-icon, #connection-icon, .notification-anchor-icon, #blocked-permissions-container > .blocked-permission-icon, #extension-icon {
-    width: 14px !important;
-    height: 14px !important;
-    margin-inline-start: 4px !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin-inline-start: 4px !important;
 }
 
 /* adjusts entire nav bar padding */
 
 #nav-bar {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 /* adjusts the padding of the three lines menu button */
 
 #PanelUI-menu-button {
-    padding-inline-start: 4px !important;
-    padding-inline-end: 8px !important;
+  padding-inline-start: 4px !important;
+  padding-inline-end: 8px !important;
 }
 
 /* hides forward and back buttons */
 
 #forward-button {
-    display: none !important;
+  display: none !important;
 }
 
 #back-button {
-    display: none !important;
+  display: none !important;
 }
 
 /* reduces the margin of the url bar */
 
 #urlbar-container {
-    margin: -4px !important;
+  margin: -4px !important;
 }
 
 /* url bar border settings */
 
 #urlbar, .searchbar-textbox {
-    border: 0px solid hsla(240,5%,5%,.25) !important;
+  border: 0px solid hsla(240,5%,5%,.25) !important;
 }
 
 /* tab box border settings */
 
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {
-    border-top: 0px solid var(--tabs-border) !important;
+  border-top: 0px solid var(--tabs-border) !important;
 }
 
 /* hides color line on top of tabs */
 
 :root {
-    --tab-line-color: none !important;
-    --toolbarbutton-border-radius: 0px !important;
-/* removes inner padding of all toolbar buttons */
-    --toolbarbutton-inner-padding: -1px !important;
-/* decreases tab height (only works in pair with "--toolbarbutton-inner-padding") */
-    --tab-min-height: 22px !important;
+  --tab-line-color: none !important;
+  --toolbarbutton-border-radius: 0px !important;
+  /* removes inner padding of all toolbar buttons */
+  --toolbarbutton-inner-padding: -1px !important;
+  /* decreases tab height (only works in pair with "--toolbarbutton-inner-padding") */
+  --tab-min-height: 22px !important;
 }
 
+
 /*
-* Auto-hide the URL-bar, show on hover or focus
-*
-* Contributor(s): Alex Vallat
-*/
+ * Auto-hide the URL-bar, show on hover or focus
+ *
+ * Contributor(s): Alex Vallat
+ */
 
 :root[uidensity=compact] #navigator-toolbox {
- --nav-bar-height: 33px;
+  --nav-bar-height: 33px;
 }
 
 :root:not([uidensity]) #navigator-toolbox {
- --nav-bar-height: 39px;
+  --nav-bar-height: 39px;
 }
 
 :root[uidensity=touch] #navigator-toolbox {
- --nav-bar-height: 41px;
+  --nav-bar-height: 41px;
 }
 
 #navigator-toolbox {
- --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
- --trigger-area-height: 5px;
- --extra-height: 2px; /* Not sure where the extra 2px comes from, but is necessary to line up right */
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  --trigger-area-height: 5px;
+  --extra-height: 2px; /* Not sure where the extra 2px comes from, but is necessary to line up right */
 }
 
 @media (-moz-os-version: windows-win7) {
- /* Windows 7 has an extra 4px top margin when not maximized */
- :root[sizemode="normal"] #navigator-toolbox {
-   --tabbar-height: calc(4px + var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
- }
+  /* Windows 7 has an extra 4px top margin when not maximized */
+  :root[sizemode="normal"] #navigator-toolbox {
+    --tabbar-height: calc(4px + var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  }
 }
 
 #toolbar-menubar {
- margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
+  margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
 }
 
 :root:not([customizing]) #nav-bar
 {
- overflow-y: hidden;
- max-height:0;
- min-height:0 !important;
- padding-top:0 !important;
- padding-bottom:0 !important;
- opacity: 0;
+  overflow-y: hidden;
+  max-height:0;
+  min-height:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  opacity: 0;
 }
 
 :root:not([customizing]) :hover > #nav-bar,
 :root:not([customizing]) #nav-bar:focus-within {
- max-height: var(--nav-bar-height);
- opacity: 1;
- transition: opacity 0.15s ease-in, max-height 0.15s linear;
+  max-height: var(--nav-bar-height);
+  opacity: 1;
+  transition: opacity 0.15s ease-in, max-height 0.15s linear;
 }
 
 :root:not([customizing]) #navigator-toolbox {
- max-height: calc(var(--tabbar-height) + var(--trigger-area-height) + var(--extra-height));
- min-height: var(--tabbar-height);
- margin-bottom: calc(-1 * var(--trigger-area-height));
+  max-height: calc(var(--tabbar-height) + var(--trigger-area-height) + var(--extra-height));
+  min-height: var(--tabbar-height);
+  margin-bottom: calc(-1 * var(--trigger-area-height));
 }
 
 :root:not([customizing]) #navigator-toolbox:hover,
 :root:not([customizing]) #navigator-toolbox:focus-within {
- max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
- margin-bottom: calc(1px - var(--nav-bar-height));
+  max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
+  margin-bottom: calc(1px - var(--nav-bar-height));
 }
 
 /* extra */
@@ -158,7 +159,7 @@ toolbar .toolbarbutton-1 {
 
 /* fix black bar when address bar hide */
 #navigator-toolbox {
-    --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
-    --trigger-area-height: 5px;
-    --extra-height: 2px;
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
+  --trigger-area-height: 5px;
+  --extra-height: 2px;
 }
