@@ -102,6 +102,19 @@ toolbar .toolbarbutton-1 {
   --nav-bar-height: 41px;
 }
 
+#navigator-toolbox {
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  --trigger-area-height: 5px;
+  --extra-height: 2px; /* Not sure where the extra 2px comes from, but is necessary to line up right */
+}
+
+@media (-moz-os-version: windows-win7) {
+  /* Windows 7 has an extra 4px top margin when not maximized */
+  :root[sizemode="normal"] #navigator-toolbox {
+    --tabbar-height: calc(4px + var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  }
+}
+
 #toolbar-menubar {
   margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
 }
@@ -147,6 +160,6 @@ toolbar .toolbarbutton-1 {
 /* fix black bar when address bar hide */
 #navigator-toolbox {
   --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
-  --trigger-area-height: -12px;
+  --trigger-area-height: 5px;
   --extra-height: 2px;
 }
