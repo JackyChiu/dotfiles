@@ -14,9 +14,9 @@ set undofile
 set wildignore=*.git                    "Wild menu to ignore compiled files
 
 "Spacing and tabs
-set backspace=2                         "Backspace deletes 2 spaces
 set tabstop=2                           "Existing tabs to be shown with 2 spaces
 set shiftwidth=2                        "Size of indent with window shifts
+set softtabstop=2
 set expandtab                           "Tabs to spaces
 
 """VISUAL"""
@@ -124,6 +124,8 @@ au BufWritePost *.exs silent :! mix format %
 au BufNewFile,BufRead *.java
       \ nnoremap <leader>b :!javac %<CR> |
       \ nnoremap <leader>r :!java -ea %:r<CR>
+
+autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 "EJSON
 au BufRead,BufNewFile  *.ejson setfiletype json
