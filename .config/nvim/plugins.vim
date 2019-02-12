@@ -39,8 +39,9 @@ Plug 'tyrannicaltoucan/vim-quantum'
 call plug#end()
 
 "Colours
+set background=dark
+set termguicolors
 let g:quantum_black=1
-let g:quantum_italics=1
 colorscheme quantum
 
 "Deoplete
