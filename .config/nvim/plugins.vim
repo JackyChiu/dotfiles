@@ -35,15 +35,13 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 "Themes
-Plug 'arcticicestudio/nord-vim'
+Plug 'tyrannicaltoucan/vim-quantum'
 call plug#end()
 
 "Colours
-let g:nord_italic = 1
-let g:nord_uniform_status_lines = 1
-let g:nord_comment_brightness = 20
-let g:nord_uniform_diff_background = 1
-colorscheme nord
+let g:quantum_black=1
+let g:quantum_italics=1
+colorscheme quantum
 
 "Deoplete
 let g:deoplete#enable_at_startup = 1
@@ -134,7 +132,7 @@ au FileType go nnoremap <buffer> <silent> <C-]> :GoDef<CR>
 
 "Lightline (copy pasta material)
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'quantum',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ] ,
       \   'right': [ ['path'], ['filetype'] ]
