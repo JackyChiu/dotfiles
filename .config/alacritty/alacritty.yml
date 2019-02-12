@@ -125,32 +125,32 @@ render_timer: false
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Nord
+# Quantum Black
 colors:
   primary:
-    background: '0x2E3440'
-    foreground: '0xD8DEE9'
+    background: '0x212121'
+    foreground: '0xbcbec0'
   cursor:
-    text: '0x2E3440'
-    cursor: '0xD8DEE9'
+    text: '0x212121'
+    cursor: '0xd0d2d3'
   normal:
-    black: '0x3B4252'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x88C0D0'
-    white: '0xE5E9F0'
+    black: '0x6a6c6c'
+    red: '0xed8499'
+    green: '0x97d589'
+    yellow: '0xe9cb88'
+    blue: '0x87bff5'
+    magenta: '0xb9a0ef'
+    cyan: '0x7bdbe4'
+    white: '0xd0d2d3'
   bright:
-    black: '0x4C566A'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x8FBCBB'
-    white: '0xECEFF4'
+    black: '0x474646'
+    red: '0xdd7186'
+    green: '0x87bb7c'
+    yellow: '0xd5b875'
+    blue: '0x70ace5'
+    magenta: '0xa48add'
+    cyan: '0x69c5ce'
+    white: '0xbcbec0'
 
   # Indexed Colors
   #
