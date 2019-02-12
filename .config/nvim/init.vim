@@ -125,7 +125,7 @@ au BufNewFile,BufRead *.java
       \ nnoremap <leader>b :!javac %<CR> |
       \ nnoremap <leader>r :!java -ea %:r<CR>
 
-autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab!
 
 "EJSON
 au BufRead,BufNewFile  *.ejson setfiletype json
