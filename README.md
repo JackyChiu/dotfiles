@@ -1,5 +1,4 @@
-## JackyChiu's dotfiles
-My beloved dotfiles, for development and window management 😊
+## dotfiles ❤️
 
 ![setup](.github/setup.png)
 
@@ -35,5 +34,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Extra info
 - Zsh Theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
-- iTerm & Neovim Theme: [Nord](https://github.com/arcticicestudio)
-- Background Image: [Unsplash](https://unsplash.com/photos/yUjM1jV5obM)
+- iTerm & Neovim Theme: [vim-quantum](https://github.com/tyrannicaltoucan/vim-quantum)
