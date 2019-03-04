@@ -28,8 +28,6 @@ Plug 'w0rp/ale'
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 Plug 'zchee/deoplete-go'
-" Rust
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
