@@ -90,8 +90,9 @@ nmap <leader>tl :TestLast<CR>
 
 "Rust
 let g:rustfmt_autosave = 1
-let g:deoplete#sources#rust#racer_binary="/Users/jackychiu/.cargo/bin/racer"
-let g:deoplete#sources#rust#rust_source_path="/Users/jackychiu/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+let g:deoplete#sources#rust#racer_binary = "/Users/jackychiu/.cargo/bin/racer"
+let g:deoplete#sources#rust#rust_source_path = "/Users/jackychiu/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+let g:LanguageClient_diagnosticsEnable = 0
 
 "Elixir
 let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
