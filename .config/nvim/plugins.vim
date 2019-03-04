@@ -52,6 +52,7 @@ let g:LanguageClient_serverCommands = {
     \ 'ruby':           ['solargraph', 'stdio'],
     \ 'rust':           ['rustup', 'run', 'stable', 'rls'],
     \ }
+let g:LanguageClient_useVirtualText = 0
 
 nnoremap <silent> M :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
