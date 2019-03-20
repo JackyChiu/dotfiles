@@ -9,8 +9,9 @@ Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
 Plug 'benmills/vimux'                       "Open tmux window in vim
-"Better syntax highlighting
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
+Plug 'w0rp/ale'                             "Linter warnings
+Plug 'tyrannicaltoucan/vim-quantum'         "Quantum theme
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Tabnine completeion
@@ -20,17 +21,13 @@ Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
-"Linter
-Plug 'w0rp/ale'
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-Plug 'zchee/deoplete-go'
+Plug 'zchee/deoplete-go', { 'for': 'go' }
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
-"Themes
-Plug 'tyrannicaltoucan/vim-quantum'
 call plug#end()
 
 "Colours
