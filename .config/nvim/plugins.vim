@@ -9,9 +9,8 @@ Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
 Plug 'benmills/vimux'                       "Open tmux window in vim
-Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 "Better syntax highlighting
-Plug 'sheerun/vim-polyglot', { 'tag': 'v3.3.1' }
+Plug 'sheerun/vim-polyglot'
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Tabnine completeion
