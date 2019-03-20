@@ -8,8 +8,6 @@ Plug 'itchyny/lightline.vim'                "Powerline (lighter version)
 Plug 'airblade/vim-gitgutter'               "Git additions and removals
 Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
-Plug 'SirVer/ultisnips'                     "Snippet Engine
-Plug 'honza/vim-snippets'                   "Language Snippets
 Plug 'benmills/vimux'                       "Open tmux window in vim
 Plug 'jparise/vim-graphql'                  "GraphQL highlighting
 "Better syntax highlighting
