@@ -123,6 +123,14 @@ review () {
   nvim -c "let g:gitgutter_diff_base = 'master'" "$(git diff --name-only origin/master)"
 }
 
+gch() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
 #Directories (you won't want these)
 alias gojc='$GOPATH/src/github.com/JackyChiu'
 alias widget='/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
