@@ -14,6 +14,8 @@ plugins=(
   vi-mode
 )
 
+### VISUAL ###
+
 # Look in ~/$ZSH_CUSTOM/themes/
 export ZSH_THEME="spaceship"
 
@@ -51,11 +53,16 @@ export PATH=$PATH:$GOPATH/bin
 
 #rust
 export PATH=$PATH:$HOME/.cargo/bin
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+#export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# macOS brew MySQL
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Default vim
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=$VISUAL
+
+###  AUTOCOMPLETE ###
 
 # FZF fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
