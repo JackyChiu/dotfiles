@@ -52,8 +52,10 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 
 #rust
-export PATH=$PATH:$HOME/.cargo/bin
-#export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+if [ -x "$(command -v rustc)" ]; then
+  export PATH=$PATH:$HOME/.cargo/bin
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi
 
 # macOS brew MySQL
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -138,13 +140,11 @@ gch() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
-#Directories (you won't want these)
+# Directories (you won't want these)
 alias gojc='$GOPATH/src/github.com/JackyChiu'
 alias widget='/Users/jackychiu/Library/Application\ Support/Übersicht/widgets/nerdbar.widget'
 alias carleton='/Users/jackychiu/Google\ Drive/Carleton'
 alias go-play='nvim $GOPATH/src/main.go'
-
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jackychiu/src/google-cloud-sdk/path.zsh.inc'; fi
