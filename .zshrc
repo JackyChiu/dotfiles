@@ -112,7 +112,7 @@ kexec () {
 
 # Select and describe pod
 kdesc () {
-  kubectl describe "$(kpod)"
+  kubectl describe pod "$(kpod)"
 }
 
 # Review code by loading diff's in vim-buffers
