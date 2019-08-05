@@ -7,7 +7,7 @@ if ! [[ -d  $profiles ]]; then
 fi
 
 for dir in $(ls "$profiles"); do
-  [[ "$dir" != *default ]] && exit 1
+  [[ "$dir" != *default* ]] && exit 1
   ! [[ -d "$profiles/$dir/chrome" ]] && mkdir -p "$profiles"/"$dir"/chrome
   ln -snf "$(pwd)"/userChrome.css "$profiles/$dir/chrome"
 done
