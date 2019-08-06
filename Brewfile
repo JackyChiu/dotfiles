@@ -17,3 +17,6 @@ brew "khd"
 # tech
 brew "node"
 brew "go"
+brew "elixir"
+brew "python3"
+brew "mysql"
