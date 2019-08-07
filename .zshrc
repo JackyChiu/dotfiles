@@ -129,7 +129,7 @@ review () {
 
   [[ -a "dev.yml" ]] && dev up
 
-  nvim -c "let g:gitgutter_diff_base = 'master'" "$(git diff --name-only origin/master)"
+  nvim -c "let g:gitgutter_diff_base = 'master'" $(git diff --name-only origin/master)
 }
 
 gch() {
