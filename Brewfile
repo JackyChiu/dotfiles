@@ -20,3 +20,7 @@ brew "go"
 brew "elixir"
 brew "python3"
 brew "mysql"
+
+# util
+brew "tree"
+brew "htop"
