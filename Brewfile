@@ -26,6 +26,9 @@ brew 'kubernetes-cli'
 brew 'tree'
 brew 'htop'
 
+tap 'instrumenta/instrumenta'
+brew 'kubeval'
+
 cask 'google-cloud-sdk'
 cask 'docker'
 cask 'minikube'
