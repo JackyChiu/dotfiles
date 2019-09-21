@@ -25,6 +25,7 @@ brew 'kubernetes-cli'
 # util
 brew 'tree'
 brew 'htop'
+brew 'openssl'
 
 tap 'instrumenta/instrumenta'
 brew 'kubeval'
