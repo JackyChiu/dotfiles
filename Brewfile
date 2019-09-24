@@ -25,6 +25,10 @@ brew 'kubernetes-cli'
 # util
 brew 'tree'
 brew 'htop'
+
+# openssl needs linking on MacOS for gcc complier
+# cd /usr/local/include
+# ln -s ../opt/openssl/include/openssl/ .
 brew 'openssl'
 
 tap 'instrumenta/instrumenta'
