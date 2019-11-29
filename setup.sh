@@ -12,6 +12,7 @@ dotfiles="
 .tern-config
 .khdrc
 .chunkwmrc
+.yabairc
 .iterm2
 .config/nvim
 .config/alacritty"
