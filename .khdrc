@@ -119,11 +119,10 @@ crtl - u         ![Alacritty,iTerm2]      :   khd -p "cmd - z"
 ctrl - space ![Alacritty] : open /Applications/Alacritty.app
 
 # set border color for different modes
-khd mode default  on_enter yabai -m config active_window_border_color 0xdd81a1c1 #blue
+khd mode default  on_enter yabai -m config active_window_border_color 0xdd81a1c1  #blue
 khd mode focus    on_enter yabai -m config active_window_border_color 0xddeacb8a #yellow
 khd mode swap     on_enter yabai -m config active_window_border_color 0xddb48dac #purple
 khd mode layout   on_enter yabai -m config active_window_border_color 0xddbf6069 #red
-
 
 # toggle between modes
 ctrl - s                :   khd -e "mode activate focus"
@@ -162,15 +161,15 @@ swap - j                :   yabai -m window --swap south
 swap - k                :   yabai -m window --swap north
 swap - l                :   yabai -m window --swap east
 
-# swap - r                :   chunkc tiling::desktop --rotate 90
+swap - r                :   yabai -m space --rotate 90
 
 # swap monitors
 swap - 1                :   yabai -m window --display 1; yabai -m display --focus 1
 swap - 2                :   yabai -m window --display 2; yabai -m display --focus 2
 
 # swap desktops
-swap + ctrl - 1         :   yabai -m window --space 1; # khd -p "ctrl - cmd - 1"
-swap + ctrl - 2         :   yabai -m window --space 2; # khd -p "ctrl - cmd - 2"
+swap + shift - 1         :   yabai -m window --space 1; khd -p "ctrl - 1"
+swap + shift - 2         :   yabai -m window --space 2; khd -p "ctrl - 2"
 
 ### layout mode ###
 # switch layout
@@ -178,5 +177,5 @@ layout - b               :   yabai -m space --layout bsp;     khd -e "mode activ
 layout - m               :   yabai -m window --toggle zoom-fullscreen; khd -e "mode activate default"
 layout - f               :   yabai -m space --layout float;   khd -e "mode activate default"
 
-# layout - p               :   chunkc tiling::desktop --padding inc
-# layout + shift - p       :   chunkc tiling::desktop --padding dec
+layout - p               :   yabai -m space --padding rel:6:6:10:10
+layout + shift - p       :   yabai -m space --padding rel:-6:-6:-10:-10
