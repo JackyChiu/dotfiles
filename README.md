@@ -35,3 +35,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## Extra info
 - Zsh Theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
 - iTerm & Neovim Theme: [vim-quantum](https://github.com/tyrannicaltoucan/vim-quantum)
+- yabai status bar requires FontAwesome 4.7

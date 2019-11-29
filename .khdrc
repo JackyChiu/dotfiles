@@ -175,7 +175,7 @@ swap + ctrl - 2         :   yabai -m window --space 2; # khd -p "ctrl - cmd - 2"
 ### layout mode ###
 # switch layout
 layout - b               :   yabai -m space --layout bsp;     khd -e "mode activate default"
-layout - m               :   yabai -m space --layout monocle; khd -e "mode activate default"
+layout - m               :   yabai -m window --toggle zoom-fullscreen; khd -e "mode activate default"
 layout - f               :   yabai -m space --layout float;   khd -e "mode activate default"
 
 # layout - p               :   chunkc tiling::desktop --padding inc
