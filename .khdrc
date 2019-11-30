@@ -113,13 +113,10 @@ ctrl - e         ![Alacritty,iTerm2]      :   khd -p "alt - right"
 shift + ctrl - b ![Alacritty,iTerm2]      :   khd -p "shift + alt - left"
 shift + ctrl - e ![Alacritty,iTerm2]      :   khd -p "shift + alt - right"
 
-# undo
-crtl - u         ![Alacritty,iTerm2]      :   khd -p "cmd - z"
-
 ctrl - space ![Alacritty] : open /Applications/Alacritty.app
 
 # set border color for different modes
-khd mode default  on_enter yabai -m config active_window_border_color 0xdd81a1c1  #blue
+khd mode default  on_enter yabai -m config active_window_border_color 0xdd81a1c1 #blue
 khd mode focus    on_enter yabai -m config active_window_border_color 0xddeacb8a #yellow
 khd mode swap     on_enter yabai -m config active_window_border_color 0xddb48dac #purple
 khd mode layout   on_enter yabai -m config active_window_border_color 0xddbf6069 #red
@@ -167,15 +164,18 @@ swap - r                :   yabai -m space --rotate 90
 swap - 1                :   yabai -m window --display 1; yabai -m display --focus 1
 swap - 2                :   yabai -m window --display 2; yabai -m display --focus 2
 
-# swap desktops
-swap + shift - 1         :   yabai -m window --space 1; khd -p "ctrl - 1"
-swap + shift - 2         :   yabai -m window --space 2; khd -p "ctrl - 2"
+# swap desktops and follow
+swap + shift - 1         :   yabai -m window --space 1; khd -e "mode activate default"; khd -p "ctrl - 1"
+swap + shift - 2         :   yabai -m window --space 2; khd -e "mode activate default"; khd -p "ctrl - 2"
+swap + shift - 3         :   yabai -m window --space 3; khd -e "mode activate default"; khd -p "ctrl - 3"
+swap + shift - 4         :   yabai -m window --space 4; khd -e "mode activate default"; khd -p "ctrl - 4"
+
 
 ### layout mode ###
 # switch layout
-layout - b               :   yabai -m space --layout bsp;     khd -e "mode activate default"
-layout - m               :   yabai -m window --toggle zoom-fullscreen; khd -e "mode activate default"
-layout - f               :   yabai -m space --layout float;   khd -e "mode activate default"
+layout - b               :   yabai -m space --layout bsp;               khd -e "mode activate default"
+layout - f               :   yabai -m space --layout float;             khd -e "mode activate default"
+layout - z               :   yabai -m window --toggle zoom-fullscreen;  khd -e "mode activate default"
 
-layout - p               :   yabai -m space --padding rel:6:6:10:10
-layout + shift - p       :   yabai -m space --padding rel:-6:-6:-10:-10
+layout - p               :   yabai -m space --padding rel:6:6:10:10; yabai -m space --gap rel:5
+layout + shift - p       :   yabai -m space --padding rel:-6:-6:-10:-10; ; yabai -m space --gap rel:-5
