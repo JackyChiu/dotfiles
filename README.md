@@ -28,11 +28,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 - [tmux](https://github.com/tmux/tmux)
 
 ## Window Management:
-- [chunkwm](https://github.com/koekeishiya/chunkwm)
+- [yabai](https://github.com/koekeishiya/yabai)
 - [khd](https://github.com/koekeishiya/khd)
 - [Ubersicth](http://tracesof.net/uebersicht/)
 
 ## Extra info
 - Zsh Theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
 - iTerm & Neovim Theme: [vim-quantum](https://github.com/tyrannicaltoucan/vim-quantum)
-- yabai status bar requires FontAwesome 4.7
