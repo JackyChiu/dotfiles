@@ -77,7 +77,7 @@ export FZF_DEFAULT_OPTS="--preview 'head -100 {}' --reverse --height 40%"
 
 ### ALIAS ###
 # Reset window manager
-alias bsrc="brew services restart chunkwm"
+alias bsry="brew services restart yabai"
 
 # Kubernetes
 alias k='kubectl'
