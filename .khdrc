@@ -177,5 +177,6 @@ layout - b               :   yabai -m space --layout bsp;               khd -e "
 layout - f               :   yabai -m space --layout float;             khd -e "mode activate default"
 layout - z               :   yabai -m window --toggle zoom-fullscreen;  khd -e "mode activate default"
 
+layout + shift - b       :   yabai -m space --balance;  khd -e "mode activate default"
 layout - p               :   yabai -m space --padding rel:6:6:10:10; yabai -m space --gap rel:5
 layout + shift - p       :   yabai -m space --padding rel:-6:-6:-10:-10; ; yabai -m space --gap rel:-5
