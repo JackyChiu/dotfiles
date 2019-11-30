@@ -13,7 +13,6 @@ dotfiles="
 .khdrc
 .chunkwmrc
 .yabairc
-.iterm2
 .config/nvim
 .config/alacritty"
 
