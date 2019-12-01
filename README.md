@@ -31,7 +31,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 - [yabai](https://github.com/koekeishiya/yabai)
 - [khd](https://github.com/koekeishiya/khd)
 - [Ubersicth](http://tracesof.net/uebersicht/)
+- [nerdbar for Ubersicth](https://github.com/JackyChiu/nerdbar.widget)
 
 ## Extra info
 - Zsh Theme: [Spaceship](https://github.com/denysdovhan/spaceship-zsh-theme)
-- iTerm & Neovim Theme: [vim-quantum](https://github.com/tyrannicaltoucan/vim-quantum)
+- Alacritty & Neovim Theme: [vim-quantum](https://github.com/JackyChiu/vim-quantum)
