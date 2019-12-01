@@ -27,34 +27,6 @@ set termguicolors
 let g:quantum_black=1
 colorscheme quantum
 
-"Deoplete
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview
-
-"LSP Client
-let g:LanguageClient_autoStop = 0
-let g:LanguageClient_serverCommands = {
-    \ 'ruby':           ['solargraph', 'stdio'],
-    \ 'rust':           ['rustup', 'run', 'stable', 'rls'],
-    \ }
-let g:LanguageClient_useVirtualText = 0
-
-nnoremap <silent> M :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <leader>R :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> <leader>f :call LanguageClient#textDocument_formatting()<CR>
-
-"Ale
-let g:ale_set_quickfix = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-      \   'ruby': ['rubocop'],
-      \   'rust': ['rustfmt'],
-      \}
-
 "Vimux
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "35"
