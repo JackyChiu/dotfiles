@@ -27,6 +27,9 @@ brew 'tree'
 brew 'htop'
 brew 'jq'
 
+# customize spotify
+brew khanhas/tap/spicetify-cli
+
 # openssl needs linking on MacOS for gcc complier
 # cd /usr/local/include
 # ln -s ../opt/openssl/include/openssl/ .
