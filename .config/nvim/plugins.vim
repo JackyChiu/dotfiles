@@ -10,20 +10,11 @@ Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
 Plug 'benmills/vimux'                       "Open tmux window in vim
 Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
-Plug 'w0rp/ale'                             "Linter warnings
 Plug 'tyrannicaltoucan/vim-quantum'         "Quantum theme
 " Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Tabnine completeion
-" Plug 'tbodt/deoplete-tabnine', { 'for': ['ruby', 'java'], 'do': './install.sh' }
-"" LSP client
-Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-Plug 'zchee/deoplete-go', { 'for': 'go' }
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
@@ -116,17 +107,17 @@ let g:go_highlight_types = 1
 let g:go_fmt_command = "goimports"        "Auto add imports
 let g:go_def_mapping_enabled = 0          "Don't use C-t
 let g:go_list_type = "quickfix"           "always use quickfix window
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
 
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>R <Plug>(go-rename)<C-f>
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>tc <Plug>(go-test-compile)
 au Filetype go nmap <leader>a <Plug>(go-alternate-edit)
 au Filetype go nmap <leader>av <Plug>(go-alternate-vertical)
 au FileType go nmap <leader>f :GoDeclsDir<CR>
 au FileType go nmap <leader>rf :GoReferrers<CR>
-au FileType go nnoremap <buffer> <silent> gd :GoDef<CR>
-au FileType go nnoremap <buffer> <silent> <C-]> :GoDef<CR>
 
 "Lightline (copy pasta material)
 let g:lightline = {

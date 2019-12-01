@@ -5,6 +5,7 @@
 
 let mapleader = "\<Space>"              "Remap leader
 source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/coc.vim
 
 " General
 set clipboard=unnamed                   "System register to be same as unnamed
