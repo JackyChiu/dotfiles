@@ -15,8 +15,6 @@ Plug 'tyrannicaltoucan/vim-quantum'         "Quantum theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Golang
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-" Elixir
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 "Live preview
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' }
 call plug#end()
