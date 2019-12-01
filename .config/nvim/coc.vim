@@ -1,3 +1,10 @@
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-python',
+  \ 'coc-solargraph',
+  \ 'coc-rls',
+  \ ]
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 
