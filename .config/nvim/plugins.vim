@@ -10,7 +10,7 @@ Plug 'tpope/vim-fugitive'                   "Git wrapper for vim
 Plug 'janko-m/vim-test'                     "Test runner
 Plug 'benmills/vimux'                       "Open tmux window in vim
 Plug 'sheerun/vim-polyglot'                 "Better syntax highlighting
-Plug 'tyrannicaltoucan/vim-quantum'         "Quantum theme
+Plug 'JackyChiu/vim-quantum'                "Quantum theme
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Golang
@@ -23,8 +23,6 @@ call plug#end()
 if has("termguicolors")
   set termguicolors
 endif
-set background=dark
-let g:quantum_black=1
 colorscheme quantum
 
 "Vimux
