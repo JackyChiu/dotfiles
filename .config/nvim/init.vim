@@ -29,11 +29,6 @@ set scrolloff=5                         "Always 5 lines before or after cusor
 set cursorline                          "highlight current line slightly
 set nohlsearch                          "Don't continue to highlight searched phrases.
 
-"Colours
-if has("termguicolors")
-  set termguicolors
-endif
-
 """KEY MAPPINGS"""
 "rg search
 " --column: Show column number

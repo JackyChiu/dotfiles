@@ -20,8 +20,10 @@ Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown', 'for': 'markdown' 
 call plug#end()
 
 "Colours
+if has("termguicolors")
+  set termguicolors
+endif
 set background=dark
-set termguicolors
 let g:quantum_black=1
 colorscheme quantum
 
@@ -42,19 +44,6 @@ nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
 nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
-
-"Rust
-let g:rustfmt_autosave = 1
-let g:deoplete#sources#rust#racer_binary = "/Users/jackychiu/.cargo/bin/racer"
-let g:deoplete#sources#rust#rust_source_path = "/Users/jackychiu/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-let g:LanguageClient_diagnosticsEnable = 0
-
-"Elixir
-let g:alchemist_tag_stack_map = '<C-s>' " don't mess with my fzf lol
-let g:alchemist_iex_term_split = 'split'
-au FileType elixir nmap <leader>r :IEx<CR>
-au FileType elixir nnoremap <buffer> <silent> gd :ExDef<CR>
-au FileType elixir nnoremap <buffer> <silent> <C-]> :ExDef<CR>
 
 "FZF
 nnoremap <C-t> :FZF<CR>
