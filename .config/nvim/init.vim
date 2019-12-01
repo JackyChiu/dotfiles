@@ -56,7 +56,7 @@ vnoremap <C-g> y:grep<space><C-R>"<CR>
 nnoremap <C-g> :grep<space><C-F>i
 
 "Search and replace
-vnoremap <C-S> y::%s/<C-R>"/<C-R>"/g<C-F>F/;l
+vnoremap <C-S> y::%sno/<C-R>"/<C-R>"/g<C-F>F/;l
 
 "Enter to enter new line
 nnoremap <CR> i<CR><ESC>
