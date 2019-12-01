@@ -14,7 +14,9 @@ dotfiles="
 .chunkwmrc
 .yabairc
 .config/nvim
-.config/alacritty"
+.config/alacritty
+spicetify_data/Themes
+spicetify_data/config.ini"
 
 # Backup
 mkdir -p $backup
