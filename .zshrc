@@ -10,7 +10,7 @@ plugins=(
   github
   tmux
   zsh-autosuggestions
-  zsh-syntax-highlighting
+  fast-syntax-highlighting
   vi-mode
 )
 
