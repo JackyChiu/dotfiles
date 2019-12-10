@@ -173,9 +173,16 @@ swap + shift - 4         :   yabai -m window --space 4; khd -e "mode activate de
 
 ### layout mode ###
 # switch layout
-layout - b               :   yabai -m space --layout bsp;               khd -e "mode activate default"
+# Set all windows on active space back to normal
+layout - b               :   yabai -m space --layout bsp; yabai -m query --windows --space \
+                              | jq -re '.[] | select(."zoom-fullscreen" == 1) | .id' \
+                              | xargs -I{} yabai -m window {} --toggle zoom-fullscreen; khd -e "mode activate default"
+# Set all windows on active space to zoom-fullscreen - mimics switching layout to monocule
+layout - z               :   yabai -m query --windows --space \
+                              | jq -re '.[] | select(."zoom-fullscreen" == 0) | .id' \
+                              | xargs -I{} yabai -m window {} --toggle zoom-fullscreen;  khd -e "mode activate default"
+
 layout - f               :   yabai -m space --layout float;             khd -e "mode activate default"
-layout - z               :   yabai -m window --toggle zoom-fullscreen;  khd -e "mode activate default"
 
 layout + shift - b       :   yabai -m space --balance;  khd -e "mode activate default"
 layout - p               :   yabai -m space --padding rel:6:6:10:10; yabai -m space --gap rel:5
