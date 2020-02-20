@@ -114,7 +114,15 @@ toolbar .toolbarbutton-1 {
   display: none !important;
 }
 
-.tabs-newtab-button {
+#tabs-newtab-button {
+  display: none !important;
+}
+
+.tabbrowser-tabs {
+  display: none !important;
+}
+
+#alltabs-button {
   display: none !important;
 }
 
