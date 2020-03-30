@@ -10,3 +10,5 @@ tags
 # Becasue I'm a Mac user
 .DS_Store
 
+# vim
+.vim
