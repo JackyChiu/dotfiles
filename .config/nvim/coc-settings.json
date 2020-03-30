@@ -1,4 +1,7 @@
 {
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": false,
+  "python.jediEnabled": false,
   "languageserver": {
     "golang": {
       "command": "gopls",
