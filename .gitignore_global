@@ -12,3 +12,6 @@ tags
 
 # vim
 .vim
+
+# Elixir language server
+*.elixir_ls
